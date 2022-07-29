@@ -28,15 +28,15 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Discord Message Notify
-          uses: appleboy/discord-action@0.0.3
-          with:
-            webhook_id: ${{ secrets.DISCORD_DESIGN_WEBHOOK_ID }}
-            webhook_token: ${{ secrets.DISCORD_DESIGN_WEBHOOK_TOKEN }}
-            color: "#4285f4"
-            args: |
-              design-seed has been deployed
-              `Contributor` ${{github.actor}}
-              `Event Status` ${{github.event_name}}
-              `url` ${{steps.run_chromatic.outputs.url}}
-              `buildUrl` ${{steps.run_chromatic.outputs.buildUrl}}
-              `storybookUrl` ${{steps.run_chromatic.outputs.storybookUrl}}
+        uses: appleboy/discord-action@0.0.3
+        with:
+          webhook_id: ${{ secrets.DISCORD_DESIGN_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_DESIGN_WEBHOOK_TOKEN }}
+          color: "#4285f4"
+          args: |
+            design-seed has been deployed
+            `Contributor` ${{github.actor}}
+            `Event Status` ${{github.event_name}}
+            `url` ${{steps.run_chromatic.outputs.url}}
+            `buildUrl` ${{steps.run_chromatic.outputs.buildUrl}}
+            `storybookUrl` ${{steps.run_chromatic.outputs.storybookUrl}}
