@@ -25,6 +25,7 @@ jobs:
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
+        id: run_chromatic
         uses: chromaui/action@v1
         # Options required to the GitHub Chromatic Action
         with:

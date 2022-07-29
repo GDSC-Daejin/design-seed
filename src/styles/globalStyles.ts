@@ -85,7 +85,7 @@ const GlobalStyles = createGlobalStyle`
   }
   * {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     word-break: keep-all;
     -webkit-tap-highlight-color: transparent;
     transition: color, background-color 0.3s ease-in-out;
@@ -107,7 +107,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 10px;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
