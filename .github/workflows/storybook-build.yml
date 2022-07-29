@@ -40,8 +40,6 @@ jobs:
           args: |
             design-seed has been deployed
             `Contributor` ${{github.actor}}
-            `Event Status` ${{github.event_name}}
             `url` ${{steps.run_chromatic.outputs.url}}
-            `buildUrl` ${{steps.run_chromatic.outputs.buildUrl}}
             `storybookUrl` ${{steps.run_chromatic.outputs.storybookUrl}}
             
