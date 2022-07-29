@@ -12,7 +12,7 @@ on:
 
 # List of jobs
 jobs:
-  test:
+  storybook-build:
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
