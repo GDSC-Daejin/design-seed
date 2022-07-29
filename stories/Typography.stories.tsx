@@ -1,5 +1,5 @@
 import React from 'react';
-import Heading from './index';
+import Heading from './Typography/Heading';
 import { ComponentStory } from '@storybook/react';
 
 export default {
