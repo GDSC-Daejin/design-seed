@@ -7,7 +7,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=b47f562fed91"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -41,5 +42,7 @@
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "gdsc-design-seed@0.0.0"
 }

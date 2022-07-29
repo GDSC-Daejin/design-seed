@@ -19,7 +19,7 @@ const style = css`
   box-sizing: border-box;
   height: 4rem;
   padding: 0.5rem 1rem;
-  background: #20c997;
+  background: ${({ theme }) => theme.colors.blue400};
   color: white;
   border-radius: 0.25rem;
   line-height: 1;
@@ -27,10 +27,10 @@ const style = css`
   font-size: ${({ theme }) => theme.fontSize.body2};
 
   &:hover {
-    background: #38d9a9;
+    background: ${({ theme }) => theme.colors.blue300};
   }
   &:active {
-    background: #12b886;
+    background: ${({ theme }) => theme.colors.googleBlue};
   }
 `;
 const ButtonElement = styled.button`
