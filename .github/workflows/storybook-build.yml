@@ -17,16 +17,19 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v2
-      - run: yarn
-        #👇 Adds Chromatic as a step in the workflow
-      - uses: chromaui/action@v1
-        id: run_chromatic
-        # Options required for Chromatic's GitHub Action
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
+          fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Install dependencies
+        run: yarn
+        # 👇 Adds Chromatic as a step in the workflow
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Options required to the GitHub Chromatic Action
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Discord Message Notify
         uses: appleboy/discord-action@0.0.3
         with:
