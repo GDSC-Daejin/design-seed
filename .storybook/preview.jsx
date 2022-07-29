@@ -1,15 +1,10 @@
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from '../src/styles/theme';
+import { darkTheme, lightTheme } from '../src/styles/theme';
 import { useDarkMode } from 'storybook-dark-mode';
 import GlobalStyles from '../src/styles/globalStyles';
-import { themes } from '@storybook/theming';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  docs: {
-    theme: themes.dark,
-  },
-
   controls: {
     matchers: {
       color: /(background|color)$/i,

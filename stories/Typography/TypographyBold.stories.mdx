@@ -1,0 +1,93 @@
+import {Meta, Typeset} from '@storybook/addon-docs/blocks';
+
+<Meta title="Typography/Bold" />
+
+
+export const typography = {
+  type: {
+    primary: '"Google Sans Display","Spoqa Han Sans Neo", "sans-serif"',
+  },
+  weight: {
+    regular: '400',
+    medium: '500',
+    bold: '700',
+  },
+  size: {
+    h1: 56,
+    h2: 48,
+    h3: 36,
+    h4: 32,
+    h5: 24,
+    h6: 20,
+    h7: 18,
+    body1: 16,
+    body2: 14,
+    body3: 12,
+    body4: 10,
+  },
+};
+const fontSizes = [
+  String(typography.size.h1),
+  String(typography.size.h2),
+  String(typography.size.h3),
+  String(typography.size.h4),
+  String(typography.size.h5),
+  String(typography.size.h6),
+  String(typography.size.h7),
+  String(typography.size.body1),
+  String(typography.size.body2),
+  String(typography.size.body3),
+  String(typography.size.body4),
+];
+
+export const SampleTextEn = 'Google Developer Student Clubs';
+export const SampleTextKr = '구글 학생 개발자 커뮤니티';
+
+# Typography
+
+
+**Font:** Google Sans Display, Spoqa Han Sans Neo
+
+
+**Weights:** 400(Regular), 500(Medium), 700(Bold)
+
+## Typography Bold
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.h1),
+        Number(typography.size.h2),
+        Number(typography.size.h3),
+        Number(typography.size.h4),
+        Number(typography.size.h5),
+        Number(typography.size.h6),
+        Number(typography.size.h7),
+        Number(typography.size.body1),
+        Number(typography.size.body2),
+        Number(typography.size.body3),
+        Number(typography.size.body4),
+    ]}
+    fontWeight={typography.weight.bold}
+    sampleText={SampleTextEn}
+    fontFamily={typography.type.primary}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.h1),
+        Number(typography.size.h2),
+        Number(typography.size.h3),
+        Number(typography.size.h4),
+        Number(typography.size.h5),
+        Number(typography.size.h6),
+        Number(typography.size.h7),
+        Number(typography.size.body1),
+        Number(typography.size.body2),
+        Number(typography.size.body3),
+        Number(typography.size.body4),
+    ]}
+    fontWeight={typography.weight.bold}
+    sampleText={SampleTextKr}
+    fontFamily={typography.type.primary}
+/>
+

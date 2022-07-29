@@ -1,19 +1,16 @@
 import React from 'react';
-import SeedButton from './Button/Button';
+import Button from './Button/Button';
+import { ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/Button',
-  component: SeedButton,
+  component: Button,
 };
 
-export const button = () => {
-  return <SeedButton>BUTTON</SeedButton>;
-};
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-button.story = {
-  name: 'Default',
-};
+export const Primary = Template.bind({});
 
-export const primaryButton = () => {
-  return <SeedButton>PRIMARY</SeedButton>;
+Primary.args = {
+  label: 'Button',
 };

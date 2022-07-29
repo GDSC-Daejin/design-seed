@@ -85,7 +85,7 @@ const GlobalStyles = createGlobalStyle`
   }
   * {
     margin: 0;
-    font-size: 10px;
+    font-size: 14px;
     word-break: keep-all;
     -webkit-tap-highlight-color: transparent;
     transition: color, background-color 0.3s ease-in-out;
@@ -115,8 +115,6 @@ const GlobalStyles = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  
- 
 
   a {
     text-decoration: none;

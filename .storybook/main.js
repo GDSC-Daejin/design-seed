@@ -1,4 +1,5 @@
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   stories: [
@@ -17,5 +18,9 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+  },
+  webpackFinal: async (config) => {
+    config.resolve.plugins.push(new TsconfigPathsPlugin({}));
+    return config;
   },
 };

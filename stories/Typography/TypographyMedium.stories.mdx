@@ -1,0 +1,55 @@
+import {Meta, Typeset} from '@storybook/addon-docs/blocks';
+import {typography} from "./TypographyBold.stories.mdx";
+import {SampleTextEn} from "./TypographyBold.stories.mdx";
+import {SampleTextKr} from "./TypographyBold.stories.mdx";
+
+<Meta title="Typography/Medium" />
+
+
+# Typography Medium
+
+
+**Font:** Google Sans Display, Spoqa Han Sans Neo
+
+
+**Weights:** 400(Regular), 500(Medium), 700(Bold)
+
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.h1),
+        Number(typography.size.h2),
+        Number(typography.size.h3),
+        Number(typography.size.h4),
+        Number(typography.size.h5),
+        Number(typography.size.h6),
+        Number(typography.size.h7),
+        Number(typography.size.body1),
+        Number(typography.size.body2),
+        Number(typography.size.body3),
+        Number(typography.size.body4),
+    ]}
+    fontWeight={typography.weight.medium}
+    sampleText={SampleTextEn}
+    fontFamily={typography.type.primary}
+/>
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.h1),
+        Number(typography.size.h2),
+        Number(typography.size.h3),
+        Number(typography.size.h4),
+        Number(typography.size.h5),
+        Number(typography.size.h6),
+        Number(typography.size.h7),
+        Number(typography.size.body1),
+        Number(typography.size.body2),
+        Number(typography.size.body3),
+        Number(typography.size.body4),
+    ]}
+    fontWeight={typography.weight.medium}
+    sampleText={SampleTextKr}
+    fontFamily={typography.type.primary}
+/>
+
