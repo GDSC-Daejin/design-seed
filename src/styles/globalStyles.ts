@@ -116,10 +116,7 @@ const GlobalStyles = createGlobalStyle`
     display: block;
   }
   
-  html{
-    background: ${({ theme }) => theme.colors.background};
-  }
-  
+ 
 
   a {
     text-decoration: none;

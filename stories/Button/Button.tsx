@@ -1,7 +1,7 @@
 import { MouseEvent, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-type ButtonProps = {
+export type ButtonProps = {
   /** 버튼 안의 내용 */
   children: ReactNode;
   /** 클릭했을 때 호출할 함수 */
