@@ -8,8 +8,8 @@
     "build": "tsc --build",
     "release": "standard-version"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/GDSC-Daejin/design-seed",
