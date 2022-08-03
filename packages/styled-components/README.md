@@ -1,4 +1,4 @@
-# styled-components
+# @gdsc-dju/styled-components
 
 ## Introduction
 
