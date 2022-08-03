@@ -1,6 +1,6 @@
 {
   "name": "@gdsc-dju/styled-components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "packageManager": "yarn@3.2.2",
   "description": "gdsc dju에서 사용하는 스타일링 패턴 패키지 입니다.",
