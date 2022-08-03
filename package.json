@@ -6,8 +6,15 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "typecheck": "yarn workspaces list typecheck"
   },
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  },
+  "packageManager": "yarn@3.2.2",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,6 +51,5 @@
     "vite": "^3.0.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "gdsc-design-seed@0.0.0",
-  "packageManager": "yarn@3.2.2"
+  "_id": "gdsc-design-seed@0.0.0"
 }
