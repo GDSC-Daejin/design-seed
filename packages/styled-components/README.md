@@ -1,1 +1,1 @@
-# gds-styled-components
+# styled-components
