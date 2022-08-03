@@ -16,11 +16,11 @@
   },
   "packageManager": "yarn@3.2.2",
   "dependencies": {
+    "@gdsc-dju/styled-components": "workspace:packages/styled-components",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook-dark-mode": "^1.1.0",
-    "styled-components": "^5.3.5",
-    "@gdsc-dju/styled-components": "workspace:packages/styled-components"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
