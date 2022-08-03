@@ -1,0 +1,31 @@
+{
+  "name": "@gdsc-dju/styled-components",
+  "version": "0.0.0",
+  "packageManager": "yarn@3.2.2",
+  "description": "gdsc dju에서 사용하는 스타일링 패턴 패키지 입니다.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GDSC-Daejin/design-seed",
+    "directory": "packages/styled-components"
+  },
+  "author": "",
+  "bin": {
+    "log-run": "bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "source": "./src/index.ts",
+    "main": "./index.ts"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sample"
+  ],
+  "files": [
+    "cli"
+  ],
+  "dependencies": {
+    "commander": "^6.1.0"
+  }
+}
