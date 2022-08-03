@@ -28,6 +28,9 @@ jobs:
           git config --global user.email jhjeong00@gmail.com
           yarn release
           git push --follow-tags origin master
+      - name: build
+        run: yarn build
+        working-directory: ${{ env.working-directory }}
       - run: npm publish
         working-directory: ${{ env.working-directory }}
         env:

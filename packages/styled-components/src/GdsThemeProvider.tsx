@@ -26,7 +26,7 @@ declare module 'styled-components' {
 
 export const GdsThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
-  mode = 'auto',
+  mode = 'auto' as BehaviorMode,
 }) => {
   const darkMode = useDarkMode();
 

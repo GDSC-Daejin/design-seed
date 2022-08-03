@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "isolatedModules": true,
+    "jsx": "react",
+    "declaration": true,
+    "outDir": "./dist",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+  },
+  "moduleResolution": "node",
+
+  "include": [
+    "./src/**/*.ts"
+  ],
+}
