@@ -16,6 +16,8 @@ jobs:
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
+    env:
+      working-directory: ./packages/design-storybook
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -30,6 +32,7 @@ jobs:
         # Options required to the GitHub Chromatic Action
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          workingDir: ${{ env.working-directory }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       - name: Discord Message Notify
         uses: appleboy/discord-action@0.0.3
