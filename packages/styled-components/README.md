@@ -49,7 +49,7 @@ backgroundColor: ${({theme}) => theme.colors.white};
 
 GdsThemeProvider is just a ThemeProvider with predefined types.
 
-You can use ThemeProvider directly to opt-out the default behavior.
+You can also use ThemeProvider directly.
 
 ```typescript jsx
 
@@ -67,7 +67,7 @@ declare module 'styled-components' {
 interface DefaultTheme extends CustomTheme {}
 }
 
-// You should provide dark mode context and control its behavior.
+// You need to set dark mode context to use dark theme.
 const darkMode = useDarkMode();
 
 <DarkModeContext.Provider value={darkMode}>
