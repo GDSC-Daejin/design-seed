@@ -31,17 +31,20 @@ import {GdsThemeProvider} from "@gdsc-dju/styled-components";
 ```typescript jsx
 const Box = styled.div(props => ({
 color: props.theme.colors.grey900,
-backgroundColor: props.theme.colors.white,
+background: props.theme.colors.white, 
+fontSize: props => props.theme.fontSizes.body1,
 }));
 
 const Box1 = styled.div`
 color: ${props => props.theme.colors.grey900};
-backgroundColor: ${props => props.theme.colors.white};
+background: ${props => props.theme.colors.white};
+font-size: ${props => props.theme.fontSizes.h1};
 `;
 
 const Box2 = styled.div`
 color: ${({theme}) => theme.colors.grey900};
-backgroundColor: ${({theme}) => theme.colors.white};
+background: ${({theme}) => theme.colors.white};
+font-size: ${props => props.theme.fontSizes.body2};
 `;
 ```
 
