@@ -16,17 +16,30 @@ yarn add styled-components @gdsc-dju/styled-components
 
 ## Usage
 
-Setup Provider
+---
+
+### Setup Provider
 
 ```typescript jsx
 import {GdsThemeProvider} from "@gdsc-dju/styled-components";
 
-<GdsThemeProvider mode={'auto'}>
+<GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
 </GdsThemeProvider>
+```    
+### To change theme
+
+```typescript jsx
+const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
+
+<button onClick={() => toggleTheme()}>
+    {isDarkMode ? 'dark' : 'light'}
+</button>
 ```
 
 ## Using styled
+
+---
 
 ```typescript jsx
 const Box = styled.div(props => ({
@@ -49,6 +62,8 @@ font-size: ${props => props.theme.fontSizes.body2};
 ```
 
 ## Usage with custom theme
+
+---
 
 GdsThemeProvider is just a ThemeProvider with predefined types.
 

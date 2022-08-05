@@ -9,3 +9,8 @@ export type {
   SemanticColorScheme,
   ColorGroup,
 } from './styles/colors/types';
+export type {
+  FontToken,
+  FontGroup,
+  FontScheme,
+} from './styles/fontSizes/types';

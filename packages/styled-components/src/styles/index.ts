@@ -1,3 +1,3 @@
 export * as colors from './colors';
-export * as windowSizes from './windowSize';
-export * as fontSizes from './fontSizes';
+export { windowSize } from './windowSize';
+export { fontSizes } from './fontSizes';
