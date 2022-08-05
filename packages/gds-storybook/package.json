@@ -16,7 +16,7 @@
   },
   "packageManager": "yarn@3.2.2",
   "dependencies": {
-    "@gdsc-dju/styled-components": "workspace:packages/styled-components",
+    "@gdsc-dju/styled-components": "workspace:packages/styled-components/src",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook-dark-mode": "^1.1.0",
