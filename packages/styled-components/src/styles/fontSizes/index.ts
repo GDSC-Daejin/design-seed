@@ -1,4 +1,6 @@
-export const fontSize = {
+import { FontScheme } from './types';
+
+export const fontSize: FontScheme = {
   h1: '5.6rem',
   h2: '4.8rem',
   h3: '3.6rem',

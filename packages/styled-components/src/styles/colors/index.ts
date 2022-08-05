@@ -74,24 +74,6 @@ export const assetBlue = {
   blue900: '#4285F4',
 };
 
-export const themeColor = {
-  boxShadow100:
-    '0 0.8px 2px rgba(0,0,0,0.03), 0 2.7px 6.7px rgba(0,0,0,0.05),0 12px 30px rgba(0,0,0,0.1)',
-  boxShadow300:
-    '0 0.8px 2px rgba(0, 0, 0, 0.03), 0 2.7px 6.7px rgba(0, 0, 0, 0.05), 0 12px 20px rgba(0, 0, 0, 0.3)',
-  backgroundOpacity900: 'rgba(255 ,255 ,255, 1)',
-  backgroundOpacity: 'rgba(255 ,255 ,255, 0)',
-  greyOpacity50: 'rgba(0, 23, 51, 0.02)',
-  greyOpacity100: 'rgba(2, 32, 71, 0.05)',
-  greyOpacity200: 'rgba(0, 27, 55, 0.1)',
-  greyOpacity300: 'rgba(0, 29, 58, 0.18)',
-  greyOpacity400: 'rgba(0, 29, 54, 0.31)',
-  greyOpacity500: 'rgba(3, 24, 50, 0.46)',
-  greyOpacity600: 'rgba(0, 19, 43, 0.58)',
-  greyOpacity700: 'rgba(3, 18, 40, 0.7)',
-  greyOpacity800: 'rgba(0, 12, 30, 0.8)',
-  greyOpacity900: 'rgba(2, 9, 19, 0.91)',
-};
 const lightSemanticScheme = {
   background: '#fff',
   backgroundLow: 'grey100',

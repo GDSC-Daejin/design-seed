@@ -1,9 +1,9 @@
 import React from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { DarkModeContext } from './DarkModeContext';
-import { colors } from './styles';
+import { colors, fontSizes } from './styles';
 import { ColorScheme, SemanticColorScheme } from './styles/colors/types';
-import { fontSize } from './styles/fontSize';
+
 import { windowSize } from './styles/windowSize';
 
 import { BehaviorMode, getThemeName } from './types/utils';
@@ -17,7 +17,7 @@ interface ThemeProviderProps {
 export type GdsTheme = {
   colors: SemanticColorScheme & ColorScheme;
   windowSize: typeof windowSize;
-  fontSize: typeof fontSize;
+  fontSize: typeof fontSizes;
 };
 
 declare module 'styled-components' {
@@ -35,7 +35,7 @@ export const GdsThemeProvider: React.FC<ThemeProviderProps> = ({
     return {
       colors: colorTheme,
       windowSize: windowSize,
-      fontSize: fontSize,
+      fontSize: fontSizes,
     };
   }, [mode, darkMode.isDarkMode]);
 

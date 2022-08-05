@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
-export const useDarkMode = () => {
+type UseDarkMode = () => { isDarkMode: boolean; toggleTheme: () => void };
+
+export const useDarkMode: UseDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
   const setMode = (isDark: boolean) => {
     window.localStorage.setItem('theme', isDark ? 'dark' : 'light');

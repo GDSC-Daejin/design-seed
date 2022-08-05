@@ -38,8 +38,8 @@
   ],
   "peerDependencies": {
     "react": "^18.2.0",
-    "styled-components": "^5.3.5",
-    "react-is": "^18.2.0"
+    "react-is": "^18.2.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
