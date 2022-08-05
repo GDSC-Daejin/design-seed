@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     env:
-      working-directory: ./packages/design-storybook
+      working-directory: ./packages/gds-storybook
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2

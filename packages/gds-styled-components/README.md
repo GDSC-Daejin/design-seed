@@ -11,7 +11,7 @@ Please read this docs to use this library.
 
 ---
 ```shell
-yarn add styled-components @gdsc-dju/styled-components
+yarn add gds-styled-components @gdsc-dju/gds-styled-components
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn add styled-components @gdsc-dju/styled-components
 ### Setup Provider
 
 ```typescript jsx
-import {GdsThemeProvider} from "@gdsc-dju/styled-components";
+import {GdsThemeProvider} from "";
 
 <GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
