@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { DarkModeContext, FontScheme } from '../../gds-styled-components/index';
+import { DarkModeContext, FontScheme } from '../../styled-components/index';
 import { useContext } from 'react';
 
 const GlobalStyle = createGlobalStyle`
