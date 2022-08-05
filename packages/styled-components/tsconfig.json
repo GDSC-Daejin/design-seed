@@ -2,13 +2,14 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "ES5",
-    "isolatedModules": true,
     "jsx": "react",
     "declaration": true,
     "rootDir": "src",
     "outDir": "lib",
+    "sourceMap": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
+
   },
   "moduleResolution": "node",
 
