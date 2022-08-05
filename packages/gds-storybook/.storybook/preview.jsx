@@ -1,4 +1,4 @@
-import { GdsThemeProvider } from 'packages/styled-components';
+import { GdsThemeProvider } from '@gdsc-dju/styled-components';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
