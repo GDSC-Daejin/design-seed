@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.12 (2022-08-05)
+
+
+### Features
+
+* add fontSize type ([916ea43](https://github.com/GDSC-Daejin/design-seed/commit/916ea4319383f39c51f40453644b56b15eecdc1e))
+
 ### 0.0.11 (2022-08-04)
 
 ### 0.0.10 (2022-08-03)
