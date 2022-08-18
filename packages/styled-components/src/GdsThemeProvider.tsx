@@ -29,7 +29,6 @@ export const GdsThemeProvider: React.FC<ThemeProviderProps> = ({
   mode = 'auto' as BehaviorMode,
 }) => {
   const darkMode = useDarkMode();
-
   const theme = React.useMemo((): DefaultTheme => {
     const colorTheme = colors[getThemeName(mode, darkMode.isDarkMode)];
     return {

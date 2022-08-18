@@ -44,12 +44,6 @@ const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
 
 
 ```typescript jsx
-const Box = styled.div(props => ({
-color: props.theme.colors.grey900,
-background: props.theme.colors.white, 
-fontSize: props => props.theme.fontSizes.body1,
-}));
-
 const Box1 = styled.div`
 color: ${props => props.theme.colors.grey900};
 background: ${props => props.theme.colors.white};

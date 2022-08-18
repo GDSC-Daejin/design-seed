@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { DarkModeContext, FontScheme } from '../../styled-components/index';
+import { DarkModeContext, FontScheme } from '../../styled-components';
 import { useContext } from 'react';
+import ThemeToggleButton from './ThemeToggleButton';
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -13,13 +14,10 @@ const Title = styled.h1<{ fontSize: keyof FontScheme }>`
   font-size: ${({ theme, fontSize }) => theme.fontSize[fontSize]};
 `;
 function App() {
-  const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
   return (
     <>
       <GlobalStyle />
-      <button onClick={() => toggleTheme()}>
-        {isDarkMode ? 'dark' : 'light'}
-      </button>
+      <ThemeToggleButton />
       <Title fontSize={'h1'}>h1 Google Developer Student Clubs</Title>
       <Title fontSize={'h2'}>h2 Google Developer Student Clubs</Title>
       <Title fontSize={'h3'}>h3 Google Developer Student Clubs</Title>
