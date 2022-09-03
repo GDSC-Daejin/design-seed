@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { DarkModeContext, FontScheme } from '../../styled-components';
-import { useContext } from 'react';
+import { FontScheme } from '../../styled-theme';
 import ThemeToggleButton from './ThemeToggleButton';
 
 const GlobalStyle = createGlobalStyle`
@@ -18,17 +17,18 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeToggleButton />
-      <Title fontSize={'h1'}>h1 Google Developer Student Clubs</Title>
-      <Title fontSize={'h2'}>h2 Google Developer Student Clubs</Title>
-      <Title fontSize={'h3'}>h3 Google Developer Student Clubs</Title>
-      <Title fontSize={'h4'}>h4 Google Developer Student Clubs</Title>
-      <Title fontSize={'h5'}>h5 Google Developer Student Clubs</Title>
-      <Title fontSize={'h6'}>h6 Google Developer Student Clubs</Title>
-      <Title fontSize={'h7'}>h7 Google Developer Student Clubs</Title>
-      <Title fontSize={'body1'}>body1 Google Developer Student Clubs</Title>
-      <Title fontSize={'body2'}>body2 Google Developer Student Clubs</Title>
-      <Title fontSize={'body3'}>body3 Google Developer Student Clubs</Title>
-      <Title fontSize={'body4'}>body4 Google Developer Student Clubs</Title>
+      <Title fontSize={'titleXxl'}>
+        titleXxl Google Developer Student Clubs
+      </Title>
+      <Title fontSize={'titleXl'}>titleXl Google Developer Student Clubs</Title>
+      <Title fontSize={'titleL'}>titleL Google Developer Student Clubs</Title>
+      <Title fontSize={'titleM'}>titleM Google Developer Student Clubs</Title>
+      <Title fontSize={'titleS'}>titleS Google Developer Student Clubs</Title>
+      <Title fontSize={'textXxl'}>textXxl Google Developer Student Clubs</Title>
+      <Title fontSize={'textXl'}>textXl Google Developer Student Clubs</Title>
+      <Title fontSize={'textL'}>textL Google Developer Student Clubs</Title>
+      <Title fontSize={'textM'}>textM Google Developer Student Clubs</Title>
+      <Title fontSize={'textS'}>textS Google Developer Student Clubs</Title>
     </>
   );
 }

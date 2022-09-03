@@ -11,7 +11,7 @@ Please read this docs to use this library.
 
 
 ```shell
-yarn add styled-components @gdsc-dju/styled-components
+yarn add styled-theme @gdsc-dju/styled-theme
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn add styled-components @gdsc-dju/styled-components
 ### Setup Provider
 
 ```typescript jsx
-import {GdsThemeProvider} from "@gdsc-dju/styled-components";
+import {GdsThemeProvider} from "";
 
 <GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
@@ -30,9 +30,9 @@ import {GdsThemeProvider} from "@gdsc-dju/styled-components";
 ### To change theme
 
 ```typescript jsx
-import {DarkModeContext} from "@gdsc-dju/styled-components";
+import {DarkModeContext} from "";
 
-const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
+const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 
 <button onClick={() => toggleTheme()}>
     {isDarkMode ? 'dark' : 'light'}

@@ -1,4 +1,5 @@
 export { GdsThemeProvider } from './GdsThemeProvider';
+export { ThemeToggleButton } from './ThemeToggleButton';
 export { DarkModeContext } from './DarkModeContext';
 export { useDarkMode } from './useDarkMode';
 export type {

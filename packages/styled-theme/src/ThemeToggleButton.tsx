@@ -1,9 +1,9 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { DarkModeContext } from '../../../styled-theme';
-import DarkModeIcon from '../assets/darkModeIcon';
-import LightModeIcon from '../assets/lightModeIcon';
+import DarkModeIcon from './assets/darkModeIcon';
+import LightModeIcon from './assets/lightModeIcon';
+import { DarkModeContext } from './DarkModeContext';
 
 const startAnimation = keyframes`
   0% {
@@ -36,7 +36,7 @@ const ButtonWrapper = styled.div<{ isActive: boolean }>`
   animation: ${({ isActive }) => isActive && startAnimation} 0.6s ease-in-out;
 `;
 
-const ThemeToggleButton = () => {
+export const ThemeToggleButton = () => {
   const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
   const [animate, setAnimate] = useState(false);
 
@@ -56,5 +56,3 @@ const ThemeToggleButton = () => {
     </ThemeButton>
   );
 };
-
-export default ThemeToggleButton;
