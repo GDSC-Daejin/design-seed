@@ -9,12 +9,12 @@ on:
     types:
       - closed
     paths:
-      - "packages/styled-theme/**"
+      - "packages/styled-components/**"
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./packages/styled-theme
+      working-directory: ./packages/styled-components
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2

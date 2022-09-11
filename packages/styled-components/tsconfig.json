@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "lib",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+//    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "moduleResolution": "node",
+
+  "include": [
+    "src/*",
+    "src/custom.d.ts"
+  ]
+}

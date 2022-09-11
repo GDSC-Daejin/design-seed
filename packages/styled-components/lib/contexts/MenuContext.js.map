@@ -1,0 +1,1 @@
+{"version":3,"file":"MenuContext.js","sourceRoot":"","sources":["../../src/contexts/MenuContext.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,OAAO,CAAC;AAEtC,MAAM,IAAI,GAAG,GAAG,EAAE,GAAE,CAAC,CAAC;AAMtB,MAAM,CAAC,MAAM,WAAW,GAAG,aAAa,CAAkB;IACxD,UAAU,EAAE,KAAK;IACjB,UAAU,EAAE,IAAI;CACjB,CAAC,CAAC"}

@@ -1,6 +1,6 @@
 import React, { ReactNode, forwardRef } from 'react';
 import styled from 'styled-components';
-import { ColorTheme } from '../../../styled-theme';
+import { ColorTheme } from '../../../styled-components';
 import { fontSize } from '@gdsc-dju/styled-components/src/styles/fontSize';
 
 export type HeadingProps = {

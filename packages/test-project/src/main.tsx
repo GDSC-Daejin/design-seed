@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { GdsThemeProvider } from '../../styled-theme';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <GdsThemeProvider mode={'auto'}>
+    <div style={{ minHeight: '100vh', flex: 1 }}>
       <App />
-    </GdsThemeProvider>
+    </div>
   </React.StrictMode>,
 );
