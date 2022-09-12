@@ -1,46 +1,13 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import GDSCLogo from '../../assets/GDSCLogo.svg';
-import { MenuContext } from '../../contexts/MenuContext';
-
-import { StyledLink } from '../../../lib/components/Navigation/styled';
-import {
-  MenuInner,
-  MenuLogo,
-  MobileMenuBackground,
-  MobileMenuWrapper,
-} from './styled';
-import { NavigationRoutes } from '../Navigation';
+import { ReactNode } from 'react';
+import { MobileMenuWrapper } from './styled';
 
 interface MobileMenuProps {
-  routes: NavigationRoutes;
+  isMenuOpen?: boolean;
+  children?: ReactNode;
 }
 
-const MobileMenu = ({ routes }: MobileMenuProps) => {
-  const navigate = useNavigate();
-  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
-
-  return (
-    <MobileMenuWrapper animate={isMenuOpen}>
-      <MobileMenuBackground>
-        <MenuLogo src={GDSCLogo} />
-        <MenuInner>
-          {routes.map((link) => (
-            <StyledLink
-              key={link.route}
-              onClick={() => {
-                toggleMenu();
-                navigate(link.route);
-              }}
-            >
-              {link.title}
-            </StyledLink>
-          ))}
-        </MenuInner>
-      </MobileMenuBackground>
-    </MobileMenuWrapper>
-  );
+const MobileMenu = ({ children, isMenuOpen = false }: MobileMenuProps) => {
+  return <MobileMenuWrapper animate={isMenuOpen}>{children}</MobileMenuWrapper>;
 };
 
 export default MobileMenu;

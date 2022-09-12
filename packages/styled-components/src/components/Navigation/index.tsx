@@ -5,6 +5,7 @@ import GDSCLogo from '../../assets/GDSCLogo';
 import {
   LinkWrapper,
   LogoTitle,
+  MenuButtonWrapper,
   NavInner,
   NavSubtitle,
   NavTaskWrapper,
@@ -13,8 +14,10 @@ import {
   StyledLink,
   StyledLogoWrapper,
 } from './styled';
-import { ThemeToggleButton } from '../ThemeToggleButton';
-import { ColorToken } from '../..';
+
+import { ColorToken, ThemeToggleButton } from '../..';
+import MenuIcon from '../MenuIcon';
+import MobileMenu from '../MobileMenu';
 
 export type NavigationRoutes = {
   route: string;
@@ -22,17 +25,32 @@ export type NavigationRoutes = {
 }[];
 
 export interface NavigationProps {
-  routes: NavigationRoutes;
   title?: string;
+  routes?: NavigationRoutes;
   pointColor?: ColorToken;
-  themeToggle?: boolean;
+  isDarkMode?: boolean;
+  menuPosition?:
+    | 'left'
+    | 'right'
+    | 'none'
+    | 'left-mobile-only'
+    | 'right-mobile-only';
+  isMenuOpen?: boolean;
+  menuToggle?: () => void;
+  children?: React.ReactNode;
+  customLogo?: React.ReactNode;
 }
 
 export const Navigation = ({
   routes,
   title,
-  themeToggle = true,
+  customLogo,
+  isDarkMode = true,
   pointColor = 'blue900',
+  menuPosition = 'right',
+  menuToggle,
+  isMenuOpen = false,
+  children,
 }: NavigationProps) => {
   const location = useLocation();
 
@@ -40,40 +58,56 @@ export const Navigation = ({
     <NavWrapper>
       <NavInner>
         <NavTaskWrapper>
+          {(menuPosition == 'left' || menuPosition == 'left-mobile-only') && (
+            <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+              <MenuIcon isMenuOpen={isMenuOpen} />
+            </MenuButtonWrapper>
+          )}
           <StyledLogoWrapper to={'/'}>
-            <GDSCLogo />
-            <LogoTitle>GDSC</LogoTitle>
-            {title ? (
-              <>
-                <NavSubtitle>DJU</NavSubtitle>
-                <NavSubtitle color={pointColor}>{title}</NavSubtitle>
-              </>
+            {customLogo ? (
+              <>{children}</>
             ) : (
               <>
-                <NavSubtitle color={pointColor}>Daejin</NavSubtitle>
-                <NavSubtitle color={pointColor}>Univ.</NavSubtitle>
+                <GDSCLogo />
+                <LogoTitle>GDSC</LogoTitle>
+                {title ? (
+                  <>
+                    <NavSubtitle>DJU</NavSubtitle>
+                    <NavSubtitle color={pointColor}>{title}</NavSubtitle>
+                  </>
+                ) : (
+                  <>
+                    <NavSubtitle color={pointColor}>Daejin</NavSubtitle>
+                    <NavSubtitle color={pointColor}>Univ.</NavSubtitle>
+                  </>
+                )}
               </>
             )}
           </StyledLogoWrapper>
-          <LinkWrapper>
-            {routes.map((link) => (
-              <StyledLi key={link.route} pointColor={pointColor}>
-                <StyledLink
-                  isRoute={location.pathname == link.route}
-                  to={link.route}
-                  pointColor={pointColor}
-                >
-                  {link.title}
-                </StyledLink>
-              </StyledLi>
-            ))}
-          </LinkWrapper>
+          {routes && (
+            <LinkWrapper>
+              {routes.map((link) => (
+                <StyledLi key={link.route} pointColor={pointColor}>
+                  <StyledLink
+                    isRoute={location.pathname == link.route}
+                    to={link.route}
+                    pointColor={pointColor}
+                  >
+                    {link.title}
+                  </StyledLink>
+                </StyledLi>
+              ))}
+            </LinkWrapper>
+          )}
         </NavTaskWrapper>
-        {themeToggle && <ThemeToggleButton />}
-
-        {/*<MenuIcon />*/}
+        {isDarkMode && <ThemeToggleButton />}
+        {(menuPosition === 'right' || menuPosition === 'right-mobile-only') && (
+          <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+            <MenuIcon isMenuOpen={isMenuOpen} />
+          </MenuButtonWrapper>
+        )}
       </NavInner>
-      {/*<MobileMenu />*/}
+      <MobileMenu isMenuOpen={isMenuOpen} children={children} />
     </NavWrapper>
   );
 };

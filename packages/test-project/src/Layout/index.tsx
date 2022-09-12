@@ -1,8 +1,11 @@
 import { Navigation } from '@gdsc-dju/styled-components';
-import React from 'react';
+// import { Navigation } from '../../../styled-components/src';
+
+import React, { useContext } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
+import { MenuContext } from '@gdsc-dju/styled-components';
 
 const route = [
   {
@@ -19,14 +22,19 @@ const route = [
   },
 ];
 const Layout = () => {
+  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
   return (
     <>
       <Navigation
         routes={route}
         title={'Design System'}
-        pointColor={'yellow600'}
+        pointColor={'blue600'}
+        isDarkMode={true}
+        isMenuOpen={isMenuOpen}
+        menuToggle={toggleMenu}
+        menuPosition={'left'}
       />
-
+      <div style={{ height: '70px' }} />
       <Routes>
         <>
           <Route path={'/'} element={<Home />} />

@@ -28,6 +28,7 @@ export const NavTaskWrapper = styled.ul`
 export const StyledLogoWrapper = styled(Link)`
   display: flex;
   align-items: center;
+
   font-size: ${({ theme }) => theme.fontSizes.textXl};
   flex-direction: row;
   flex-wrap: wrap;
@@ -35,9 +36,10 @@ export const StyledLogoWrapper = styled(Link)`
 `;
 
 export const LogoTitle = styled.div`
+  margin-left: 4px;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   font-size: ${({ theme }) => theme.fontSizes.textXxl};
-  color: ${({ theme }) => theme.colors.grey800}; ;
+  color: ${({ theme }) => theme.colors.grey800};
 `;
 
 export const NavSubtitle = styled.div<{ color?: ColorToken }>`
@@ -96,7 +98,6 @@ export const StyledLink = styled(Link)<{
   list-style: none;
   font-size: ${({ theme }) => theme.fontSizes.textM};
   color: ${({ theme }) => theme.colors.grey700};
-
   transition: all 0.2s ease-in-out;
   ${({ isRoute, pointColor }) =>
     isRoute &&
@@ -104,4 +105,38 @@ export const StyledLink = styled(Link)<{
     css`
       color: ${({ theme }) => theme.colors[pointColor]};
     `};
+`;
+
+export const MenuButtonWrapper = styled.div<{
+  position: 'left' | 'right' | 'left-mobile-only' | 'right-mobile-only';
+}>`
+  cursor: pointer;
+  ${({ position }) =>
+    position === 'left' &&
+    css`
+      margin-right: 50px;
+      @media (max-width: 600px) {
+        margin-right: 20px;
+      }
+    `};
+  ${({ position }) =>
+    position === 'left-mobile-only' &&
+    css`
+      margin-right: 20px;
+    `};
+  ${({ position }) =>
+    (position === 'right' || position === 'right-mobile-only') &&
+    css`
+      margin-left: 10px;
+    `};
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  ${({ position }) =>
+    (position == 'left-mobile-only' || position == 'right-mobile-only') &&
+    css`
+      @media (min-width: 800px) {
+        display: none;
+      }
+    `}
 `;

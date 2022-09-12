@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gdsc-dju/styled-components": "workspace:packages/styled-components",
+    "@gdsc-dju/styled-components": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"

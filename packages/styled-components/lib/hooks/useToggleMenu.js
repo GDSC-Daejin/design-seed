@@ -1,8 +1,8 @@
 import { useState } from 'react';
 export const useToggleMenu = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const toggleMenu = (isOpen) => {
-        isOpen ? setIsMenuOpen(isOpen) : setIsMenuOpen((prev) => !prev);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
     return { isMenuOpen, toggleMenu };
 };

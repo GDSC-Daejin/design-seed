@@ -16,3 +16,6 @@ export declare const StyledLink: import("styled-components").StyledComponent<imp
     isRoute?: boolean | undefined;
     pointColor: ColorToken;
 }, never>;
+export declare const MenuButtonWrapper: import("styled-components").StyledComponent<"div", import("styled-components").DefaultTheme, {
+    position: 'left' | 'right' | 'left-mobile-only' | 'right-mobile-only';
+}, never>;
