@@ -51,5 +51,5 @@ export default {
   },
 };
 
-const Template: Story<NavigationProps> = (args) => <Navigation {...args} />;
+const Template: Story<typeof Navigation> = (args) => <Navigation {...args} />;
 export const Default = Template.bind({});

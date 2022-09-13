@@ -3,6 +3,8 @@ name: Node.js Package
 on:
   push:
     branches: [ master ]
+    paths:
+      - "packages/styled-components/**"
   pull_request:
     branches:
       - master
