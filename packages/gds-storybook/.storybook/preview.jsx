@@ -1,7 +1,6 @@
 import { GdsThemeProvider } from '@gdsc-dju/styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import GlobalStyles from '../stories/styles/globalStyles';
-import { Routes, Route } from 'react-router';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -22,7 +21,7 @@ export const decorators = [
   (Story) => (
     <GdsThemeProvider mode={'auto'}>
       <GlobalStyles />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
         <Story />
       </BrowserRouter>
     </GdsThemeProvider>
