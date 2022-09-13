@@ -23,9 +23,7 @@ export const decorators = [
     <GdsThemeProvider mode={'auto'}>
       <GlobalStyles />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Routes>
-          <Route path="/*" element={<Story />} />
-        </Routes>
+        <Story />
       </BrowserRouter>
     </GdsThemeProvider>
   ),
