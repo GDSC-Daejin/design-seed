@@ -6,6 +6,8 @@ export { MenuContext } from './contexts/MenuContext';
 export { useToggleMenu } from './hooks/useToggleMenu';
 export { useDarkMode } from './hooks/useDarkMode';
 
+export type { NavigationProps } from './components/Navigation';
+
 export type {
   ColorScheme,
   isColorGroup,

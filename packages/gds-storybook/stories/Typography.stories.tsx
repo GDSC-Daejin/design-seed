@@ -15,13 +15,13 @@ export const HeadingText = Template.bind({});
 
 HeadingText.args = {
   label: '이건 제목이에요.',
-  size: 'h1',
+  size: 'titleXxl',
   color: 'grey800',
 };
 export const BodyText = Template.bind({});
 
 BodyText.args = {
   label: '이건 본문이에요.',
-  size: 'body1',
+  size: 'textXxl',
   color: 'grey800',
 };

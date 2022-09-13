@@ -16,9 +16,10 @@
   },
   "packageManager": "yarn@3.2.2",
   "dependencies": {
-    "@gdsc-dju/styled-components": "workspace:packages/styled-components",
+    "@gdsc-dju/styled-components": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "storybook-dark-mode": "^1.1.0",
     "styled-components": "^5.3.5"
   },
@@ -35,7 +36,6 @@
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.9",
     "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",

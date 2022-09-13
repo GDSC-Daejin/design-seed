@@ -29,7 +29,7 @@ const Layout = () => {
         routes={route}
         title={'Design System'}
         pointColor={'blue600'}
-        isDarkMode={true}
+        themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}
         menuPosition={'left'}

@@ -8,10 +8,11 @@ export interface NavigationProps {
     title?: string;
     routes?: NavigationRoutes;
     pointColor?: ColorToken;
-    isDarkMode?: boolean;
+    themeButtonActive?: boolean;
     menuPosition?: 'left' | 'right' | 'none' | 'left-mobile-only' | 'right-mobile-only';
     isMenuOpen?: boolean;
     menuToggle?: () => void;
     children?: React.ReactNode;
+    customLogo?: React.ReactNode;
 }
-export declare const Navigation: ({ routes, title, isDarkMode, pointColor, menuPosition, menuToggle, isMenuOpen, children, }: NavigationProps) => JSX.Element;
+export declare const Navigation: ({ routes, title, customLogo, themeButtonActive, pointColor, menuPosition, menuToggle, isMenuOpen, children, }: NavigationProps) => JSX.Element;

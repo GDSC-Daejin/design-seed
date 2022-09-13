@@ -1,20 +1,20 @@
 import React, { ReactNode, forwardRef } from 'react';
 import styled from 'styled-components';
-import { ColorTheme } from '../../../styled-components';
-import { fontSize } from '@gdsc-dju/styled-components/src/styles/fontSize';
+import { ColorTheme, FontToken } from '@gdsc-dju/styled-components';
 
 export type HeadingProps = {
-  /** 제목 안의 내용 */
   label: ReactNode;
-  /** 사이즈 */
-  size?: keyof typeof fontSize;
+  size?: FontToken;
   color?: keyof ColorTheme;
 };
 
 const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ label, size = 'h1', color = 'grey800' as keyof ColorTheme }, ref) => {
+  (
+    { label, size = 'TitleXxl', color = 'grey800' as keyof ColorTheme },
+    ref,
+  ) => {
     return (
-      <HeadingElement size={size} color={color}>
+      <HeadingElement size={size as FontToken} color={color} ref={ref}>
         {label}
       </HeadingElement>
     );
@@ -22,10 +22,10 @@ const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
 );
 
 const HeadingElement = styled.h1<{
-  size: keyof typeof fontSize;
+  size: FontToken;
   color: keyof ColorTheme;
 }>`
-  font-size: ${({ theme, size }) => theme.fontSize[size]};
+  font-size: ${({ theme, size }) => theme.fontSizes[size]};
   color: ${({ theme, color }) => theme.colors[color]};
 `;
 

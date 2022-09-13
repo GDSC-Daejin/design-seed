@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router';
 import GDSCLogo from '../../assets/GDSCLogo';
 
 import {
@@ -18,6 +17,7 @@ import {
 import { ColorToken, ThemeToggleButton } from '../..';
 import MenuIcon from '../MenuIcon';
 import MobileMenu from '../MobileMenu';
+import { useLocation } from 'react-router-dom';
 
 export type NavigationRoutes = {
   route: string;
@@ -28,7 +28,7 @@ export interface NavigationProps {
   title?: string;
   routes?: NavigationRoutes;
   pointColor?: ColorToken;
-  isDarkMode?: boolean;
+  themeButtonActive?: boolean;
   menuPosition?:
     | 'left'
     | 'right'
@@ -45,7 +45,7 @@ export const Navigation = ({
   routes,
   title,
   customLogo,
-  isDarkMode = true,
+  themeButtonActive = true,
   pointColor = 'blue900',
   menuPosition = 'right',
   menuToggle,
@@ -53,7 +53,6 @@ export const Navigation = ({
   children,
 }: NavigationProps) => {
   const location = useLocation();
-
   return (
     <NavWrapper>
       <NavInner>
@@ -100,7 +99,7 @@ export const Navigation = ({
             </LinkWrapper>
           )}
         </NavTaskWrapper>
-        {isDarkMode && <ThemeToggleButton />}
+        {themeButtonActive && <ThemeToggleButton />}
         {(menuPosition === 'right' || menuPosition === 'right-mobile-only') && (
           <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
             <MenuIcon isMenuOpen={isMenuOpen} />
