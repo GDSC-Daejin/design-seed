@@ -16,7 +16,7 @@ import {
 
 import { ColorToken, ThemeToggleButton } from '../..';
 import MenuIcon from '../MenuIcon';
-import MobileMenu from '../MobileMenu';
+import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';
 
 export type NavigationRoutes = {
@@ -109,7 +109,7 @@ export const Navigation = ({
           </MenuButtonWrapper>
         )}
       </NavInner>
-      <MobileMenu isMenuOpen={isMenuOpen} children={sideMenu} />
+      <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />
     </NavWrapper>
   );
 };

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const MobileMenuWrapper = styled.nav<{ animate: boolean }>`
+export const SideMenuWrapper = styled.nav<{ animate: boolean }>`
   position: fixed;
   top: 0;
   bottom: 0;
