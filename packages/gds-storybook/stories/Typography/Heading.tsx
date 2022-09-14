@@ -21,7 +21,7 @@ const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
   },
 );
 
-const HeadingElement = styled.h1<{
+export const HeadingElement = styled.h1<{
   size: FontToken;
   color: keyof ColorTheme;
 }>`

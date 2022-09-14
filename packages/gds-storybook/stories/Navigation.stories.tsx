@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navigation, NavigationProps } from '@gdsc-dju/styled-components';
+import { Navigation } from '@gdsc-dju/styled-components';
 import { Story } from '@storybook/react';
+import { HeadingElement } from './Typography/Heading';
 
 export default {
   title: 'Components/Navigation',
@@ -48,6 +49,9 @@ export default {
     themeButtonActive: true,
     menuPosition: 'left',
     isMenuOpen: false,
+    sideMenu: null,
+    rightElement: null,
+    customLogo: null,
   },
 };
 

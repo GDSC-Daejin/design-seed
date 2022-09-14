@@ -6,6 +6,7 @@ import React, { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import { MenuContext } from '@gdsc-dju/styled-components';
+import styled from 'styled-components';
 
 const route = [
   {
@@ -21,6 +22,13 @@ const route = [
     title: 'FrameWork',
   },
 ];
+
+const MenuBackground = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
 const Layout = () => {
   const { isMenuOpen, toggleMenu } = useContext(MenuContext);
   return (
@@ -33,6 +41,11 @@ const Layout = () => {
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}
         menuPosition={'left'}
+        sideMenu={
+          <MenuBackground>
+            <h1>asdasdadasd</h1>
+          </MenuBackground>
+        }
       />
       <div style={{ height: '70px' }} />
       <Routes>

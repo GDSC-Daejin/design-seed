@@ -21,7 +21,7 @@ export const decorators = [
   (Story) => (
     <GdsThemeProvider mode={'auto'}>
       <GlobalStyles />
-      <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Story />
       </BrowserRouter>
     </GdsThemeProvider>

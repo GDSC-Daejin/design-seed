@@ -12,7 +12,8 @@ export interface NavigationProps {
     menuPosition?: 'left' | 'right' | 'none' | 'left-mobile-only' | 'right-mobile-only';
     isMenuOpen?: boolean;
     menuToggle?: () => void;
-    children?: React.ReactNode;
+    sideMenu?: React.ReactNode;
+    rightElement?: React.ReactNode;
     customLogo?: React.ReactNode;
 }
-export declare const Navigation: ({ routes, title, customLogo, themeButtonActive, pointColor, menuPosition, menuToggle, isMenuOpen, children, }: NavigationProps) => JSX.Element;
+export declare const Navigation: ({ routes, title, customLogo, themeButtonActive, pointColor, menuPosition, menuToggle, isMenuOpen, sideMenu, rightElement, }: NavigationProps) => JSX.Element;
