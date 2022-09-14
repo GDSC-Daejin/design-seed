@@ -37,7 +37,8 @@ export interface NavigationProps {
     | 'right-mobile-only';
   isMenuOpen?: boolean;
   menuToggle?: () => void;
-  children?: React.ReactNode;
+  sideMenu?: React.ReactNode;
+  rightElement?: React.ReactNode;
   customLogo?: React.ReactNode;
 }
 
@@ -50,7 +51,8 @@ export const Navigation = ({
   menuPosition = 'right',
   menuToggle,
   isMenuOpen = false,
-  children,
+  sideMenu,
+  rightElement,
 }: NavigationProps) => {
   const location = useLocation();
   return (
@@ -64,7 +66,7 @@ export const Navigation = ({
           )}
           <StyledLogoWrapper to={'/'}>
             {customLogo ? (
-              <>{children}</>
+              <>{customLogo}</>
             ) : (
               <>
                 <GDSCLogo />
@@ -99,6 +101,7 @@ export const Navigation = ({
             </LinkWrapper>
           )}
         </NavTaskWrapper>
+        {rightElement && <>{rightElement}</>}
         {themeButtonActive && <ThemeToggleButton />}
         {(menuPosition === 'right' || menuPosition === 'right-mobile-only') && (
           <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
@@ -106,7 +109,7 @@ export const Navigation = ({
           </MenuButtonWrapper>
         )}
       </NavInner>
-      <MobileMenu isMenuOpen={isMenuOpen} children={children} />
+      <MobileMenu isMenuOpen={isMenuOpen} children={sideMenu} />
     </NavWrapper>
   );
 };
