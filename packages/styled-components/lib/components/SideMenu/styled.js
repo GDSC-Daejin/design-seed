@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-export const SideMenuWrapper = styled.nav `
+export const SideMenuWrapper = styled.div `
   position: fixed;
   top: 0;
   bottom: 0;
@@ -7,12 +7,12 @@ export const SideMenuWrapper = styled.nav `
   right: 0;
   z-index: 91;
   transition: all 0.3s ease-out;
-  background: #222222;
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: saturate(60%) blur(2px);
   ${({ animate }) => animate
     ? css `
           visibility: visible;
-          opacity: 0.7;
+          opacity: 1;
           //transform: translateX(100vw);
         `
     : css `

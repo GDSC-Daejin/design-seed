@@ -27,9 +27,11 @@ const SideMenu = ({
     }
   }, [isMenuOpen]);
   return (
-    <OutsideClickHandler outsideClick={toggleMenu}>
-      <SideMenuWrapper animate={isMenuOpen}>{children}</SideMenuWrapper>
-    </OutsideClickHandler>
+    <SideMenuWrapper animate={isMenuOpen}>
+      <OutsideClickHandler outsideClick={() => toggleMenu()}>
+        {children}
+      </OutsideClickHandler>
+    </SideMenuWrapper>
   );
 };
 

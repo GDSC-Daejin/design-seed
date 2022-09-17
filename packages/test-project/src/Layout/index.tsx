@@ -40,11 +40,11 @@ const Layout = () => {
         themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}
-        menuPosition={'right-mobile-only'}
+        menuPosition={'right'}
         sideMenu={
-          <MenuBackground>
-            <h1>asdasdadasd</h1>
-          </MenuBackground>
+          // <MenuBackground>
+          <h1>asdasdadasd</h1>
+          // </MenuBackground>
         }
       />
       <div style={{ height: '70px' }} />
