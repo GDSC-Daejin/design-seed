@@ -40,7 +40,7 @@ const Layout = () => {
         themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}
-        menuPosition={'left'}
+        menuPosition={'right-mobile-only'}
         sideMenu={
           <MenuBackground>
             <h1>asdasdadasd</h1>

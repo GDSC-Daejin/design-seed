@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import GDSCLogo from '../../assets/GDSCLogo';
 
 import {
@@ -14,7 +14,7 @@ import {
   StyledLogoWrapper,
 } from './styled';
 
-import { ColorToken, ThemeToggleButton } from '../..';
+import { ColorToken, MenuContext, ThemeToggleButton } from '../..';
 import MenuIcon from '../MenuIcon';
 import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';

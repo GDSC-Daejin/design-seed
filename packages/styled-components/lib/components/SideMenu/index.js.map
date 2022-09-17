@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/components/SideMenu/index.tsx"],"names":[],"mappings":";AACA,OAAO,EAAE,eAAe,EAAE,MAAM,UAAU,CAAC;AAO3C,MAAM,QAAQ,GAAG,CAAC,EAAE,QAAQ,EAAE,UAAU,GAAG,KAAK,EAAiB,EAAE,EAAE;IACnE,OAAO,KAAC,eAAe,IAAC,OAAO,EAAE,UAAU,YAAG,QAAQ,GAAmB,CAAC;AAC5E,CAAC,CAAC;AAEF,eAAe,QAAQ,CAAC"}
