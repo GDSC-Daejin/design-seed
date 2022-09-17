@@ -5,13 +5,13 @@ import OutsideClickHandler from '../../utils/OutsideClickHandler';
 interface SideMenuProps {
   isMenuOpen?: boolean;
   children?: ReactNode;
-  toggleMenu: () => void;
+  menuHandler: (type: boolean) => void;
 }
 
 const SideMenu = ({
   children,
   isMenuOpen = false,
-  toggleMenu,
+  menuHandler,
 }: SideMenuProps) => {
   useEffect(() => {
     document.body.style.cssText = `
@@ -28,7 +28,7 @@ const SideMenu = ({
   }, [isMenuOpen]);
   return (
     <SideMenuWrapper animate={isMenuOpen}>
-      <OutsideClickHandler outsideClick={() => toggleMenu()}>
+      <OutsideClickHandler outsideClick={() => menuHandler(false)}>
         {children}
       </OutsideClickHandler>
     </SideMenuWrapper>

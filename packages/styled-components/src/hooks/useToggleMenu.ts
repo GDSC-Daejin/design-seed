@@ -5,5 +5,8 @@ export const useToggleMenu = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  return { isMenuOpen, toggleMenu };
+  const handleMenu = (type: boolean) => {
+    setIsMenuOpen(type);
+  };
+  return { isMenuOpen, toggleMenu, handleMenu };
 };
