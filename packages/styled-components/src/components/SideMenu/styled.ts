@@ -8,13 +8,13 @@ export const SideMenuWrapper = styled.nav<{ animate: boolean }>`
   right: 0;
   z-index: 91;
   transition: all 0.3s ease-out;
-  background: #222222;
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   ${({ animate }) =>
     animate
       ? css`
           visibility: visible;
-          opacity: 0.7;
+          opacity: 1;
           //transform: translateX(100vw);
         `
       : css`
