@@ -59,10 +59,6 @@ const MenuIcon = ({ isMenuOpen }: MenuIconProps) => {
         stroke={theme.colors.grey900}
         strokeLinecap="round"
         d={isMenuOpen ? 'M 3.5 3 L 17 19' : 'M 2 18.346 L 20 18.346'}
-        // variants={{
-        //   closed: { d: 'M 2 16.346 L 20 16.346' },
-        //   open: { d: 'M 3 2.5 L 17 16.346' },
-        // }}
       />
     </StyledSvg>
   );
