@@ -109,7 +109,13 @@ export const Navigation = ({
           </MenuButtonWrapper>
         )}
       </NavInner>
-      <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />
+      {menuToggle && (
+        <SideMenu
+          isMenuOpen={isMenuOpen}
+          children={sideMenu}
+          toggleMenu={menuToggle}
+        />
+      )}
     </NavWrapper>
   );
 };

@@ -9,7 +9,7 @@ export const SideMenuWrapper = styled.nav<{ animate: boolean }>`
   z-index: 91;
   transition: all 0.3s ease-out;
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   ${({ animate }) =>
     animate
       ? css`
