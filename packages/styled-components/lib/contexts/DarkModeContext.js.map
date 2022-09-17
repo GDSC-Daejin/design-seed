@@ -1,1 +1,0 @@
-{"version":3,"file":"DarkModeContext.js","sourceRoot":"","sources":["../../src/contexts/DarkModeContext.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,OAAO,CAAC;AAEtC,MAAM,IAAI,GAAG,GAAG,EAAE,GAAE,CAAC,CAAC;AAKtB,MAAM,CAAC,MAAM,eAAe,GAAG,aAAa,CAAsB;IAChE,UAAU,EAAE,KAAK;IACjB,WAAW,EAAE,IAAI;CAClB,CAAC,CAAC"}
