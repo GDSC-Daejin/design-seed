@@ -32,6 +32,8 @@ jobs:
       - name: Install dependencies
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
+      - name: Build GDS
+        run: yarn workspace @gdsc-dju/styled-components tsc
       - name: Publish to Chromatic
         id: run_chromatic
         uses: chromaui/action@v1
