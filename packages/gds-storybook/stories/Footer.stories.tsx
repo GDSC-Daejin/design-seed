@@ -3,7 +3,7 @@ import { Footer } from '@gdsc-dju/styled-components';
 import { Story } from '@storybook/react';
 
 export default {
-  title: 'Components/Navigation',
+  title: 'Components/Footer',
   component: Footer,
   argTypes: {
     disable: false,
