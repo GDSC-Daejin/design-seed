@@ -1,4 +1,4 @@
-import { Navigation } from '@gdsc-dju/styled-components';
+import { Footer, Navigation } from '@gdsc-dju/styled-components';
 // import { Navigation } from '../../../styled-components/src';
 
 import React, { useContext } from 'react';
@@ -56,6 +56,7 @@ const Layout = () => {
           <Route path={'/frameWork'} element={<Home />} />
         </>
       </Routes>
+      <Footer />
     </>
   );
 };
