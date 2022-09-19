@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navigation } from '@gdsc-dju/styled-components';
 import { Story } from '@storybook/react';
-import { HeadingElement } from './Typography/Heading';
 
 export default {
   title: 'Components/Navigation',

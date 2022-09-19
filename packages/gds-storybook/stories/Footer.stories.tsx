@@ -1,0 +1,28 @@
+import React from 'react';
+import { Footer } from '@gdsc-dju/styled-components';
+import { Story } from '@storybook/react';
+
+export default {
+  title: 'Components/Navigation',
+  component: Footer,
+  argTypes: {
+    disable: false,
+    pages: [
+      {
+        text: 'Tech Blog',
+        link: 'link',
+      },
+      {
+        text: 'Design System',
+        link: 'link',
+      },
+      {
+        text: 'About Us',
+        link: 'link',
+      },
+    ],
+  },
+};
+
+const Template: Story<typeof Footer> = (args) => <Footer {...args} />;
+export const Default = Template.bind({});
