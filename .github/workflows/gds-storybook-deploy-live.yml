@@ -22,7 +22,7 @@ jobs:
       working-directory: ./packages/gds-storybook
     environment:
       name: GDSC DJU blog Production
-      url: https://blog.gdsc-dju.com
+      url: https://design.gdsc-dju.com
     steps:
       - uses: actions/checkout@v2
       - name: Setting .env
@@ -40,7 +40,7 @@ jobs:
       - name: install package
         run: yarn install
       - name: Project Build
-        run: yarn build
+        run: yarn build-storybook
         working-directory: ${{ env.working-directory }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         id: run_firebase_deploy
