@@ -2,8 +2,8 @@ name: Deploy to GDS Storybook Live Channel
 
 on:
   push:
-    branches:
-      - master
+#    branches:
+#      - master
     paths:
       - "packages/gds-storybook/**"
       - ".github/workflows/gds-storybook-deploy-live.yml"
