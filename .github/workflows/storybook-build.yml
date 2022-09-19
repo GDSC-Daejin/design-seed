@@ -4,9 +4,15 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on:
   push:
+    paths:
+      - "packages/gds-storybook/**"
+      - ".github/workflows/gds-storybook-deploy-live.yml"
     branches:
     - master
   pull_request:
+    paths:
+      - "packages/gds-storybook/**"
+      - ".github/workflows/gds-storybook-deploy-live.yml"
     branches:
       - master
 
