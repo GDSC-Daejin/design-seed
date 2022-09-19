@@ -23,9 +23,9 @@
   },
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.js",
-      "default": "./index.js"
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
