@@ -49,6 +49,8 @@ export default {
     menuPosition: 'left',
     isMenuOpen: false,
     sideMenu: null,
+    menuToggle: () => {},
+    menuHandler: () => {},
     rightElement: null,
     customLogo: null,
   },
