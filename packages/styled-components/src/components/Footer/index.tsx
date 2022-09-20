@@ -27,7 +27,7 @@ export const Footer = ({ disable = false, pages }: FooterProps) => {
             </FooterText>
             {pages &&
               pages.map((page) => (
-                <FooterText key={page.text} google={true} href={page.link}>
+                <FooterText key={page.text} href={page.link}>
                   {page.text}
                 </FooterText>
               ))}
