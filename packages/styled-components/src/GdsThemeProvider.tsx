@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { DarkModeContext, useDarkMode } from '.';
 import { MenuContext } from './contexts/MenuContext';
@@ -9,7 +9,7 @@ import { ThemeMode, getThemeName } from './types/utils';
 import { useToggleMenu } from './hooks/useToggleMenu';
 
 interface ThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
   mode: ThemeMode;
 }
 

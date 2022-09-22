@@ -2632,19 +2632,20 @@ __metadata:
     "@babel/preset-react": ^7.18.6
     "@babel/preset-typescript": ^7.18.6
     "@rollup/plugin-babel": ^5.3.1
-    "@rollup/plugin-typescript": ^8.5.0
     "@types/react": ^18.0.15
+    "@types/react-router-dom": ^5.3.3
     "@types/styled-components": ^5.1.25
-    react: ^18.2.0
-    react-is: ^18.2.0
     rollup: ^2.79.1
     rollup-plugin-tslint: ^0.2.2
+    rollup-plugin-typescript: ^1.0.1
+    rollup-plugin-uglify: ^6.0.4
     standard-version: ^9.5.0
     tslib: ^2.4.0
     typescript: ^4.8.3
   peerDependencies:
     react: ^18.2.0
     react-is: ^18.2.0
+    react-router-dom: "*"
     styled-components: ^5.3.5
   languageName: unknown
   linkType: soft
@@ -3207,23 +3208,6 @@ __metadata:
     "@types/babel__core":
       optional: true
   checksum: 220d71e4647330f252ef33d5f29700aef2e8284a0b61acfcceb47617a7f96208aa1ed16eae75619424bf08811ede5241e271a6d031f07026dee6b3a2bdcdc638
-  languageName: node
-  linkType: hard
-
-"@rollup/plugin-typescript@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "@rollup/plugin-typescript@npm:8.5.0"
-  dependencies:
-    "@rollup/pluginutils": ^3.1.0
-    resolve: ^1.17.0
-  peerDependencies:
-    rollup: ^2.14.0
-    tslib: "*"
-    typescript: ">=3.7.0"
-  peerDependenciesMeta:
-    tslib:
-      optional: true
-  checksum: 2f100a73cdeb9bf82feaf8665fe791dabf5dcc17f6e727eb7b1825e7c7cf815ccd3f79f9f43ca53d7806c50686565c71f35fffcfc773b811a5c1e39eab167529
   languageName: node
   linkType: hard
 
@@ -4648,6 +4632,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/history@npm:^4.7.11":
+  version: 4.7.11
+  resolution: "@types/history@npm:4.7.11"
+  checksum: c92e2ba407dcab0581a9afdf98f533aa41b61a71133420a6d92b1ca9839f741ab1f9395b17454ba5b88cb86020b70b22d74a1950ccfbdfd9beeaa5459fdc3464
+  languageName: node
+  linkType: hard
+
 "@types/hoist-non-react-statics@npm:*":
   version: 3.3.1
   resolution: "@types/hoist-non-react-statics@npm:3.3.1"
@@ -4881,6 +4872,27 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
+  languageName: node
+  linkType: hard
+
+"@types/react-router-dom@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "@types/react-router-dom@npm:5.3.3"
+  dependencies:
+    "@types/history": ^4.7.11
+    "@types/react": "*"
+    "@types/react-router": "*"
+  checksum: 28c4ea48909803c414bf5a08502acbb8ba414669b4b43bb51297c05fe5addc4df0b8fd00e0a9d1e3535ec4073ef38aaafac2c4a2b95b787167d113bc059beff3
+  languageName: node
+  linkType: hard
+
+"@types/react-router@npm:*":
+  version: 5.1.19
+  resolution: "@types/react-router@npm:5.1.19"
+  dependencies:
+    "@types/history": ^4.7.11
+    "@types/react": "*"
+  checksum: 3536c3dec7af1f12fed2bea246eb143bd893ee66d4e58c1d3fe734cbd67d8a0aedac0bba9255c58fc69dbd32ae17ad280d6866916aee32653a705178e4a544dc
   languageName: node
   linkType: hard
 
@@ -14263,6 +14275,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jest-worker@npm:^24.0.0":
+  version: 24.9.0
+  resolution: "jest-worker@npm:24.9.0"
+  dependencies:
+    merge-stream: ^2.0.0
+    supports-color: ^6.1.0
+  checksum: bd23b6c8728dcf3bad0d84543ea1bc4a95ccd3b5a40f9e2796d527ab0e87dc6afa6c30cc7b67845dce1cfe7894753812d19793de605db1976b7ac08930671bff
+  languageName: node
+  linkType: hard
+
 "jest-worker@npm:^26.5.0, jest-worker@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-worker@npm:26.6.2"
@@ -18697,7 +18719,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-pluginutils@npm:^2.0.1":
+"rollup-plugin-typescript@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "rollup-plugin-typescript@npm:1.0.1"
+  dependencies:
+    resolve: ^1.10.0
+    rollup-pluginutils: ^2.5.0
+  peerDependencies:
+    tslib: "*"
+    typescript: ">=2.1.0"
+  checksum: e54fa3f11130d93ea15d19c5ef805a6db4f4ebf0798255210e2f3ffca0fc268d6890f3c311f03236d73781864d2299e51f81824c96bc916729357cdcef91a0f3
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-uglify@npm:^6.0.4":
+  version: 6.0.4
+  resolution: "rollup-plugin-uglify@npm:6.0.4"
+  dependencies:
+    "@babel/code-frame": ^7.0.0
+    jest-worker: ^24.0.0
+    serialize-javascript: ^2.1.2
+    uglify-js: ^3.4.9
+  peerDependencies:
+    rollup: ">=0.66.0 <2"
+  checksum: 0cc46b7346906aa2af80d1729a292c547a9014a934daae07d54d6f4c858c822b71222e3f62cc12498880efaf1ddad26b9c0aca17e788b467aea61fde135e2ed3
+  languageName: node
+  linkType: hard
+
+"rollup-pluginutils@npm:^2.0.1, rollup-pluginutils@npm:^2.5.0":
   version: 2.8.2
   resolution: "rollup-pluginutils@npm:2.8.2"
   dependencies:
@@ -18982,6 +19031,13 @@ __metadata:
     range-parser: ~1.2.1
     statuses: 2.0.1
   checksum: 74fc07ebb58566b87b078ec63e5a3e41ecd987e4272ba67b7467e86c6ad51bc6b0b0154133b6d8b08a2ddda360464f71382f7ef864700f34844a76c8027817a8
+  languageName: node
+  linkType: hard
+
+"serialize-javascript@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "serialize-javascript@npm:2.1.2"
+  checksum: 16ce4e4886aff10d5cbbc46149cae3a63f31ea1578f218ef3a363ae413fa245dde61ab039f6733cc86db7b3ff940bfcba9b5a4bfc7b5dd1b3967737c0bbc017e
   languageName: node
   linkType: hard
 
@@ -19907,6 +19963,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"supports-color@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "supports-color@npm:6.1.0"
+  dependencies:
+    has-flag: ^3.0.0
+  checksum: 74358f9535c83ee113fbaac354b11e808060f6e7d8722082ee43af3578469134e89d00026dce2a6b93ce4e5b89d0e9a10f638b2b9f64c7838c2fb2883a47b3d5
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^7.0.0, supports-color@npm:^7.1.0":
   version: 7.2.0
   resolution: "supports-color@npm:7.2.0"
@@ -20715,6 +20780,15 @@ __metadata:
   bin:
     uglifyjs: bin/uglifyjs
   checksum: 908a6bc877c49ca756bbf50d2ab365ee0315a66af52e14042a5c56077311f3d7c9e028524703c54c8d4b608e3d57346ee0400105acab3c3cded3238513657916
+  languageName: node
+  linkType: hard
+
+"uglify-js@npm:^3.4.9":
+  version: 3.17.1
+  resolution: "uglify-js@npm:3.17.1"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 5e24ad48e096d309e77a462fa0508a9bfe33e2ab00e1bd21dc8bd5d035cf0b58063914bef1c6d6aca78e9e5bbe619714b142ffc646165702e3714f4cfbc7151c
   languageName: node
   linkType: hard
 
