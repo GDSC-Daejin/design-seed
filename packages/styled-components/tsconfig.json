@@ -12,7 +12,7 @@
     "isolatedModules": false,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "dist",
+    "declarationDir": "./dist",
     "skipLibCheck": true,
   },
   "include": [

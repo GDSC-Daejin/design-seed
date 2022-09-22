@@ -28,33 +28,34 @@ export default {
       },
     },
   },
-  args: {
-    routes: [
-      {
-        route: '/foundation',
-        title: 'Foundation',
-      },
-      {
-        route: '/component',
-        title: 'Component',
-      },
-      {
-        route: '/frameWork',
-        title: 'FrameWork',
-      },
-    ],
-    title: 'Design System',
-    pointColor: 'blue600',
-    themeButtonActive: true,
-    menuPosition: 'left',
-    isMenuOpen: false,
-    sideMenu: null,
-    menuToggle: () => {},
-    menuHandler: () => {},
-    rightElement: null,
-    customLogo: null,
-  },
 };
 
 const Template: Story<typeof Navigation> = (args) => <Navigation {...args} />;
 export const Default = Template.bind({});
+Default.args = {
+  routes: [
+    {
+      route: '/foundation',
+      title: 'Foundation',
+    },
+    {
+      route: '/component',
+      title: 'Component',
+    },
+    {
+      route: '/frameWork',
+      title: 'FrameWork',
+    },
+  ],
+  title: 'Design System',
+  // pointColor: 'blue600',
+  themeButtonActive: true,
+  menuPosition: 'left',
+  isMenuOpen: false,
+  pointColor: 'blue600',
+  sideMenu: <div>test</div>,
+  menuToggle: () => {},
+  menuHandler: () => {},
+  rightElement: <div>test</div>,
+  customLogo: null,
+};

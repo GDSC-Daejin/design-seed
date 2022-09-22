@@ -1,4 +1,7 @@
-import { GdsThemeProvider } from '@gdsc-dju/styled-components';
+import {
+  GdsThemeProvider,
+  ThemeToggleButton,
+} from '@gdsc-dju/styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import GlobalStyles from '../stories/styles/globalStyles';
 
@@ -22,6 +25,7 @@ export const decorators = [
     <GdsThemeProvider mode={'auto'}>
       <GlobalStyles />
       <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <ThemeToggleButton />
         <Story />
       </BrowserRouter>
     </GdsThemeProvider>

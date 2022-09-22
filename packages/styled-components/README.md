@@ -17,7 +17,6 @@ yarn add styled-components @gdsc-dju/styled-components
 ## Usage
 
 
-
 ### Setup Provider
 
 ```typescript jsx
@@ -27,10 +26,14 @@ import {GdsThemeProvider} from "";
     <MyThemedComponent/>
 </GdsThemeProvider>
 ```    
+
+
 ### To change theme
 
+You can change theme by using `DarkModeContext`.
+
 ```typescript jsx
-import {DarkModeContext} from "";
+import {DarkModeContext} from "@gdsc-dju/styled-components";
 
 const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 
@@ -39,27 +42,34 @@ const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 </button>
 ```
 
-## Using styled
+You can open SideMenu by using `MenuContext`.
+```typescript jsx
+import {MenuContext} from "@gdsc-dju/styled-components";
 
+const {isMenuOpen, toggleMenu, menuHandler} = useContext(MenuContext);
 
+<button onClick={() => toggleMenu()}>
+    {isMenuOpen ? 'open' : 'closed'}
+</button>
+```
+
+## Using styled Tokens
 
 ```typescript jsx
 const Box1 = styled.div`
 color: ${props => props.theme.colors.grey900};
 background: ${props => props.theme.colors.white};
-font-size: ${props => props.theme.fontSizes.h1};
+font-size: ${props => props.theme.fontSizes.titleXxl};
 `;
 
 const Box2 = styled.div`
 color: ${({theme}) => theme.colors.grey900};
 background: ${({theme}) => theme.colors.white};
-font-size: ${props => props.theme.fontSizes.body2};
+font-size: ${({theme}) => theme.fontSizes.textXxl};
 `;
 ```
 
 ## Usage with custom theme
-
-
 
 GdsThemeProvider is just a ThemeProvider with predefined types.
 
@@ -83,10 +93,13 @@ interface DefaultTheme extends CustomTheme {}
 
 // You need to set dark mode context to use dark theme.
 const darkMode = useDarkMode();
+const menuValue = useToggleMenu();
 
 <DarkModeContext.Provider value={darkMode}>
-    <ThemeProvider theme={theme}>
-        <MyThemedComponent />
-    </ThemeProvider>
+    <MenuContext.Provider value={menuValue}>
+        <ThemeProvider theme={theme}>
+            <MyThemedComponent />
+        </ThemeProvider>
+    </MenuContext.Provider>
 </DarkModeContext.Provider>
 ```

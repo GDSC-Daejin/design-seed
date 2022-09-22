@@ -5,6 +5,25 @@ import { ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Text',
   component: Heading,
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+        options: [
+          'titleXxl',
+          'titleXl',
+          'titleL',
+          'titleM',
+          'titleS',
+          'textXxl',
+          'textXl',
+          'textL',
+          'textM',
+          'textS',
+        ],
+      },
+    },
+  },
 };
 
 const Template: ComponentStory<typeof Heading> = (args) => (

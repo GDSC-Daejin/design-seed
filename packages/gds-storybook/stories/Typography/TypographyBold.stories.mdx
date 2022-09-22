@@ -7,23 +7,22 @@ export const typography = {
   type: {
     primary: '"Google Sans Display","Spoqa Han Sans Neo", "sans-serif"',
   },
-  weight: {
+  weights: {
     regular: '400',
     medium: '500',
     bold: '700',
   },
   size: {
-    h1: 56,
-    h2: 48,
-    h3: 36,
-    h4: 32,
-    h5: 24,
-    h6: 20,
-    h7: 18,
-    body1: 16,
-    body2: 14,
-    body3: 12,
-    body4: 10,
+      titleXxl: 56,
+      titleXl: 48,
+      titleL: 36,
+      titleM: 32,
+      titleS: 24,
+      textXxl: 20,
+      textXl: 18,
+      textL: 16,
+      textM: 14,
+      textS: 12
   },
 };
 const fontSizes = [
@@ -48,44 +47,54 @@ export const SampleTextKr = '구글 학생 개발자 커뮤니티';
 
 **Font:** Google Sans Display, Spoqa Han Sans Neo
 
-
 **Weights:** 400(Regular), 500(Medium), 700(Bold)
 
 
+```
+titleXxl: 56,
+titleXl: 48,
+titleL: 36,
+titleM: 32,
+titleS: 24,
+textXxl: 20,
+textXl: 18,
+textL: 16,
+textM: 14,
+textS: 12
+```
+
 <Typeset
     fontSizes={[
-        Number(typography.size.h1),
-        Number(typography.size.h2),
-        Number(typography.size.h3),
-        Number(typography.size.h4),
-        Number(typography.size.h5),
-        Number(typography.size.h6),
-        Number(typography.size.h7),
-        Number(typography.size.body1),
-        Number(typography.size.body2),
-        Number(typography.size.body3),
-        Number(typography.size.body4),
+        Number(typography.size.titleXxl),
+        Number(typography.size.titleXl),
+        Number(typography.size.titleL),
+        Number(typography.size.titleM),
+        Number(typography.size.titleS),
+        Number(typography.size.textXxl),
+        Number(typography.size.textXl),
+        Number(typography.size.textL),
+        Number(typography.size.textM),
+        Number(typography.size.textS),
     ]}
-    fontWeight={typography.weight.bold}
+    fontWeight={typography.weights.bold}
     sampleText={SampleTextEn}
     fontFamily={typography.type.primary}
 />
 
 <Typeset
     fontSizes={[
-        Number(typography.size.h1),
-        Number(typography.size.h2),
-        Number(typography.size.h3),
-        Number(typography.size.h4),
-        Number(typography.size.h5),
-        Number(typography.size.h6),
-        Number(typography.size.h7),
-        Number(typography.size.body1),
-        Number(typography.size.body2),
-        Number(typography.size.body3),
-        Number(typography.size.body4),
+        Number(typography.size.titleXxl),
+        Number(typography.size.titleXl),
+        Number(typography.size.titleL),
+        Number(typography.size.titleM),
+        Number(typography.size.titleS),
+        Number(typography.size.textXxl),
+        Number(typography.size.textXl),
+        Number(typography.size.textL),
+        Number(typography.size.textM),
+        Number(typography.size.textS),
     ]}
-    fontWeight={typography.weight.bold}
+    fontWeight={typography.weights.bold}
     sampleText={SampleTextKr}
     fontFamily={typography.type.primary}
 />
