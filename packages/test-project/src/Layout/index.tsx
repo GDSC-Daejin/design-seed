@@ -26,7 +26,10 @@ const route = [
 const MenuBackground = styled.div`
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
 `;
 
 const Layout = () => {
@@ -40,12 +43,9 @@ const Layout = () => {
         themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}
+        menuHandler={toggleMenu}
         menuPosition={'right'}
-        sideMenu={
-          // <MenuBackground>
-          <h1>asdasdadasd</h1>
-          // </MenuBackground>
-        }
+        sideMenu={<MenuBackground>테스트</MenuBackground>}
       />
       <div style={{ height: '70px' }} />
       <Routes>

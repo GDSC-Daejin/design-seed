@@ -8,16 +8,20 @@
     "baseUrl": "./",
     "strict": true,
     "esModuleInterop": true,
-    "noImplicitAny": false
-
+    "noImplicitAny": false,
+    "isolatedModules": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
+    "skipLibCheck": true,
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "**/*.d.ts"
-  ],
   "include": [
     "src/*",
     "src/custom.d.ts"
   ],
+  "exclude": [
+    "node_modules/**",
+    "lib",
+    "*.d.ts"
+  ]
 }
