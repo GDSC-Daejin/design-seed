@@ -42,7 +42,7 @@ jobs:
       - name: install package
         run: yarn install
       - name: Build GDS
-        run: yarn workspace @gdsc-dju/styled-components tsc
+        run: yarn workspace @gdsc-dju/styled-components build
       - name: Project Build
         run: yarn build-storybook
         working-directory: ${{ env.working-directory }}
