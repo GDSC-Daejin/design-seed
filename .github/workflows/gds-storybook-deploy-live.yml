@@ -23,7 +23,7 @@ jobs:
     env:
       working-directory: ./packages/gds-storybook
     environment:
-      name: GDSC DJU blog Production
+      name: GDS Storybook Live
       url: https://design.gdsc-dju.com
     steps:
       - uses: actions/checkout@v2
