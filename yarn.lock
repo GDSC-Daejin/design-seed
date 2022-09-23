@@ -2639,7 +2639,6 @@ __metadata:
     rollup-plugin-dts: ^4.2.2
     rollup-plugin-terser: ^7.0.2
     rollup-plugin-tslint: ^0.2.2
-    rollup-plugin-typescript: ^1.0.1
     rollup-plugin-typescript2: ^0.34.0
     rollup-plugin-uglify: ^6.0.4
     standard-version: ^9.5.0
@@ -18767,19 +18766,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-typescript@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "rollup-plugin-typescript@npm:1.0.1"
-  dependencies:
-    resolve: ^1.10.0
-    rollup-pluginutils: ^2.5.0
-  peerDependencies:
-    tslib: "*"
-    typescript: ">=2.1.0"
-  checksum: e54fa3f11130d93ea15d19c5ef805a6db4f4ebf0798255210e2f3ffca0fc268d6890f3c311f03236d73781864d2299e51f81824c96bc916729357cdcef91a0f3
-  languageName: node
-  linkType: hard
-
 "rollup-plugin-uglify@npm:^6.0.4":
   version: 6.0.4
   resolution: "rollup-plugin-uglify@npm:6.0.4"
@@ -18794,7 +18780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-pluginutils@npm:^2.0.1, rollup-pluginutils@npm:^2.5.0":
+"rollup-pluginutils@npm:^2.0.1":
   version: 2.8.2
   resolution: "rollup-pluginutils@npm:2.8.2"
   dependencies:
