@@ -1,5 +1,5 @@
 import babel from '@rollup/plugin-babel';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 import tslint from 'rollup-plugin-tslint';
 import { terser } from 'rollup-plugin-terser';
 import { uglify } from 'rollup-plugin-uglify';
@@ -14,7 +14,10 @@ export default {
   },
   external: ['styled-components', 'react', 'react-router-dom'],
   plugins: [
-    typescript(),
+    typescript({
+      rollupCommonJSResolveHack: false,
+      clean: true,
+    }),
     tslint(),
     // dts(),
     babel({

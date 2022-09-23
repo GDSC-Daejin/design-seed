@@ -2640,6 +2640,7 @@ __metadata:
     rollup-plugin-terser: ^7.0.2
     rollup-plugin-tslint: ^0.2.2
     rollup-plugin-typescript: ^1.0.1
+    rollup-plugin-typescript2: ^0.34.0
     rollup-plugin-uglify: ^6.0.4
     standard-version: ^9.5.0
     tslib: ^2.4.0
@@ -3226,7 +3227,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^4.2.1":
+"@rollup/pluginutils@npm:^4.1.2, @rollup/pluginutils@npm:^4.2.1":
   version: 4.2.1
   resolution: "@rollup/pluginutils@npm:4.2.1"
   dependencies:
@@ -11371,7 +11372,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^3.3.1":
+"find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:
@@ -11743,7 +11744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.1.0":
+"fs-extra@npm:^10.0.0, fs-extra@npm:^10.1.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
   dependencies:
@@ -18748,6 +18749,21 @@ __metadata:
     tslint: ^5.9.1
     typescript: ^3.0.0
   checksum: 2fd609a4d33f1a6988380bf5cf0272d27e1419f3b9239f3e0f7e1a32be8af98a2660fa53e7e3ef76f3ba6a98616f38bb4b151ecc5d7eed7d6240f2e16c044307
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-typescript2@npm:^0.34.0":
+  version: 0.34.0
+  resolution: "rollup-plugin-typescript2@npm:0.34.0"
+  dependencies:
+    "@rollup/pluginutils": ^4.1.2
+    find-cache-dir: ^3.3.2
+    fs-extra: ^10.0.0
+    tslib: ^2.4.0
+  peerDependencies:
+    rollup: ">=1.26.3"
+    typescript: ">=2.4.0"
+  checksum: 14d5fbfa705430fdc0aaa6fed73ca9ae3c1297408f2da6b842942d40e0b44fbc264ee8be5ac7c61268dfcf61b281f770f010bd4bbd0332e2250cefd79c7352ea
   languageName: node
   linkType: hard
 

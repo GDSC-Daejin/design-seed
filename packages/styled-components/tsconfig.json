@@ -14,14 +14,11 @@
     "emitDeclarationOnly": true,
     "declarationDir": "./dist",
     "skipLibCheck": true,
+    "removeComments": true,
   },
   "include": [
-    "src/*",
+    "src",
     "src/custom.d.ts"
   ],
-  "exclude": [
-    "node_modules/**",
-    "lib",
-    "*.d.ts"
-  ]
+  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
 }
