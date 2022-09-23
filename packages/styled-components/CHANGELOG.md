@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.37 (2022-09-23)
+
+
+### Features
+
+* generate d.ts with rollup ([08af5d9](https://github.com/GDSC-Daejin/design-seed/commit/08af5d9b77f43855285e98c0f97640267c5bb887))
+
 ### 0.0.36 (2022-09-22)
 
 ### 0.0.35 (2022-09-22)
