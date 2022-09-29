@@ -5,31 +5,34 @@ import { terser } from 'rollup-plugin-terser';
 import { uglify } from 'rollup-plugin-uglify';
 import dts from 'rollup-plugin-dts';
 
-export default {
-  input: './src/index.ts',
-  output: {
-    file: './dist/bundle.js',
-    format: 'es',
-    sourcemap: true,
+export default [
+  {
+    input: './src/index.ts',
+    output: {
+      file: './dist/bundle.js',
+      format: 'esm',
+    },
+    external: ['styled-components', 'react', 'react-router-dom'],
+    plugins: [
+      typescript(),
+      uglify(),
+      tslint(),
+      babel({
+        babelHelpers: 'bundled',
+        presets: [
+          '@babel/preset-env',
+          '@babel/preset-react',
+          '@babel/preset-typescript',
+        ],
+
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      }),
+      terser(),
+    ],
   },
-  external: ['styled-components', 'react', 'react-router-dom'],
-  plugins: [
-    typescript({
-      rollupCommonJSResolveHack: false,
-      clean: true,
-    }),
-    tslint(),
-    // dts(),
-    babel({
-      babelHelpers: 'bundled',
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
-        '@babel/preset-typescript',
-      ],
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    }),
-    terser(),
-    uglify(),
-  ],
-};
+  {
+    input: 'src/index.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    plugins: [dts()],
+  },
+];
