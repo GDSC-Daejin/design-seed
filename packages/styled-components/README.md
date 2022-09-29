@@ -1,11 +1,11 @@
 # @gdsc-dju/styled-components
 
+[![install size](https://packagephobia.com/badge?p=@gdsc-dju/styled-components)](https://packagephobia.com/result?p=@gdsc-dju/styled-components)
+
 ## Introduction
 
-`@gdsc-dju/styled-components` is a library for creating color, font-size, window-sizes asset
+`@gdsc-dju/styled-components` is a library for creating colors, font-sizes, window-sizes asset
 that using in gdsc-dju websites.
-
-Please read this docs to use this library.
 
 ## Installation
 
@@ -20,7 +20,7 @@ yarn add styled-components @gdsc-dju/styled-components
 ### Setup Provider
 
 ```typescript jsx
-import {GdsThemeProvider} from "";
+import {GdsThemeProvider} from "@gdsc-dju/styled-components";
 
 <GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
@@ -79,12 +79,12 @@ You can also use ThemeProvider directly.
 
 type CustomTheme = {
     colors: ColorScheme,
-    myColors: MyColorScheme,
+    customColors: CustomColorToken,
 };
 
 const theme: CustomTheme = {
     colors: colors.light.scheme,
-    myColors: {/* ... */},
+    customColors: {/* ... */},
 };
 
 declare module 'styled-components' {
@@ -103,3 +103,9 @@ const menuValue = useToggleMenu();
     </MenuContext.Provider>
 </DarkModeContext.Provider>
 ```
+
+## FontSizes
+
+[gds-storybook FontSizes](https://design.gdsc-dju.com/?path=/story/typography-bold--page)
+
+
