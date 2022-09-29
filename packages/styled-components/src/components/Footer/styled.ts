@@ -35,6 +35,7 @@ export const FooterWrapper = styled.div`
   padding: 30px 40px;
   justify-content: space-between;
   width: 100vw;
+  z-index: 90;
   box-sizing: border-box;
   align-items: flex-end;
   background-color: rgba(0, 0, 0, 0.01);
