@@ -4,7 +4,7 @@ GDSC DJU의 디자인 시스템 모노레포입니다.
 
 [@gdsc-dju/styled-components](https://www.npmjs.com/package/@gdsc-dju/styled-components) 디자인 에셋 모듈
 
-gds-storybook 디자인 시스템을 위한 스토리북
+[gds-storybook](https://design.gdsc-dju.com/?path=/story/typography-bold--page) 디자인 시스템을 위한 스토리북
 
 ## Git Flow / Commit convention rule
 
