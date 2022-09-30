@@ -25,11 +25,11 @@ export const StyledTextAreaWrapper = styled(StyledInputWrapper)<{
       `}
   }
   .formInput:focus {
-    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue200};
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue600};
     ${(props) =>
       props.error &&
       css`
-        box-shadow: inset 0 0 0 2px ${props.theme.colors.blue200}!important;
+        box-shadow: inset 0 0 0 2px ${props.theme.colors.red600};
       `}
   }
   ${({ disabled }) =>

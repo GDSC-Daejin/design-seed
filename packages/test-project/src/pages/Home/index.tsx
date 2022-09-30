@@ -8,6 +8,7 @@ const Title = styled.h1<{ fontSize: keyof FontScheme }>`
   font-size: ${({ theme, fontSize }) => theme.fontSizes[fontSize]};
 `;
 const Home = () => {
+  const ref = React.useRef<HTMLInputElement>(null);
   return (
     <div>
       <Title fontSize={'titleXxl'}>
@@ -24,7 +25,7 @@ const Home = () => {
       <Title fontSize={'textS'}>textS Google Developer Student Clubs</Title>
       <TextInput />
       <TextArea />
-      <FileInput defaultPlaceholder={'asds'} />
+      <FileInput defaultPlaceholder={'Choose File'} ref={ref} />
     </div>
   );
 };

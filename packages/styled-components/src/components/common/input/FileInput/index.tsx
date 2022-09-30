@@ -5,7 +5,7 @@ import React, {
   forwardRef,
   useState,
 } from 'react';
-import FolderIcon from 'src/assets/FolderIcon';
+import FolderIcon from '../../../../assets/FolderIcon';
 
 import {
   InputImageWrapper,

@@ -55,19 +55,19 @@ export const StyledInputWrapper = styled.div<{
   box-shadow: inset 0 0 0 1px ${({ theme }) => theme.colors.grey300};
   cursor: auto;
   &:hover {
-    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue200};
-    ${(props) =>
-      props.error &&
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue200} !important;
+    ${({ error }) =>
+      error &&
       css`
-        box-shadow: inset 0 0 0 2px ${props.theme.colors.red900};
+        box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red600};
       `}
   }
   .formInput:focus {
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue600};
-    ${(props) =>
-      props.error &&
+    ${({ error }) =>
+      error &&
       css`
-        box-shadow: inset 0 0 0 2px ${props.theme.colors.red900}!important;
+        box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red900};
       `}
   }
   ${({ disabled }) =>
