@@ -1,17 +1,17 @@
-# @gdsc-dju/styled-components
+# @gdsc-dju/styled-components-theme
 
-[![install size](https://packagephobia.com/badge?p=@gdsc-dju/styled-components)](https://packagephobia.com/result?p=@gdsc-dju/styled-components)
+[![install size](https://packagephobia.com/badge?p=@gdsc-dju/styled-components-theme)](https://packagephobia.com/result?p=@gdsc-dju/styled-components-theme-theme)
 
 ## Introduction
 
-`@gdsc-dju/styled-components` is a library for creating colors, font-sizes, window-sizes asset
+`@gdsc-dju/styled-components-theme` is a library for creating colors, font-sizes, window-sizes asset
 that using in gdsc-dju websites.
 
 ## Installation
 
 
 ```shell
-yarn add styled-components-theme @gdsc-dju/styled-components-theme
+yarn add styled-components-theme-theme @gdsc-dju/styled-components-theme-theme
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ yarn add styled-components-theme @gdsc-dju/styled-components-theme
 ### Setup Provider
 
 ```typescript jsx
-import {GdsThemeProvider} from "@gdsc-dju/styled-components";
+import {GdsThemeProvider} from "@gdsc-dju/styled-components-theme";
 
 <GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
@@ -88,7 +88,7 @@ const theme: CustomTheme = {
     customColors: {/* ... */},
 };
 
-declare module 'styled-components' {
+declare module 'styled-components-theme' {
 interface DefaultTheme extends CustomTheme {}
 }
 

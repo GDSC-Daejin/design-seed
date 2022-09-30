@@ -1,18 +1,12 @@
 import React, { ReactNode, useEffect } from 'react';
-import OutsideClickHandler from 'src/utils/OutsideClickHandler';
 import { SideMenuWrapper } from './styled';
 
 interface SideMenuProps {
   isMenuOpen?: boolean;
   children?: ReactNode;
-  menuHandler: (type: boolean) => void;
 }
 
-const SideMenu = ({
-  children,
-  isMenuOpen = false,
-  menuHandler,
-}: SideMenuProps) => {
+const SideMenu = ({ children, isMenuOpen = false }: SideMenuProps) => {
   useEffect(() => {
     document.body.style.cssText = `
     position: fixed; 
@@ -27,13 +21,7 @@ const SideMenu = ({
     }
   }, [isMenuOpen]);
 
-  return (
-    <SideMenuWrapper animate={isMenuOpen}>
-      <OutsideClickHandler outsideClick={() => menuHandler(false)}>
-        {children}
-      </OutsideClickHandler>
-    </SideMenuWrapper>
-  );
+  return <SideMenuWrapper animate={isMenuOpen}>{children}</SideMenuWrapper>;
 };
 
 export default SideMenu;

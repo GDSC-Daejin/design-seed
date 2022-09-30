@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontScheme } from '../../../../styled-components-theme';
+import { FontScheme } from '@gdsc-dju/styled-components-theme';
+import { FileInput, TextArea, TextInput } from '@gdsc-dju/styled-components';
 
 const Title = styled.h1<{ fontSize: keyof FontScheme }>`
   color: ${({ theme }) => theme.colors.grey900};
@@ -21,6 +22,9 @@ const Home = () => {
       <Title fontSize={'textL'}>textL Google Developer Student Clubs</Title>
       <Title fontSize={'textM'}>textM Google Developer Student Clubs</Title>
       <Title fontSize={'textS'}>textS Google Developer Student Clubs</Title>
+      <TextInput />
+      <TextArea />
+      <FileInput defaultPlaceholder={'asds'} />
     </div>
   );
 };

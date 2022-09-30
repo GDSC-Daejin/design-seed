@@ -1,4 +1,4 @@
-import { Footer, Navigation } from '../../../styled-components-theme';
+import { Footer, Navigation } from '@gdsc-dju/styled-components';
 // import { Navigation } from '../../../styled-components-theme/src';
 
 import React, { useContext } from 'react';
@@ -33,7 +33,7 @@ const MenuBackground = styled.div`
 `;
 
 const Layout = () => {
-  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
+  const { isMenuOpen, toggleMenu, menuHandler } = useContext(MenuContext);
   return (
     <>
       <Navigation
@@ -43,9 +43,12 @@ const Layout = () => {
         themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}
-        menuHandler={toggleMenu}
         menuPosition={'right'}
-        sideMenu={<MenuBackground>테스트</MenuBackground>}
+        sideMenu={
+          <MenuBackground onClick={() => menuHandler(false)}>
+            테스트
+          </MenuBackground>
+        }
       />
       <div style={{ height: '70px' }} />
       <Routes>

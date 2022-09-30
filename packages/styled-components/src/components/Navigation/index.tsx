@@ -37,7 +37,6 @@ export interface NavigationProps {
     | 'right-mobile-only';
   isMenuOpen?: boolean;
   menuToggle?: () => void;
-  menuHandler?: (type: boolean) => void;
   sideMenu?: React.ReactNode;
   rightElement?: React.ReactNode;
   customLogo?: React.ReactNode;
@@ -51,7 +50,6 @@ export const Navigation = ({
   pointColor = 'blue900',
   menuPosition = 'right',
   menuToggle,
-  menuHandler,
   isMenuOpen = false,
   sideMenu,
   rightElement,
@@ -111,13 +109,7 @@ export const Navigation = ({
           </MenuButtonWrapper>
         )}
       </NavInner>
-      {menuToggle && menuHandler && (
-        <SideMenu
-          isMenuOpen={isMenuOpen}
-          children={sideMenu}
-          menuHandler={menuHandler}
-        />
-      )}
+      {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
     </NavWrapper>
   );
 };

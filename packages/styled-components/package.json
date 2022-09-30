@@ -3,7 +3,7 @@
   "version": "0.0.43",
   "type": "module",
   "packageManager": "yarn@3.2.2",
-  "description": "GDSC-DJU Design System package for styled-components",
+  "description": "GDSC-DJU Design System Component package for styled-components",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
