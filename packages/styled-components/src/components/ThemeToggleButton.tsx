@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 import DarkModeIcon from '../assets/darkModeIcon';
 import LightModeIcon from '../assets/lightModeIcon';
-import { DarkModeContext } from '../contexts/DarkModeContext';
+import { DarkModeContext } from '@gdsc-dju/styled-components-theme';
 
 const startAnimation = keyframes`
   0% {

@@ -2623,9 +2623,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gdsc-dju/styled-component-theme@workspace:packages/styled-components-theme":
+"@gdsc-dju/styled-components-theme@workspace:packages/styled-components-theme":
   version: 0.0.0-use.local
-  resolution: "@gdsc-dju/styled-component-theme@workspace:packages/styled-components-theme"
+  resolution: "@gdsc-dju/styled-components-theme@workspace:packages/styled-components-theme"
   dependencies:
     "@babel/core": ^7.19.1
     "@babel/preset-env": ^7.19.1
@@ -2652,9 +2652,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gdsc-dju/styled-components@*, @gdsc-dju/styled-components@workspace:packages/ui-components":
+"@gdsc-dju/styled-components@*, @gdsc-dju/styled-components@workspace:packages/styled-components":
   version: 0.0.0-use.local
-  resolution: "@gdsc-dju/styled-components@workspace:packages/ui-components"
+  resolution: "@gdsc-dju/styled-components@workspace:packages/styled-components"
   dependencies:
     "@babel/core": ^7.19.1
     "@babel/preset-env": ^7.19.1
@@ -2674,6 +2674,7 @@ __metadata:
     tslib: ^2.4.0
     typescript: ^4.8.3
   peerDependencies:
+    "@gdsc-dju/styled-components-theme": "*"
     react: ^18.2.0
     react-is: ^18.2.0
     react-router-dom: "*"

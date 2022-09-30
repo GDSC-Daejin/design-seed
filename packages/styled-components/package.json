@@ -1,6 +1,6 @@
 {
   "name": "@gdsc-dju/styled-components",
-  "version": "0.0.0",
+  "version": "0.0.43",
   "type": "module",
   "packageManager": "yarn@3.2.2",
   "description": "GDSC-DJU Design System package for styled-components",
@@ -39,11 +39,11 @@
     "dist"
   ],
   "peerDependencies": {
+    "@gdsc-dju/styled-components-theme": "*",
     "react": "^18.2.0",
     "react-is": "^18.2.0",
     "react-router-dom": "*",
-    "styled-components": "^5.3.5",
-    "@gdsc-dju/styled-components-theme": "*"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",

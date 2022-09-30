@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { ColorToken } from '../..';
+import { ColorToken } from '@gdsc-dju/styled-components-theme';
 
 export const NavWrapper = styled.nav`
   height: 70px;

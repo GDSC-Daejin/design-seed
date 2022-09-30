@@ -1,10 +1,5 @@
 import React from 'react';
 import styled, { css, useTheme } from 'styled-components';
-import { GdsTheme } from '../GdsThemeProvider';
-
-declare module 'styled-components' {
-  export interface DefaultTheme extends GdsTheme {}
-}
 
 interface MenuIconProps {
   isMenuOpen: boolean;

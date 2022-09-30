@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect } from 'react';
+import OutsideClickHandler from 'src/utils/OutsideClickHandler';
 import { SideMenuWrapper } from './styled';
-import OutsideClickHandler from '../../utils/OutsideClickHandler';
 
 interface SideMenuProps {
   isMenuOpen?: boolean;
@@ -26,6 +26,7 @@ const SideMenu = ({
       window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
     }
   }, [isMenuOpen]);
+
   return (
     <SideMenuWrapper animate={isMenuOpen}>
       <OutsideClickHandler outsideClick={() => menuHandler(false)}>

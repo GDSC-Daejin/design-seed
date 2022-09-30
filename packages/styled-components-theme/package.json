@@ -1,5 +1,5 @@
 {
-  "name": "@gdsc-dju/styled-component-theme",
+  "name": "@gdsc-dju/styled-components-theme",
   "version": "0.0.42",
   "type": "module",
   "packageManager": "yarn@3.2.2",
@@ -15,7 +15,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/GDSC-Daejin/design-seed",
-    "directory": "packages/styled-components"
+    "directory": "packages/styled-components-theme"
   },
   "publishConfig": {
     "access": "public",

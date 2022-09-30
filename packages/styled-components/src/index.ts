@@ -1,4 +1,3 @@
-export { GdsThemeProvider } from './GdsThemeProvider';
 export { Navigation } from './components/Navigation';
 export { Footer } from './components/Footer';
 export { ThemeToggleButton } from './components/ThemeToggleButton';

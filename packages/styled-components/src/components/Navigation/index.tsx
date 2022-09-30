@@ -13,11 +13,11 @@ import {
   StyledLink,
   StyledLogoWrapper,
 } from './styled';
-
-import { ColorToken, ThemeToggleButton } from '../..';
+import { ColorToken } from '@gdsc-dju/styled-components-theme';
 import MenuIcon from '../MenuIcon';
 import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';
+import { ThemeToggleButton } from '../ThemeToggleButton';
 
 export type NavigationRoutes = {
   route: string;
