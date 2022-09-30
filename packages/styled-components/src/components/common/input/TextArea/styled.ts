@@ -92,5 +92,12 @@ export const StyledTextArea = styled.textarea<{
     error &&
     css`
       box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red900};
-    `}
+    `};
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      cursor: not-allowed;
+      background: ${({ theme }) => theme.colors.grey100};
+      color: ${({ theme }) => theme.colors.grey400};
+    `};
 `;

@@ -23,7 +23,8 @@ export interface FileInputProps extends HTMLAttributes<HTMLInputElement> {
 
 export const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
   (props, ref) => {
-    const { defaultPlaceholder, errorToggle, disabled, onChange } = props;
+    const { defaultPlaceholder, errorToggle, disabled, onChange, ...rest } =
+      props;
     const [placeholder, setPlaceholder] = useState(
       defaultPlaceholder || 'Choose a file',
     );
@@ -33,14 +34,22 @@ export const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
         onChange && onChange(e);
       }
     };
+    const inputRef = document.getElementById('formInput') as HTMLInputElement;
     return (
-      <StyledInputWrapper error={errorToggle} disabled={!disabled}>
+      <StyledInputWrapper
+        error={errorToggle}
+        disabled={!disabled}
+        onClick={() => {
+          inputRef && inputRef.click();
+        }}
+      >
         <InputImageWrapper>
           <FolderIcon />
         </InputImageWrapper>
         <StyledFileInput>{placeholder}</StyledFileInput>
         <input
-          {...props}
+          {...rest}
+          id={'formInput'}
           ref={ref}
           type={'file'}
           style={{ display: 'none' }}

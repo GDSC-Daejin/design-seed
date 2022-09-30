@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigation } from '../../styled-components-theme';
+import { Navigation } from '../../styled-components';
 import { Story } from '@storybook/react';
 
 export default {

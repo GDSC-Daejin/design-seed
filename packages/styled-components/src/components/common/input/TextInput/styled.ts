@@ -23,6 +23,7 @@ export const StyledInputInner = styled.input<{ disabled?: boolean }>`
     css`
       background: ${({ theme }) => theme.colors.grey100};
       color: ${({ theme }) => theme.colors.grey400};
+      cursor: not-allowed;
     `}
 `;
 export const StyledFileInput = styled.div`

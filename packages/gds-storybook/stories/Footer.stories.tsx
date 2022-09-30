@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '../../styled-components-theme';
+import { Footer } from '@gdsc-dju/styled-components';
 import { Story } from '@storybook/react';
 
 export default {

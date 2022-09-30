@@ -91,19 +91,19 @@ export const StyledLi = styled.li<{
 `;
 
 export const StyledLink = styled(Link)<{
-  isRoute?: boolean;
-  pointColor: ColorToken;
+  active: boolean;
+  pointcolor: ColorToken;
 }>`
   text-decoration: none;
   list-style: none;
   font-size: ${({ theme }) => theme.fontSizes.textM};
   color: ${({ theme }) => theme.colors.grey700};
   transition: all 0.2s ease-in-out;
-  ${({ isRoute, pointColor }) =>
-    isRoute &&
-    pointColor &&
+  ${({ active, pointcolor }) =>
+    active &&
+    pointcolor &&
     css`
-      color: ${({ theme }) => theme.colors[pointColor]};
+      color: ${({ theme }) => theme.colors[pointcolor]};
     `};
 `;
 

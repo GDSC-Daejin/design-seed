@@ -87,17 +87,20 @@ export const Navigation = ({
           </StyledLogoWrapper>
           {routes && (
             <LinkWrapper>
-              {routes.map((link) => (
-                <StyledLi key={link.route} pointColor={pointColor}>
-                  <StyledLink
-                    isRoute={location.pathname == link.route}
-                    to={link.route}
-                    pointColor={pointColor}
-                  >
-                    {link.title}
-                  </StyledLink>
-                </StyledLi>
-              ))}
+              {routes.map((link) => {
+                const isRoute = location.pathname === link.route;
+                return (
+                  <StyledLi key={link.route} pointColor={pointColor}>
+                    <StyledLink
+                      active={isRoute}
+                      to={link.route}
+                      pointcolor={pointColor}
+                    >
+                      {link.title}
+                    </StyledLink>
+                  </StyledLi>
+                );
+              })}
             </LinkWrapper>
           )}
         </NavTaskWrapper>

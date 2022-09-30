@@ -8,10 +8,10 @@ export interface TextInputProps extends HTMLAttributes<HTMLInputElement> {
 }
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
   (props, ref) => {
-    const { error, disabled } = props;
+    const { error, disabled, ...rest } = props;
     return (
       <StyledInputWrapper error={error} disabled={disabled}>
-        <StyledInputInner className={'formInput'} {...props} ref={ref} />
+        <StyledInputInner className={'formInput'} {...rest} ref={ref} />
       </StyledInputWrapper>
     );
   },
