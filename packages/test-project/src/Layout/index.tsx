@@ -1,11 +1,11 @@
-import { Footer, Navigation } from '@gdsc-dju/styled-components';
-// import { Navigation } from '../../../styled-components/src';
+import { Footer, Navigation } from '../../../styled-components-theme';
+// import { Navigation } from '../../../styled-components-theme/src';
 
 import React, { useContext } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
-import { MenuContext } from '@gdsc-dju/styled-components';
+import { MenuContext } from '../../../styled-components-theme';
 import styled from 'styled-components';
 
 const route = [

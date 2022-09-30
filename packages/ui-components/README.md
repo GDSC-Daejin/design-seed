@@ -11,7 +11,7 @@ Please read this docs to use this library.
 
 
 ```shell
-yarn add styled-components @gdsc-dju/styled-components
+yarn add styled-components-theme @gdsc-dju/styled-components-theme
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ import {GdsThemeProvider} from "";
 You can change theme by using `DarkModeContext`.
 
 ```typescript jsx
-import {DarkModeContext} from "@gdsc-dju/styled-components";
+import {DarkModeContext} from "../styled-components-theme";
 
 const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 
@@ -43,8 +43,9 @@ const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 ```
 
 You can open SideMenu by using `MenuContext`.
+
 ```typescript jsx
-import {MenuContext} from "@gdsc-dju/styled-components";
+import {MenuContext} from "../styled-components-theme";
 
 const {isMenuOpen, toggleMenu, menuHandler} = useContext(MenuContext);
 

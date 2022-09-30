@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontScheme } from '@gdsc-dju/styled-components';
+import { FontScheme } from '../../../../styled-components-theme';
 
 const Title = styled.h1<{ fontSize: keyof FontScheme }>`
   color: ${({ theme }) => theme.colors.grey900};

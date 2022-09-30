@@ -1,6 +1,6 @@
 import React, { ReactNode, forwardRef } from 'react';
 import styled from 'styled-components';
-import { ColorToken, FontToken } from '@gdsc-dju/styled-components';
+import { ColorToken, FontToken } from '../../../styled-components-theme';
 
 export type HeadingProps = {
   label: ReactNode;

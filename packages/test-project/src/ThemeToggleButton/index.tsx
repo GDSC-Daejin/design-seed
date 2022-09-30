@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { DarkModeContext } from '../../../styled-components';
+import { DarkModeContext } from '../../../styled-components-theme';
 import DarkModeIcon from '../assets/darkModeIcon';
 import LightModeIcon from '../assets/lightModeIcon';
 

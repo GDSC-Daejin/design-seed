@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - "packages/gds-storybook/**"
-      - "packages/styled-components/**"
+      - "packages/styled-components-theme/**"
       - ".github/workflows/gds-storybook-deploy-live.yml"
   pull_request:
     branches:
@@ -15,7 +15,7 @@ on:
       - closed
     paths:
       - "packages/gds-storybook/**"
-      - "packages/styled-components/**"
+      - "packages/styled-components-theme/**"
       - ".github/workflows/gds-storybook-deploy-live.yml"
 jobs:
   Deploy_Live_channel:
@@ -42,7 +42,7 @@ jobs:
       - name: install package
         run: yarn install
       - name: Build GDS
-        run: yarn workspace @gdsc-dju/styled-components build
+        run: yarn workspace @gdsc-dju/styled-components-theme build
       - name: Project Build
         run: yarn build-storybook
         working-directory: ${{ env.working-directory }}

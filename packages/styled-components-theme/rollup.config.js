@@ -12,7 +12,7 @@ export default {
     format: 'es',
     sourcemap: true,
   },
-  external: ['styled-components', 'react', 'react-router-dom'],
+  external: ['styled-components-theme', 'react', 'react-router-dom'],
   plugins: [
     typescript({
       rollupCommonJSResolveHack: false,
