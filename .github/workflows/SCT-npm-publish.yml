@@ -5,6 +5,7 @@ on:
     branches: [ master ]
     paths:
       - "packages/styled-components-theme/**"
+      - ".github/workflows/SCT-npm-publish.yml"
   pull_request:
     branches:
       - master

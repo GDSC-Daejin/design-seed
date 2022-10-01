@@ -5,6 +5,7 @@ on:
     branches: [ master ]
     paths:
       - "packages/styled-components/**"
+      - ".github/workflows/SC-npm-publish.yml"
   pull_request:
     branches:
       - master
