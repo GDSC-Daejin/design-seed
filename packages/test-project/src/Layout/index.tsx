@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import { MenuContext } from '../../../styled-components-theme';
 import styled from 'styled-components';
+import Foundation from '../pages/Foundation';
 
 const route = [
   {
@@ -52,12 +53,10 @@ const Layout = () => {
       />
       <div style={{ height: '70px' }} />
       <Routes>
-        <>
-          <Route path={'/'} element={<Home />} />
-          <Route path={'/foundation'} element={<Home />} />
-          <Route path={'/component'} element={<Home />} />
-          <Route path={'/frameWork'} element={<Home />} />
-        </>
+        <Route path={'/'} element={<Home />} />
+        <Route path={'/foundation'} element={<Foundation />} />
+        <Route path={'/component'} element={<Home />} />
+        <Route path={'/frameWork'} element={<Home />} />
       </Routes>
       <Footer />
     </>

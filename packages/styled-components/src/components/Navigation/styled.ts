@@ -72,7 +72,6 @@ export const StyledLi = styled.li<{
   align-items: center;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
-  padding: 10px 15px;
   margin-left: 0;
   &:first-child {
     margin-left: 16px;
@@ -94,6 +93,7 @@ export const StyledLink = styled(Link)<{
   active: boolean;
   pointcolor: ColorToken;
 }>`
+  padding: 10px 15px;
   text-decoration: none;
   list-style: none;
   font-size: ${({ theme }) => theme.fontSizes.textM};
