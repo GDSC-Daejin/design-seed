@@ -13,11 +13,11 @@ import {
   StyledLink,
   StyledLogoWrapper,
 } from './styled';
-
-import { ColorToken, ThemeToggleButton } from '../..';
+import { ColorToken } from '@gdsc-dju/styled-components-theme';
 import MenuIcon from '../MenuIcon';
 import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';
+import { ThemeToggleButton } from '../ThemeToggleButton';
 
 export type NavigationRoutes = {
   route: string;
@@ -37,7 +37,6 @@ export interface NavigationProps {
     | 'right-mobile-only';
   isMenuOpen?: boolean;
   menuToggle?: () => void;
-  menuHandler?: (type: boolean) => void;
   sideMenu?: React.ReactNode;
   rightElement?: React.ReactNode;
   customLogo?: React.ReactNode;
@@ -51,7 +50,6 @@ export const Navigation = ({
   pointColor = 'blue900',
   menuPosition = 'right',
   menuToggle,
-  menuHandler,
   isMenuOpen = false,
   sideMenu,
   rightElement,
@@ -89,17 +87,20 @@ export const Navigation = ({
           </StyledLogoWrapper>
           {routes && (
             <LinkWrapper>
-              {routes.map((link) => (
-                <StyledLi key={link.route} pointColor={pointColor}>
-                  <StyledLink
-                    isRoute={location.pathname == link.route}
-                    to={link.route}
-                    pointColor={pointColor}
-                  >
-                    {link.title}
-                  </StyledLink>
-                </StyledLi>
-              ))}
+              {routes.map((link) => {
+                const isRoute = location.pathname === link.route;
+                return (
+                  <StyledLi key={link.route} pointColor={pointColor}>
+                    <StyledLink
+                      active={isRoute}
+                      to={link.route}
+                      pointcolor={pointColor}
+                    >
+                      {link.title}
+                    </StyledLink>
+                  </StyledLi>
+                );
+              })}
             </LinkWrapper>
           )}
         </NavTaskWrapper>
@@ -111,13 +112,7 @@ export const Navigation = ({
           </MenuButtonWrapper>
         )}
       </NavInner>
-      {menuToggle && menuHandler && (
-        <SideMenu
-          isMenuOpen={isMenuOpen}
-          children={sideMenu}
-          menuHandler={menuHandler}
-        />
-      )}
+      {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
     </NavWrapper>
   );
 };

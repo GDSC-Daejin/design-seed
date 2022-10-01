@@ -1,0 +1,42 @@
+name: Node.js Package
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - "packages/styled-components/**"
+  pull_request:
+    branches:
+      - master
+    types:
+      - closed
+    paths:
+      - "packages/styled-components/**"
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./packages/styled-components
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org
+      - run: yarn install
+      - name: Build GDS
+        run: yarn workspace @gdsc-dju/styled-components-theme build
+      - name: version up
+        run: |
+          git config --global user.name 'hyeoke0'
+          git config --global user.email jhjeong00@gmail.com
+          yarn release
+          git push --follow-tags origin master
+        working-directory: ${{ env.working-directory }}
+      - name: build
+        run: yarn build
+        working-directory: ${{ env.working-directory }}
+      - run: npm publish
+        working-directory: ${{ env.working-directory }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -1,7 +1,5 @@
-import {
-  GdsThemeProvider,
-  ThemeToggleButton,
-} from '@gdsc-dju/styled-components';
+import { GdsThemeProvider } from '@gdsc-dju/styled-components-theme';
+import { ThemeToggleButton } from '@gdsc-dju/styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import GlobalStyles from '../stories/styles/globalStyles';
 

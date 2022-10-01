@@ -1,4 +1,4 @@
-import { GdsThemeProvider } from '@gdsc-dju/styled-components';
+import { GdsThemeProvider } from '../../styled-components-theme';
 import React from 'react';
 
 import GlobalStyles from './globalStyles';

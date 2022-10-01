@@ -1,9 +1,9 @@
 {
-  "name": "@gdsc-dju/styled-components",
-  "version": "0.0.43",
+  "name": "@gdsc-dju/styled-components-theme",
+  "version": "0.0.42",
   "type": "module",
   "packageManager": "yarn@3.2.2",
-  "description": "GDSC-DJU Design System Component package for styled-components",
+  "description": "GDSC-DJU Design System Token package for styled-components",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
@@ -15,7 +15,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/GDSC-Daejin/design-seed",
-    "directory": "packages/styled-components"
+    "directory": "packages/styled-components-theme"
   },
   "publishConfig": {
     "access": "public",
@@ -39,7 +39,6 @@
     "dist"
   ],
   "peerDependencies": {
-    "@gdsc-dju/styled-components-theme": "*",
     "react": "^18.2.0",
     "react-is": "^18.2.0",
     "react-router-dom": "*",

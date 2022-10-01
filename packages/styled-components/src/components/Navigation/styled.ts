@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { ColorToken } from '../..';
+import { ColorToken } from '@gdsc-dju/styled-components-theme';
 
 export const NavWrapper = styled.nav`
   height: 70px;
@@ -72,7 +72,6 @@ export const StyledLi = styled.li<{
   align-items: center;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
-  padding: 10px 15px;
   margin-left: 0;
   &:first-child {
     margin-left: 16px;
@@ -91,19 +90,20 @@ export const StyledLi = styled.li<{
 `;
 
 export const StyledLink = styled(Link)<{
-  isRoute?: boolean;
-  pointColor: ColorToken;
+  active: boolean;
+  pointcolor: ColorToken;
 }>`
+  padding: 10px 15px;
   text-decoration: none;
   list-style: none;
   font-size: ${({ theme }) => theme.fontSizes.textM};
   color: ${({ theme }) => theme.colors.grey700};
   transition: all 0.2s ease-in-out;
-  ${({ isRoute, pointColor }) =>
-    isRoute &&
-    pointColor &&
+  ${({ active, pointcolor }) =>
+    active &&
+    pointcolor &&
     css`
-      color: ${({ theme }) => theme.colors[pointColor]};
+      color: ${({ theme }) => theme.colors[pointcolor]};
     `};
 `;
 
