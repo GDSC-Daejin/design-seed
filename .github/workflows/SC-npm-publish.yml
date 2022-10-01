@@ -28,6 +28,7 @@ jobs:
         run: yarn workspace @gdsc-dju/styled-components-theme build
       - name: version up
         run: |
+          git pull
           git config --global user.name 'hyeoke0'
           git config --global user.email jhjeong00@gmail.com
           yarn release
