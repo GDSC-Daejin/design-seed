@@ -2,11 +2,14 @@
 
 GDSC DJU의 디자인 시스템 모노레포입니다.
 
+Provider
+[@gdsc-dju/styled-components-theme](https://github.com/GDSC-Daejin/design-seed/blob/master/packages/styled-components-theme/README.md)
 
+Components
+[@gdsc-dju/styled-components](https://github.com/GDSC-Daejin/design-seed/blob/master/packages/styled-components/README.md)
 
-[@gdsc-dju/styled-components](https://github.com/GDSC-Daejin/design-seed/blob/master/packages/styled-components/README.md) 
-
-[gds-storybook](https://design.gdsc-dju.com/?path=/story/typography-bold--page) 디자인 시스템을 위한 스토리북
+Storybook
+[gds-storybook](https://design.gdsc-dju.com/?path=/story/typography-bold--page)
 
 ## Git Flow / Commit convention rule
 

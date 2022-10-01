@@ -33,7 +33,7 @@ import {GdsThemeProvider} from "@gdsc-dju/styled-components-theme";
 You can change theme by using `DarkModeContext`.
 
 ```typescript jsx
-import {DarkModeContext} from "";
+import {DarkModeContext} from "@gdsc-dju/styled-components-theme";
 
 const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 
@@ -45,7 +45,7 @@ const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 You can open SideMenu by using `MenuContext`.
 
 ```typescript jsx
-import {MenuContext} from "";
+import {MenuContext} from "@gdsc-dju/styled-components-theme";
 
 const {isMenuOpen, toggleMenu, menuHandler} = useContext(MenuContext);
 
