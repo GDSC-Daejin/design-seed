@@ -43,8 +43,6 @@ export const NavTaskWrapper = styled.ul`
   flex: 1;
   align-items: center;
   list-style: none;
-  padding-left: 0;
-  gap: 10px;
   position: relative;
 `;
 
@@ -52,6 +50,8 @@ export const LinkWrapper = styled.ul`
   margin-left: 20px;
   display: none;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
   @media (min-width: 800px) {
     display: flex;
   } ;
