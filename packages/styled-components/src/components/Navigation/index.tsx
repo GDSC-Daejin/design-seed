@@ -18,7 +18,6 @@ import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';
 import { ThemeToggleButton } from '../ThemeToggleButton';
 import NavigationLogo from './NavigationLogo';
-import { isColorToken } from '../../utils/isColorToken';
 
 export type NavigationRoutes = {
   route: string;
