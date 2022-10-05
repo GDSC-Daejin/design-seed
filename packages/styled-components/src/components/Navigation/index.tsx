@@ -65,7 +65,6 @@ export const Navigation = ({
                 <MenuIcon isMenuOpen={isMenuOpen} />
               </MenuButtonWrapper>
             )}
-
             <NavigationLogo
               title={title}
               customLogo={customLogo}

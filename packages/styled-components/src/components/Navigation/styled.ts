@@ -92,11 +92,12 @@ export const StyledLink = styled(Link)<{
   color: ColorToken | string;
 }>`
   padding: 10px 15px;
-  text-decoration: none;
   list-style: none;
   font-size: ${({ theme }) => theme.fontSizes.textM};
   color: ${({ theme }) => theme.colors.grey700};
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-transform: capitalize;
   ${({ active, color }) =>
     active && color && isColorToken(color)
       ? css`
@@ -104,7 +105,7 @@ export const StyledLink = styled(Link)<{
         `
       : css`
           color: ${color};
-        `}
+        `};
 `;
 
 export const MenuButtonWrapper = styled.div<{
