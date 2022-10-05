@@ -1,6 +1,6 @@
 {
   "name": "@gdsc-dju/styled-components-theme",
-  "version": "0.0.47",
+  "version": "0.0.48",
   "type": "module",
   "packageManager": "yarn@3.2.2",
   "description": "GDSC-DJU Design System Token package for styled-components",
