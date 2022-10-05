@@ -29,9 +29,10 @@ jobs:
         run: yarn workspace @gdsc-dju/styled-components-theme build
       - name: version up
         run: |
-          git pull
+          git pull origin master
           git config --global user.name 'hyeoke0'
           git config --global user.email jhjeong00@gmail.com
+          git pull origin master
           yarn release
           git push --follow-tags origin master
         working-directory: ${{ env.working-directory }}

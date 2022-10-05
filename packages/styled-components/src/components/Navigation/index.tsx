@@ -65,13 +65,13 @@ export const Navigation = ({
                 <MenuIcon isMenuOpen={isMenuOpen} />
               </MenuButtonWrapper>
             )}
-            <div style={{ zIndex: '999' }}>
-              <NavigationLogo
-                title={title}
-                customLogo={customLogo}
-                pointColor={pointColor}
-              />
-            </div>
+
+            <NavigationLogo
+              title={title}
+              customLogo={customLogo}
+              pointColor={pointColor}
+            />
+
             <NavTaskWrapper>
               {routes && (
                 <LinkWrapper>
