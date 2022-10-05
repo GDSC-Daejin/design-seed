@@ -32,7 +32,6 @@ export const FooterCopyRight = styled.span`
 export const FooterWrapper = styled.div`
   display: flex;
   bottom: 0;
-  position: fixed;
   padding: 30px 40px;
   justify-content: space-between;
   width: 100vw;
