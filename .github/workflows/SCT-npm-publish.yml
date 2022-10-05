@@ -27,10 +27,11 @@ jobs:
       - run: yarn install
       - name: version up
         run: |
-          git pull
+          git pull origin master
           git config --global user.name 'hyeoke0'
           git config --global user.email jhjeong00@gmail.com
           yarn release
+          git pull origin master
           git push --follow-tags origin master
         working-directory: ${{ env.working-directory }}
       - name: build
