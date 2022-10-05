@@ -8,7 +8,6 @@ export const SideMenuWrapper = styled.div<{ animate: boolean }>`
   right: 0;
   z-index: 91;
   transition: all 0.3s ease-out;
-  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: saturate(60%) blur(2px);
   ${({ animate }) =>
     animate
@@ -22,4 +21,9 @@ export const SideMenuWrapper = styled.div<{ animate: boolean }>`
           opacity: 0;
           //transform: translateX(-100vw);
         `};
+`;
+export const SideMenuInner = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.2);
 `;

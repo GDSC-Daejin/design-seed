@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect } from 'react';
-import { SideMenuWrapper } from './styled';
+import { SideMenuInner, SideMenuWrapper } from './styled';
 
 interface SideMenuProps {
   isMenuOpen?: boolean;
@@ -21,7 +21,11 @@ const SideMenu = ({ children, isMenuOpen = false }: SideMenuProps) => {
     }
   }, [isMenuOpen]);
 
-  return <SideMenuWrapper animate={isMenuOpen}>{children}</SideMenuWrapper>;
+  return (
+    <SideMenuWrapper animate={isMenuOpen}>
+      <SideMenuInner>{children}</SideMenuInner>
+    </SideMenuWrapper>
+  );
 };
 
 export default SideMenu;

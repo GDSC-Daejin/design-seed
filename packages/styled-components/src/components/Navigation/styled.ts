@@ -7,8 +7,7 @@ export const NavWrapper = styled.nav`
   position: fixed;
   top: 0;
   z-index: 90;
-  background-color: rgba(0, 0, 0, 0.01);
-  backdrop-filter: blur(10px);
+  background: ${({ theme }) => theme.colors.background};
   box-shadow: 0 4px 30px ${({ theme }) => theme.colors.boxShadow100};
   width: 100vw;
   display: flex;
@@ -32,6 +31,7 @@ export const NavInner = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 `;
 export const NavTaskWrapper = styled.ul`
   display: flex;

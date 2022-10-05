@@ -55,52 +55,55 @@ export const Navigation = ({
 }: NavigationProps) => {
   const location = useLocation();
   return (
-    <NavWrapper>
-      <NavLogoContainer>
-        <NavLogoContainerInner>
-          <NavigationLogo
-            title={title}
-            customLogo={customLogo}
-            pointColor={pointColor}
-          />
-        </NavLogoContainerInner>
-      </NavLogoContainer>
-      <NavInner>
-        <NavTaskWrapper>
-          {(menuPosition == 'left' || menuPosition == 'left-mobile-only') && (
+    <>
+      <NavWrapper>
+        <NavLogoContainer>
+          <NavLogoContainerInner>
+            {(menuPosition == 'left' || menuPosition == 'left-mobile-only') && (
+              <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+                <MenuIcon isMenuOpen={isMenuOpen} />
+              </MenuButtonWrapper>
+            )}
+            <NavigationLogo
+              title={title}
+              customLogo={customLogo}
+              pointColor={pointColor}
+            />
+            <NavTaskWrapper>
+              {routes && (
+                <LinkWrapper>
+                  {routes.map((link) => {
+                    const isRoute = location.pathname === link.route;
+                    return (
+                      <StyledLi key={link.route} color={pointColor}>
+                        <StyledLink
+                          active={isRoute}
+                          to={link.route}
+                          color={pointColor}
+                        >
+                          {link.title}
+                        </StyledLink>
+                      </StyledLi>
+                    );
+                  })}
+                </LinkWrapper>
+              )}
+            </NavTaskWrapper>
+          </NavLogoContainerInner>
+        </NavLogoContainer>
+        <NavInner>
+          <div />
+          {rightElement && <>{rightElement}</>}
+          {themeButtonActive && <ThemeToggleButton />}
+          {(menuPosition === 'right' ||
+            menuPosition === 'right-mobile-only') && (
             <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
-
-          {routes && (
-            <LinkWrapper>
-              {routes.map((link) => {
-                const isRoute = location.pathname === link.route;
-                return (
-                  <StyledLi key={link.route} color={pointColor}>
-                    <StyledLink
-                      active={isRoute}
-                      to={link.route}
-                      color={pointColor}
-                    >
-                      {link.title}
-                    </StyledLink>
-                  </StyledLi>
-                );
-              })}
-            </LinkWrapper>
-          )}
-        </NavTaskWrapper>
-        {rightElement && <>{rightElement}</>}
-        {themeButtonActive && <ThemeToggleButton />}
-        {(menuPosition === 'right' || menuPosition === 'right-mobile-only') && (
-          <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
-            <MenuIcon isMenuOpen={isMenuOpen} />
-          </MenuButtonWrapper>
-        )}
-      </NavInner>
-      {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
-    </NavWrapper>
+        </NavInner>
+        {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
+      </NavWrapper>
+    </>
   );
 };
