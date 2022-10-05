@@ -40,7 +40,7 @@ const Layout = () => {
       <Navigation
         routes={route}
         title={'Design System'}
-        pointColor={'#aaaaaa'}
+        pointColor={'blue600'}
         themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { ColorToken, isColorGroup } from '@gdsc-dju/styled-components-theme';
+import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
 
 export const NavWrapper = styled.nav`
   height: 70px;
@@ -33,6 +33,11 @@ export const NavInner = styled.div`
   align-items: center;
   justify-content: flex-end;
 `;
+export const ButtonWrapper = styled.div`
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+`;
 export const NavTaskWrapper = styled.ul`
   display: flex;
   flex: 1;
@@ -63,7 +68,7 @@ export const StyledLi = styled.li<{
   }
   cursor: pointer;
   ${({ color }) =>
-    color && isColorGroup(color)
+    color && isColorToken(color)
       ? css`
           &:hover {
             color: ${({ theme }) => theme.colors[color]};
@@ -93,7 +98,7 @@ export const StyledLink = styled(Link)<{
   color: ${({ theme }) => theme.colors.grey700};
   transition: all 0.2s ease-in-out;
   ${({ active, color }) =>
-    active && color && isColorGroup(color)
+    active && color && isColorToken(color)
       ? css`
           color: ${({ theme }) => theme.colors[color]};
         `

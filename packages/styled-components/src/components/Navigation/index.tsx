@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  ButtonWrapper,
   LinkWrapper,
   MenuButtonWrapper,
   NavInner,
@@ -17,6 +18,7 @@ import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';
 import { ThemeToggleButton } from '../ThemeToggleButton';
 import NavigationLogo from './NavigationLogo';
+import { isColorToken } from '../../utils/isColorToken';
 
 export type NavigationRoutes = {
   route: string;
@@ -64,11 +66,13 @@ export const Navigation = ({
                 <MenuIcon isMenuOpen={isMenuOpen} />
               </MenuButtonWrapper>
             )}
-            <NavigationLogo
-              title={title}
-              customLogo={customLogo}
-              pointColor={pointColor}
-            />
+            <div style={{ zIndex: '999' }}>
+              <NavigationLogo
+                title={title}
+                customLogo={customLogo}
+                pointColor={pointColor}
+              />
+            </div>
             <NavTaskWrapper>
               {routes && (
                 <LinkWrapper>
@@ -92,15 +96,16 @@ export const Navigation = ({
           </NavLogoContainerInner>
         </NavLogoContainer>
         <NavInner>
-          <div />
-          {rightElement && <>{rightElement}</>}
-          {themeButtonActive && <ThemeToggleButton />}
-          {(menuPosition === 'right' ||
-            menuPosition === 'right-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
-              <MenuIcon isMenuOpen={isMenuOpen} />
-            </MenuButtonWrapper>
-          )}
+          <ButtonWrapper>
+            {rightElement && <>{rightElement}</>}
+            {themeButtonActive && <ThemeToggleButton />}
+            {(menuPosition === 'right' ||
+              menuPosition === 'right-mobile-only') && (
+              <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+                <MenuIcon isMenuOpen={isMenuOpen} />
+              </MenuButtonWrapper>
+            )}
+          </ButtonWrapper>
         </NavInner>
         {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
       </NavWrapper>

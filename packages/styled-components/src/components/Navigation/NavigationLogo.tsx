@@ -1,4 +1,4 @@
-import { ColorToken, isColorGroup } from '@gdsc-dju/styled-components-theme';
+import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
 import React from 'react';
 import GDSCLogo from '../../assets/GDSCLogo';
 
@@ -18,6 +18,7 @@ export const StyledLogoWrapper = styled(Link)`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4px;
+
   @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
     position: absolute;
     top: 50%;
@@ -35,7 +36,7 @@ export const NavSubtitle = styled.div<{ color?: ColorToken | string }>`
   word-break: keep-all;
   margin-top: 2px;
   ${({ color }) =>
-    color && isColorGroup(color)
+    color && isColorToken(color)
       ? css`
           color: ${({ theme }) => theme.colors[color]};
         `

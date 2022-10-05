@@ -37,3 +37,9 @@ export type SemanticColorScheme = {
 };
 
 export type ColorTheme = ColorScheme & SemanticColorScheme;
+
+export const isColorToken = (str: string) => {
+  //remove number
+  const colorGroup = str.replace(/[0-9]/g, '') as ColorGroup;
+  return isColorGroup(colorGroup);
+};
