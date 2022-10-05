@@ -1,23 +1,22 @@
 import React from 'react';
-import GDSCLogo from '../../assets/GDSCLogo';
 
 import {
   LinkWrapper,
-  LogoTitle,
   MenuButtonWrapper,
   NavInner,
-  NavSubtitle,
+  NavLogoContainer,
+  NavLogoContainerInner,
   NavTaskWrapper,
   NavWrapper,
   StyledLi,
   StyledLink,
-  StyledLogoWrapper,
 } from './styled';
 import { ColorToken } from '@gdsc-dju/styled-components-theme';
 import MenuIcon from '../MenuIcon';
 import SideMenu from '../SideMenu';
 import { useLocation } from 'react-router-dom';
 import { ThemeToggleButton } from '../ThemeToggleButton';
+import NavigationLogo from './NavigationLogo';
 
 export type NavigationRoutes = {
   route: string;
@@ -27,7 +26,7 @@ export type NavigationRoutes = {
 export interface NavigationProps {
   title?: string;
   routes?: NavigationRoutes;
-  pointColor?: ColorToken;
+  pointColor?: ColorToken | string;
   themeButtonActive?: boolean;
   menuPosition?:
     | 'left'
@@ -57,6 +56,15 @@ export const Navigation = ({
   const location = useLocation();
   return (
     <NavWrapper>
+      <NavLogoContainer>
+        <NavLogoContainerInner>
+          <NavigationLogo
+            title={title}
+            customLogo={customLogo}
+            pointColor={pointColor}
+          />
+        </NavLogoContainerInner>
+      </NavLogoContainer>
       <NavInner>
         <NavTaskWrapper>
           {(menuPosition == 'left' || menuPosition == 'left-mobile-only') && (
@@ -64,37 +72,17 @@ export const Navigation = ({
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
-          <StyledLogoWrapper to={'/'}>
-            {customLogo ? (
-              <>{customLogo}</>
-            ) : (
-              <>
-                <GDSCLogo />
-                <LogoTitle>GDSC</LogoTitle>
-                {title ? (
-                  <>
-                    <NavSubtitle>DJU</NavSubtitle>
-                    <NavSubtitle color={pointColor}>{title}</NavSubtitle>
-                  </>
-                ) : (
-                  <>
-                    <NavSubtitle color={pointColor}>Daejin</NavSubtitle>
-                    <NavSubtitle color={pointColor}>Univ.</NavSubtitle>
-                  </>
-                )}
-              </>
-            )}
-          </StyledLogoWrapper>
+
           {routes && (
             <LinkWrapper>
               {routes.map((link) => {
                 const isRoute = location.pathname === link.route;
                 return (
-                  <StyledLi key={link.route} pointColor={pointColor}>
+                  <StyledLi key={link.route} color={pointColor}>
                     <StyledLink
                       active={isRoute}
                       to={link.route}
-                      pointcolor={pointColor}
+                      color={pointColor}
                     >
                       {link.title}
                     </StyledLink>

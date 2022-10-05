@@ -3,10 +3,10 @@ export { DarkModeContext } from './contexts/DarkModeContext';
 export { MenuContext } from './contexts/MenuContext';
 export { useToggleMenu } from './hooks/useToggleMenu';
 export { useDarkMode } from './hooks/useDarkMode';
+export { isColorGroup } from './styles/colors/types';
 
 export type {
   ColorScheme,
-  isColorGroup,
   ColorTheme,
   ColorToken,
   SemanticColorScheme,

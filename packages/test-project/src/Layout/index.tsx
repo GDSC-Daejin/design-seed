@@ -1,4 +1,4 @@
-import { Footer, Navigation } from '@gdsc-dju/styled-components';
+import { Footer, Navigation } from '../../../styled-components/src';
 // import { Navigation } from '../../../styled-components-theme/src';
 
 import React, { useContext } from 'react';
@@ -40,7 +40,7 @@ const Layout = () => {
       <Navigation
         routes={route}
         title={'Design System'}
-        pointColor={'blue600'}
+        pointColor={'#aaaaaa'}
         themeButtonActive={true}
         isMenuOpen={isMenuOpen}
         menuToggle={toggleMenu}

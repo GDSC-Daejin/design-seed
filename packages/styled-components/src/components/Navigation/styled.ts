@@ -1,16 +1,31 @@
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { ColorToken } from '@gdsc-dju/styled-components-theme';
+import { ColorToken, isColorGroup } from '@gdsc-dju/styled-components-theme';
 
 export const NavWrapper = styled.nav`
   height: 70px;
   position: fixed;
   top: 0;
   z-index: 90;
-  background: ${({ theme }) => theme.colors.background};
+  background-color: rgba(0, 0, 0, 0.01);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px ${({ theme }) => theme.colors.boxShadow100};
   width: 100vw;
   display: flex;
+`;
+export const NavLogoContainer = styled.div`
+  display: flex;
+  height: 70px;
+  width: 100vw;
+  align-items: center;
+  position: absolute;
+`;
+export const NavLogoContainerInner = styled.div`
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
 `;
 export const NavInner = styled.div`
   width: 92%;
@@ -24,39 +39,9 @@ export const NavTaskWrapper = styled.ul`
   align-items: center;
   list-style: none;
   padding-left: 0;
-`;
-export const StyledLogoWrapper = styled(Link)`
-  display: flex;
-  align-items: center;
-
-  font-size: ${({ theme }) => theme.fontSizes.textXl};
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 4px;
+  position: relative;
 `;
 
-export const LogoTitle = styled.div`
-  margin-left: 4px;
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
-  font-size: ${({ theme }) => theme.fontSizes.textXxl};
-  color: ${({ theme }) => theme.colors.grey800};
-`;
-
-export const NavSubtitle = styled.div<{ color?: ColorToken }>`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: ${({ theme }) => theme.colors.grey600};
-  font-size: ${({ theme }) => theme.fontSizes.textM};
-  font-weight: ${({ theme }) => theme.fontWeights.medium};
-  word-break: keep-all;
-  margin-top: 2px;
-  ${({ color }) =>
-    color &&
-    css`
-      color: ${({ theme }) => theme.colors[color]};
-    `}
-`;
 export const LinkWrapper = styled.ul`
   margin-left: 20px;
   display: none;
@@ -66,7 +51,7 @@ export const LinkWrapper = styled.ul`
   } ;
 `;
 export const StyledLi = styled.li<{
-  pointColor: ColorToken;
+  color: ColorToken | string;
 }>`
   display: flex;
   align-items: center;
@@ -77,21 +62,29 @@ export const StyledLi = styled.li<{
     margin-left: 16px;
   }
   cursor: pointer;
-  ${({ pointColor }) =>
-    pointColor &&
-    css`
-      &:hover {
-        color: ${({ theme }) => theme.colors[pointColor]};
-        background-color: ${({ theme }) => theme.colors.grey100};
-        backdrop-filter: blur(10px);
-        text-decoration: none;
-      }
-    `}
+  ${({ color }) =>
+    color && isColorGroup(color)
+      ? css`
+          &:hover {
+            color: ${({ theme }) => theme.colors[color]};
+            background-color: ${({ theme }) => theme.colors.grey100};
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+          }
+        `
+      : css`
+          &:hover {
+            color: ${color};
+            background-color: ${({ theme }) => theme.colors.grey100};
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+          }
+        `}
 `;
 
 export const StyledLink = styled(Link)<{
   active: boolean;
-  pointcolor: ColorToken;
+  color: ColorToken | string;
 }>`
   padding: 10px 15px;
   text-decoration: none;
@@ -99,12 +92,14 @@ export const StyledLink = styled(Link)<{
   font-size: ${({ theme }) => theme.fontSizes.textM};
   color: ${({ theme }) => theme.colors.grey700};
   transition: all 0.2s ease-in-out;
-  ${({ active, pointcolor }) =>
-    active &&
-    pointcolor &&
-    css`
-      color: ${({ theme }) => theme.colors[pointcolor]};
-    `};
+  ${({ active, color }) =>
+    active && color && isColorGroup(color)
+      ? css`
+          color: ${({ theme }) => theme.colors[color]};
+        `
+      : css`
+          color: ${color};
+        `}
 `;
 
 export const MenuButtonWrapper = styled.div<{
@@ -132,6 +127,7 @@ export const MenuButtonWrapper = styled.div<{
   z-index: 999;
   display: flex;
   align-items: center;
+  justify-content: center;
   ${({ position }) =>
     (position == 'left-mobile-only' || position == 'right-mobile-only') &&
     css`
