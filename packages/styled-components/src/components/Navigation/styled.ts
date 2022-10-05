@@ -44,6 +44,7 @@ export const NavTaskWrapper = styled.ul`
   align-items: center;
   list-style: none;
   padding-left: 0;
+  gap: 10px;
   position: relative;
 `;
 
