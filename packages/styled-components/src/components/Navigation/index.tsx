@@ -75,7 +75,7 @@ export const Navigation = ({
               {routes && (
                 <LinkWrapper>
                   {routes.map((link) => {
-                    const isRoute = location.pathname === link.route;
+                    const isRoute = location.pathname.includes(link.route);
                     return (
                       <StyledLi key={link.route} color={pointColor}>
                         <StyledLink

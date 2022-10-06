@@ -1,4 +1,4 @@
-import { Footer, Navigation } from '@gdsc-dju/styled-components';
+import { Footer, Navigation } from '../../../styled-components/src';
 // import { Navigation } from '../../../styled-components-theme/src';
 
 import React, { useContext } from 'react';

@@ -113,6 +113,7 @@ export const MenuButtonWrapper = styled.div<{
   position: 'left' | 'right' | 'left-mobile-only' | 'right-mobile-only';
 }>`
   cursor: pointer;
+  padding: 7px;
   ${({ position }) =>
     position === 'left' &&
     css`
@@ -129,7 +130,7 @@ export const MenuButtonWrapper = styled.div<{
   ${({ position }) =>
     (position === 'right' || position === 'right-mobile-only') &&
     css`
-      margin-left: 10px;
+      margin-left: 0px;
     `};
   z-index: 999;
   display: flex;
