@@ -1,6 +1,6 @@
 {
   "name": "@gdsc-dju/styled-components",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "type": "module",
   "packageManager": "yarn@3.2.2",
   "description": "GDSC-DJU Design System Component package for styled-components",
