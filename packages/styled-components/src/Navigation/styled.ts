@@ -58,12 +58,18 @@ export const LinkWrapper = styled.ul`
 `;
 export const StyledLi = styled.li<{
   color: ColorToken | string;
+  active?: boolean;
 }>`
   display: flex;
   align-items: center;
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
-  margin-left: 0;
+  padding: 10px 15px;
+  list-style: none;
+  font-size: ${({ theme }) => theme.fontSizes.textM};
+  color: ${({ theme }) => theme.colors.grey700};
+  text-decoration: none;
+  text-transform: capitalize;
   &:first-child {
     margin-left: 16px;
   }
@@ -85,20 +91,7 @@ export const StyledLi = styled.li<{
             backdrop-filter: blur(10px);
             text-decoration: none;
           }
-        `}
-`;
-
-export const StyledLink = styled(Link)<{
-  active: boolean;
-  color: ColorToken | string;
-}>`
-  padding: 10px 15px;
-  list-style: none;
-  font-size: ${({ theme }) => theme.fontSizes.textM};
-  color: ${({ theme }) => theme.colors.grey700};
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  text-transform: capitalize;
+        `};
   ${({ active, color }) =>
     active && color && isColorToken(color)
       ? css`

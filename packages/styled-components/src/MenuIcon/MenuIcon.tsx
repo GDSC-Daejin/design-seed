@@ -1,9 +1,7 @@
 import React from 'react';
 import styled, { css, useTheme } from 'styled-components';
+import { MenuIconProps } from './props';
 
-interface MenuIconProps {
-  isMenuOpen: boolean;
-}
 const StyledSvg = styled.svg`
   display: flex;
   align-items: center;

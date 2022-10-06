@@ -18,7 +18,7 @@ const startAnimation = keyframes`
   }
 `;
 
-const ThemeButton = styled.button`
+const StyledThemeButton = styled.button`
   padding: 7px;
   width: 40px;
   height: 40px;
@@ -36,12 +36,13 @@ const ButtonWrapper = styled.div<{ isActive: boolean }>`
   animation: ${({ isActive }) => isActive && startAnimation} 0.6s ease-in-out;
 `;
 
-export const ThemeToggleButton = () => {
+const ThemeButton = () => {
   const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
   const [animate, setAnimate] = useState(false);
 
   return (
-    <ThemeButton
+    <StyledThemeButton
+      name={'theme-toggle-button'}
       onClick={() => {
         setAnimate(true);
         toggleTheme();
@@ -53,6 +54,7 @@ export const ThemeToggleButton = () => {
       >
         {isDarkMode ? <DarkModeIcon /> : <LightModeIcon />}
       </ButtonWrapper>
-    </ThemeButton>
+    </StyledThemeButton>
   );
 };
+export default ThemeButton;

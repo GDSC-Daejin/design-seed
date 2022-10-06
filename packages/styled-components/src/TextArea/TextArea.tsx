@@ -1,8 +1,10 @@
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
-import { StyledInputWrapper } from '../TextInput/styled';
+import { TextAreaProps } from './props';
 
-export const StyledTextAreaWrapper = styled(StyledInputWrapper)<{
+export const StyledTextAreaWrapper = styled.div<{
   error?: boolean;
+  disabled?: boolean;
 }>`
   width: 100%;
   display: flex;
@@ -101,3 +103,20 @@ export const StyledTextArea = styled.textarea<{
       color: ${({ theme }) => theme.colors.grey400};
     `};
 `;
+
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  (props, ref) => {
+    const { error, disabled, ...rest } = props;
+    return (
+      <StyledTextAreaWrapper error={error} disabled={disabled}>
+        <StyledTextArea
+          ref={ref}
+          className={'formInput'}
+          disabled={disabled}
+          {...rest}
+        />
+      </StyledTextAreaWrapper>
+    );
+  },
+);
+export default TextArea;

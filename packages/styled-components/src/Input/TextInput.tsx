@@ -1,4 +1,7 @@
+import React, { forwardRef } from 'react';
+
 import styled, { css } from 'styled-components';
+import { InputProps } from './props';
 
 export const StyledInputInner = styled.input<{ disabled?: boolean }>`
   padding: 0 18px;
@@ -25,16 +28,6 @@ export const StyledInputInner = styled.input<{ disabled?: boolean }>`
       color: ${({ theme }) => theme.colors.grey400};
       cursor: not-allowed;
     `}
-`;
-export const StyledFileInput = styled.div`
-  color: ${({ theme }) => theme.colors.grey500};
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  flex-grow: 1;
-  font-weight: 300;
-  font-size: ${({ theme }) => theme.fontSizes.textL};
-  padding: 0 18px;
 `;
 
 export const StyledInputWrapper = styled.div<{
@@ -85,11 +78,13 @@ export const StyledInputWrapper = styled.div<{
   transition: 0.3s;
 `;
 
-export const InputImageWrapper = styled.div`
-  height: 20px;
-  width: 20px;
-  margin: 0 -8px 0 18px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;
+const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const { error, disabled, ...rest } = props;
+  return (
+    <StyledInputWrapper error={error} disabled={disabled}>
+      <StyledInputInner className={'formInput'} {...rest} ref={ref} />
+    </StyledInputWrapper>
+  );
+});
+
+export default Input;

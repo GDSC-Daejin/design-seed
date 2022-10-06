@@ -1,7 +1,14 @@
-export { Navigation } from './components/Navigation';
-export { Footer } from './components/Footer';
-export { ThemeToggleButton } from './components/ThemeToggleButton';
+export { default as FileInput } from './FileInput';
+export * from './FileInput';
 
-export { TextInput, FileInput, TextArea } from './components/common/input';
+export { default as Input } from './Input';
+export * from './Input';
 
-export type { NavigationProps } from './components/Navigation';
+export { default as TextArea } from './TextArea';
+export * from './TextArea';
+
+export { default as Navigation } from './Navigation';
+export * from './Navigation';
+
+export { default as Footer } from './Footer';
+export * from './Footer';

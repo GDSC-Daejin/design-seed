@@ -1,6 +1,6 @@
 import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
 import React from 'react';
-import GDSCLogo from '../../assets/GDSCLogo';
+import GDSCLogo from '../assets/GDSCLogo';
 
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';

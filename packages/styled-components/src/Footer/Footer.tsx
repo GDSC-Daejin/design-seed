@@ -1,4 +1,6 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
+import { FooterProps } from './props';
 
 export const FooterText = styled.a<{ google?: boolean }>`
   font-size: ${({ theme }) => theme.fontSizes.textL};
@@ -56,3 +58,32 @@ export const FooterLogo = styled.div`
     align-items: flex-start;
   }
 `;
+
+const Footer = ({ disable = false, pages }: FooterProps) => {
+  return (
+    <>
+      {!disable && (
+        <FooterWrapper>
+          <FooterLogo>
+            <FooterText google={true} href={'https://developers.google.com/'}>
+              Google
+            </FooterText>
+            <FooterText
+              href={'https://developers.google.com/community-guidelines'}
+            >
+              Community guidelines
+            </FooterText>
+            {pages &&
+              pages.map((page) => (
+                <FooterText key={page.text} href={page.link}>
+                  {page.text}
+                </FooterText>
+              ))}
+          </FooterLogo>
+          <FooterCopyRight>{'Copyright © '}GDSC Daejin</FooterCopyRight>
+        </FooterWrapper>
+      )}
+    </>
+  );
+};
+export default Footer;
