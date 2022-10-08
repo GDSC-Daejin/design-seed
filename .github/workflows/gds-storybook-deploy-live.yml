@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - "packages/gds-storybook/**"
+      - "packages/styled-components/**"
       - "packages/styled-components-theme/**"
       - ".github/workflows/gds-storybook-deploy-live.yml"
   pull_request:
@@ -15,6 +16,7 @@ on:
       - closed
     paths:
       - "packages/gds-storybook/**"
+      - "packages/styled-components/**"
       - "packages/styled-components-theme/**"
       - ".github/workflows/gds-storybook-deploy-live.yml"
 jobs:
