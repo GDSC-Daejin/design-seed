@@ -9,7 +9,6 @@ on:
       - "packages/styled-components/**"
       - "packages/styled-components-theme/**"
       - ".github/workflows/Docusaurus-deploy.yml"
-
   pull_request:
     branches:
       - master
