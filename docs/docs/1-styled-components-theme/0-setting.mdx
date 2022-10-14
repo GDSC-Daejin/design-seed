@@ -12,6 +12,25 @@ import {GdsThemeProvider} from "@gdsc-dju/styled-components-theme";
 </GdsThemeProvider>
 ```
 
+### CSS를 Reset 해주세요.
+
+`Styled-Components`의 `globalStyle`을 활용하시면 됩니다.
+
+:::caution
+
+기본 font-size는 10px로 설정해주세요
+
+:::
+
+EX
+```
+  * {
+    font-size: 10px;
+    word-break: keep-all;
+    font-family: 'Google Sans Display','Spoqa Han Sans Neo', sans-serif;
+  }
+```
+
 
 ### 테마 변경하기
 
