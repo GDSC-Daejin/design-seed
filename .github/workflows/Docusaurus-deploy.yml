@@ -48,7 +48,7 @@ jobs:
       - name: Build GDS
         run: yarn workspace @gdsc-dju/styled-components build
       - name: Project Build
-        run: yarn build-storybook
+        run: yarn build
         working-directory: ${{ env.working-directory }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         id: run_firebase_deploy
