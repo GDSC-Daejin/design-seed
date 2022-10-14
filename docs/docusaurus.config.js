@@ -68,8 +68,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Website',
+                href: 'https://web.gdsc-dju.com/',
               },
               {
                 label: 'Discord',
