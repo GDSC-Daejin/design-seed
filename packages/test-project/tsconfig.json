@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "EsNext",
+    "jsx": "react",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "lib",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true
+
+  },
+  "moduleResolution": "node",
+  "include": ["src", "./vite.config.ts"],
+  "exclude": ["node_modules", "lib", "**/*.d.ts"],
+  "extends": "../../tsconfig.base.json",
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
