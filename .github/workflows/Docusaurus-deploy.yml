@@ -58,7 +58,7 @@ jobs:
           channelId: live
           projectId: gdsc-dju
           target: gdsc-dju-design
-          entryPoint: './packages/docs'
+          entryPoint: './docs'
       - name: Discord Message Notify
         uses: appleboy/discord-action@0.0.3
         with:
