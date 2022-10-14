@@ -23,7 +23,7 @@ jobs:
   Deploy_Live_channel:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./packages/docs
+      working-directory: packages/docs
     environment:
       name: docs
       url: https://design.gdsc-dju.com
