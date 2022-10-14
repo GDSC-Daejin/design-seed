@@ -1,14 +1,14 @@
-name: Deploy to GDS Storybook Live Channel
+name: Deploy to Docusaurus Live Channel
 
 on:
   push:
     branches:
       - master
     paths:
-      - "packages/gds-storybook/**"
+      - "packages/docs/**"
       - "packages/styled-components/**"
       - "packages/styled-components-theme/**"
-      - ".github/workflows/gds-storybook-deploy-live.yml"
+      - ".github/workflows/Docusaurus-deploy.yml"
   pull_request:
     branches:
       - master
@@ -18,14 +18,14 @@ on:
       - "packages/gds-storybook/**"
       - "packages/styled-components/**"
       - "packages/styled-components-theme/**"
-      - ".github/workflows/gds-storybook-deploy-live.yml"
+      - ".github/workflows/Docusaurus-deploy.yml"
 jobs:
   Deploy_Live_channel:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./packages/gds-storybook
+      working-directory: ./packages/docs
     environment:
-      name: GDS Storybook Live
+      name: docs
       url: https://design.gdsc-dju.com
     steps:
       - uses: actions/checkout@v2
@@ -58,7 +58,7 @@ jobs:
           channelId: live
           projectId: gdsc-dju
           target: gdsc-dju-design
-          entryPoint: './packages/gds-storybook'
+          entryPoint: './packages/docs'
       - name: Discord Message Notify
         uses: appleboy/discord-action@0.0.3
         with:

@@ -11,7 +11,7 @@ that using in gdsc-dju websites.
 
 
 ```shell
-yarn add styled-components-theme-theme @gdsc-dju/styled-components-theme-theme
+yarn add 1-2-styled-components-theme-theme @gdsc-dju/1-2-styled-components-theme-theme
 ```
 
 ## Usage

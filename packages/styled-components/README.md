@@ -16,7 +16,7 @@ To use this library, you need to install `styled-components` and `styled-compone
 
 
 ```shell
-yarn add styled-components-theme @gdsc-dju/styled-components-theme @gdsc-dju/styled-components
+yarn add 1-2-styled-components-theme @gdsc-dju/1-2-styled-components-theme @gdsc-dju/2-styled-components
 ```
 
 ## Usage

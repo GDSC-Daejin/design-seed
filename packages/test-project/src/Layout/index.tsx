@@ -1,5 +1,5 @@
 import { Footer, Navigation } from '@gdsc-dju/styled-components';
-// import { Navigation } from '../../../styled-components-theme/src';
+// import { Navigation } from '../../../1-2-styled-components-theme/src';
 
 import React, { useContext } from 'react';
 
