@@ -2,8 +2,8 @@ name: Deploy to Docusaurus Live Channel
 
 on:
   push:
-    branches:
-      - master
+#    branches:
+#      - master
     paths:
       - "packages/docs/**"
       - "packages/styled-components/**"
