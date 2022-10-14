@@ -1,0 +1,27 @@
+
+
+현재 테마의 이름을 가져옵니다.
+
+`export type ThemeName = 'light' | 'dark';`
+
+`export type ThemeMode = 'auto' | 'light-only' | 'dark-only';`
+
+## 함수 타입
+`
+getThemeName(mode: ThemeMode, isDarkMode: boolean): ThemeName
+`
+
+```tsx
+export const getThemeName = (
+    mode: ThemeMode,
+    isDarkMode: boolean,
+): ThemeName => {
+    return (
+        {
+            auto: isDarkMode ? 'dark' : 'light',
+            'light-only': 'light',
+            'dark-only': 'dark',
+        } as const
+        )[mode];
+};
+```

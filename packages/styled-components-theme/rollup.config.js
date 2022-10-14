@@ -12,7 +12,7 @@ export default [
       file: './dist/bundle.js',
       format: 'esm',
     },
-    external: ['styled-components', 'react', 'react-router-dom'],
+    external: ['2-styled-components', 'react', 'react-router-dom'],
     plugins: [
       typescript(),
       uglify(),
