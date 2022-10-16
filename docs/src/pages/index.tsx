@@ -6,6 +6,8 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import { GdsThemeProvider } from '@gdsc-dju/styled-components-theme';
+import { BrowserRouter } from 'react-router-dom';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -34,17 +36,19 @@ export default function Home(): JSX.Element {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
-      <main
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          height: '100%',
-          flex: '1 0 auto',
-        }}
-      >
-        <HomepageFeatures />
-      </main>
+      <BrowserRouter>
+        <HomepageHeader />
+        <main
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+            flex: '1 0 auto',
+          }}
+        >
+          <HomepageFeatures />
+        </main>
+      </BrowserRouter>
     </Layout>
   );
 }

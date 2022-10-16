@@ -19,7 +19,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-      title: '@gdsc-dju/styled-components',
+    title: '@gdsc-dju/styled-components',
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-      title: '@gdsc-dju/utils',
+    title: '@gdsc-dju/utils',
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -38,11 +38,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-          {Svg && <Svg className={styles.featureSvg} role="img" />}
+        {Svg && <Svg className={styles.featureSvg} role="img" />}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

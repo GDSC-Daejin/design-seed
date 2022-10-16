@@ -33,9 +33,9 @@ jobs:
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
       - name: Build SCT
-        run: yarn workspace @gdsc-dju/1-2-styled-components-theme build
+        run: yarn workspace @gdsc-dju/styled-components-theme build
       - name: Build SC
-        run: yarn workspace @gdsc-dju/2-styled-components build
+        run: yarn workspace @gdsc-dju/styled-components build
       - name: Publish to Chromatic
         id: run_chromatic
         uses: chromaui/action@v1

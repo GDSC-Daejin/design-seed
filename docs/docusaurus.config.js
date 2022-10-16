@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -30,7 +32,20 @@ const config = {
           editUrl:
             'https://github.com/GDSC-Daejin/design-seed/tree/master/packages',
         },
-
+        blog: {
+          blogTitle: 'GDSC DJU Design Blog',
+          blogDescription: 'A Docusaurus powered blog!',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+          showReadingTime: true, // When set to false, the "x min read" won't be shown
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} GDSC DJU, Inc.`,
+          },
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -54,6 +69,7 @@ const config = {
             docId: 'index',
             label: 'Docs',
           },
+          { to: 'blog', label: 'Blog', position: 'left' }, // or position: 'right'
           {
             href: 'https://github.com/GDSC-Daejin/design-seed',
             label: 'GitHub',
