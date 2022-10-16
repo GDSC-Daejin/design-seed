@@ -38,7 +38,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
-export const NavTaskWrapper = styled.ul`
+export const NavTaskWrapper = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
