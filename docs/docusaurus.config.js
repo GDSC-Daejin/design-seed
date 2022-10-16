@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'GDSC DJU Design System',
-  tagline: '',
+  title: 'GDSC DJU Design',
+  tagline: '쉽고 간단하게 스타일을 사용해보세요',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -70,14 +70,6 @@ const config = {
               {
                 label: 'Website',
                 href: 'https://web.gdsc-dju.com/',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
