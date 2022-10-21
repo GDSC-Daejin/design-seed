@@ -1,6 +1,6 @@
-import { ChangeEvent, HTMLAttributes } from 'react';
+import { ChangeEvent, InputHTMLAttributes } from 'react';
 
-export interface FileInputProps extends HTMLAttributes<HTMLInputElement> {
+export interface FileInputProps extends InputHTMLAttributes<HTMLInputElement> {
   defaultPlaceholder: string;
   errorToggle?: boolean;
   disabled?: boolean;

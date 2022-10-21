@@ -1,13 +1,15 @@
 import React, { ReactNode } from 'react';
-import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 import { DarkModeContext } from 'src/contexts/DarkModeContext';
 import { MenuContext } from 'src/contexts/MenuContext';
+import { ThemeProvider } from 'styled-components';
+import type { DefaultTheme } from 'styled-components';
+
 import { useDarkMode } from './hooks/useDarkMode';
-import { colors, fontSizes, fontWeights, windowSizes } from './styles';
 import { useToggleMenu } from './hooks/useToggleMenu';
-import { ThemeMode, getThemeName } from './types/utils';
+import { colors, fontSizes, fontWeights, windowSizes } from './styles';
 import { ColorScheme, SemanticColorScheme } from './styles/colors/types';
+import { ThemeMode, getThemeName } from './types/utils';
 
 interface ThemeProviderProps {
   children: ReactNode;
