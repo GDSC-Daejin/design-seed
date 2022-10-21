@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import styled, { css } from 'styled-components';
+
 import { InputProps } from './props';
 
 export const StyledInputInner = styled.input<{ disabled?: boolean }>`
@@ -46,6 +47,7 @@ export const StyledInputWrapper = styled.div<{
   appearance: none;
   border-radius: 10px;
   box-shadow: inset 0 0 0 1px ${({ theme }) => theme.colors.grey300};
+  background: ${({ theme }) => theme.colors.background};
   cursor: auto;
   &:hover {
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue200} !important;
