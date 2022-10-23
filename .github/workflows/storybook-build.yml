@@ -4,11 +4,11 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on:
   push:
+    branches:
+      - master
     paths:
       - "packages/gds-storybook/**"
       - ".github/workflows/Docusaurus-deploy.yml"
-    branches:
-    - master
   pull_request:
     paths:
       - "packages/gds-storybook/**"
@@ -19,6 +19,7 @@ on:
 # List of jobs
 jobs:
   storybook-build:
+    if: github.event.pull_request.merged == true
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
