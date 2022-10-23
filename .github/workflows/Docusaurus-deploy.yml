@@ -2,8 +2,8 @@ name: Deploy to Docusaurus Live Channel
 
 on:
   push:
-#    branches:
-#      - master
+    branches:
+      - master
     paths:
       - "docs/**"
       - "packages/styled-components/**"
@@ -22,6 +22,8 @@ on:
       - ".github/workflows/Docusaurus-deploy.yml"
 jobs:
   Deploy_Live_channel:
+    branches:
+      - master
     runs-on: ubuntu-latest
     env:
       working-directory: docs
