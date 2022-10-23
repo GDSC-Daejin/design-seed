@@ -10,17 +10,16 @@ export const StyledInputInner = styled.input<{ disabled?: boolean }>`
   border: 0;
   border-radius: 10px;
   height: 48px;
+  width: 100%;
   font-size: ${({ theme }) => theme.fontSizes.textL};
   outline: none;
-  width: 100%;
   flex-grow: 1;
   background: none;
   font-weight: 400;
   box-sizing: border-box;
-  color: ${({ theme }) => theme.colors.grey700};
+  color: ${({ theme }) => theme.colors.grey800};
   &::placeholder {
     color: ${({ theme }) => theme.colors.grey400};
-    font-weight: 300;
   }
   ${(props) =>
     props.disabled &&

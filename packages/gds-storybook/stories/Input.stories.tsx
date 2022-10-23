@@ -1,10 +1,13 @@
 import React from 'react';
-import { Story } from '@storybook/react';
+
 import {
   TextArea as Area,
   FileInput as File,
-  TextInput as Text,
+  Input as Text,
 } from '@gdsc-dju/styled-components';
+
+// eslint-disable-next-line import/named
+import { Story } from '@storybook/react';
 
 export default {
   title: 'Components/Input',

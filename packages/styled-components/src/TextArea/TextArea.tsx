@@ -1,5 +1,7 @@
 import React, { forwardRef } from 'react';
+
 import styled, { css } from 'styled-components';
+
 import { TextAreaProps } from './props';
 
 export const StyledTextAreaWrapper = styled.div<{
@@ -16,6 +18,7 @@ export const StyledTextAreaWrapper = styled.div<{
   outline: none;
   appearance: none;
   border-radius: 10px;
+  font-size: ${({ theme }) => theme.fontSizes.textL};
   box-shadow: inset 0 0 0 1px ${({ theme }) => theme.colors.grey300};
   cursor: auto;
   &:hover {
@@ -27,7 +30,7 @@ export const StyledTextAreaWrapper = styled.div<{
       `}
   }
   .formInput:focus {
-    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue600};
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue600} !important;
     ${(props) =>
       props.error &&
       css`
@@ -64,44 +67,23 @@ export const StyledTextArea = styled.textarea<{
   padding: 18px 18px;
   margin: 0;
   border-radius: 10px;
-  font-size: ${({ theme }) => theme.fontSizes.textM};
+  font-size: ${({ theme }) => theme.fontSizes.textL};
   color: ${({ theme }) => theme.colors.grey800};
   box-shadow: inset 0 0 0 1px ${({ theme }) => theme.colors.grey300};
   cursor: auto;
   transition: box-shadow 0.3s;
   resize: vertical;
+  font-weight: 400;
   &::placeholder {
     color: ${({ theme }) => theme.colors.grey400};
-    font-weight: 300;
   }
-  &:hover {
-    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue200};
-    ${(props) =>
-      props.error &&
-      css`
-        box-shadow: inset 0 0 0 2px ${props.theme.colors.red900};
-      `}
-  }
-  &:focus {
-    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue600};
-    ${(props) =>
-      props.error &&
-      css`
-        box-shadow: inset 0 0 0 2px ${props.theme.colors.red900}!important;
-      `}
-  }
-  ${({ error }) =>
-    error &&
+  ${(props) =>
+    props.disabled &&
     css`
-      box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red900};
-    `};
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      cursor: not-allowed;
       background: ${({ theme }) => theme.colors.grey100};
       color: ${({ theme }) => theme.colors.grey400};
-    `};
+      cursor: not-allowed;
+    `}
 `;
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
