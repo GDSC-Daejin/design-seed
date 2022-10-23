@@ -10,12 +10,11 @@ on:
       - "packages/gds-storybook/**"
       - ".github/workflows/Docusaurus-deploy.yml"
   pull_request:
+    branches:
+      - master
     paths:
       - "packages/gds-storybook/**"
       - ".github/workflows/Docusaurus-deploy.yml"
-    branches:
-      - master
-
 # List of jobs
 jobs:
   storybook-build:
