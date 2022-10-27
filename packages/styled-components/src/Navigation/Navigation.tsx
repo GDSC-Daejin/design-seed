@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+
+import { MenuContext } from '@gdsc-dju/styled-components-theme';
 
 import MenuIcon from '../MenuIcon';
 import SideMenu from '../SideMenu/SideMenu';
@@ -31,12 +33,13 @@ const Navigation = ({
   pointColor = 'blue900',
   menuPosition = 'right',
   router,
-  menuToggle,
-  isMenuOpen = false,
   sideMenu,
   rightElement,
 }: NavigationProps) => {
   const [currentLocation, setLocation] = useState<string | undefined>();
+
+  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
+
   useEffect(() => {
     setLocation(location.pathname);
   }, [location.pathname]);
@@ -50,7 +53,7 @@ const Navigation = ({
       <NavLogoContainer>
         <NavLogoContainerInner>
           {(menuPosition === 'left' || menuPosition === 'left-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+            <MenuButtonWrapper position={menuPosition} onClick={toggleMenu}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
@@ -88,14 +91,14 @@ const Navigation = ({
           {themeButtonActive && <ThemeButton />}
           {(menuPosition === 'right' ||
             menuPosition === 'right-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+            <MenuButtonWrapper position={menuPosition} onClick={toggleMenu}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
         </ButtonWrapper>
       </NavInner>
       {/* eslint-disable-next-line react/no-children-prop */}
-      {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
+      <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />
     </NavWrapper>
   );
 };
