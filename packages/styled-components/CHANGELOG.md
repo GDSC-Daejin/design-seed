@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.58 (2022-10-23)
+
+### 0.0.57 (2022-10-21)
+
+
+### Features
+
+* apply lint ([#5](https://github.com/GDSC-Daejin/design-seed/issues/5)) ([a37f79a](https://github.com/GDSC-Daejin/design-seed/commit/a37f79a24fb9690d5cfd740b5b281965167e9496))
+
+### 0.0.56 (2022-10-21)
+
+
+### Features
+
+* apply lint ([#5](https://github.com/GDSC-Daejin/design-seed/issues/5)) ([a37f79a](https://github.com/GDSC-Daejin/design-seed/commit/a37f79a24fb9690d5cfd740b5b281965167e9496))
+
+### 0.0.55 (2022-10-16)
+
+### 0.0.54 (2022-10-16)
+
 ### 0.0.53 (2022-10-06)
 
 ### 0.0.52 (2022-10-06)

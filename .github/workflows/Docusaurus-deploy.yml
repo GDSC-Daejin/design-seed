@@ -2,13 +2,14 @@ name: Deploy to Docusaurus Live Channel
 
 on:
   push:
-#    branches:
-#      - master
+    branches:
+      - master
     paths:
       - "docs/**"
       - "packages/styled-components/**"
       - "packages/styled-components-theme/**"
       - ".github/workflows/Docusaurus-deploy.yml"
+
   pull_request:
     branches:
       - master
@@ -21,6 +22,7 @@ on:
       - ".github/workflows/Docusaurus-deploy.yml"
 jobs:
   Deploy_Live_channel:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
       working-directory: docs

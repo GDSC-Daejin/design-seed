@@ -10,13 +10,13 @@ To use this library, you need to install `styled-components` and `styled-compone
 
 [@gdsc-dju/styled-components-theme docs](https://www.npmjs.com/package/@gdsc-dju/styled-components-theme)
 
-[Storybook](https://design.gdsc-dju.com)
+[DOCS](https://design.gdsc-dju.com)
 
 ## Installation
 
 
 ```shell
-yarn add 1-2-styled-components-theme @gdsc-dju/1-2-styled-components-theme @gdsc-dju/2-styled-components
+yarn add styled-components @gdsc-dju/styled-components-theme @gdsc-dju/styled-components
 ```
 
 ## Usage

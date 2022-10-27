@@ -1,24 +1,25 @@
+import React, { forwardRef, HTMLAttributes } from 'react';
+
 import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
-import React from 'react';
-import GDSCLogo from '../assets/GDSCLogo';
 
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
 
-type NavigationLogoProps = {
+import GDSCLogo from '../assets/GDSCLogo';
+
+interface NavigationLogoProps extends HTMLAttributes<HTMLDivElement> {
   customLogo?: React.ReactNode;
   title?: string;
   pointColor?: ColorToken | string;
-};
+}
 
-export const StyledLogoWrapper = styled(Link)`
+export const StyledLogoWrapper = styled.div`
   display: flex;
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizes.textXl};
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4px;
-
+  cursor: pointer;
   @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
     position: absolute;
     top: 50%;
@@ -60,36 +61,34 @@ export const LogoTextWrapper = styled.div`
   }
 `;
 
-const NavigationLogo = ({
-  customLogo,
-  title,
-  pointColor,
-}: NavigationLogoProps) => {
-  return (
-    <>
-      {customLogo ? (
-        <>{customLogo}</>
-      ) : (
-        <StyledLogoWrapper to={'/'}>
-          <GDSCLogo />
-          <LogoTextWrapper>
-            <LogoTitle>GDSC</LogoTitle>
-            {title ? (
-              <>
-                <NavSubtitle>DJU</NavSubtitle>
-                <NavSubtitle color={pointColor}>{title}</NavSubtitle>
-              </>
-            ) : (
-              <>
-                <NavSubtitle color={pointColor}>Daejin</NavSubtitle>
-                <NavSubtitle color={pointColor}>Univ.</NavSubtitle>
-              </>
-            )}
-          </LogoTextWrapper>
-        </StyledLogoWrapper>
-      )}
-    </>
-  );
-};
+const NavigationLogo = forwardRef<HTMLDivElement, NavigationLogoProps>(
+  ({ customLogo, title, pointColor, ...rest }, ref) => {
+    return (
+      <>
+        {customLogo ? (
+          <>{customLogo}</>
+        ) : (
+          <StyledLogoWrapper ref={ref} {...rest}>
+            <GDSCLogo />
+            <LogoTextWrapper>
+              <LogoTitle>GDSC</LogoTitle>
+              {title ? (
+                <>
+                  <NavSubtitle>DJU</NavSubtitle>
+                  <NavSubtitle color={pointColor}>{title}</NavSubtitle>
+                </>
+              ) : (
+                <>
+                  <NavSubtitle color={pointColor}>Daejin</NavSubtitle>
+                  <NavSubtitle color={pointColor}>Univ.</NavSubtitle>
+                </>
+              )}
+            </LogoTextWrapper>
+          </StyledLogoWrapper>
+        )}
+      </>
+    );
+  },
+);
 
 export default NavigationLogo;

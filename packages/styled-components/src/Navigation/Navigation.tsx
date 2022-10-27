@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
+import { MenuContext } from '@gdsc-dju/styled-components-theme';
+
+import MenuIcon from '../MenuIcon';
+import SideMenu from '../SideMenu/SideMenu';
+import ThemeButton from '../ThemeButton';
+
+import NavigationLogo from './NavigationLogo';
+import { NavigationProps } from './props';
 import {
   ButtonWrapper,
   LinkWrapper,
@@ -11,17 +19,11 @@ import {
   NavWrapper,
   StyledLi,
 } from './styled';
-import MenuIcon from '../MenuIcon';
-import SideMenu from '../SideMenu/SideMenu';
-import { useLocation, useNavigate } from 'react-router-dom';
-import ThemeButton from '../ThemeButton';
-import NavigationLogo from './NavigationLogo';
-import { NavigationProps } from './props';
 
-export type NavigationRoutes = {
+export type NavigationRoutes = Array<{
   route: string;
   title: string;
-}[];
+}>;
 
 const Navigation = ({
   routes,
@@ -30,24 +32,34 @@ const Navigation = ({
   themeButtonActive = true,
   pointColor = 'blue900',
   menuPosition = 'right',
-  menuToggle,
-  isMenuOpen = false,
+  router,
   sideMenu,
   rightElement,
 }: NavigationProps) => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [currentLocation, setLocation] = useState<string | undefined>();
+
+  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
+
+  useEffect(() => {
+    setLocation(location.pathname);
+  }, [location.pathname]);
+
+  const routeHandler = (route: string) => {
+    router && router(route);
+  };
+
   return (
     <NavWrapper>
       <NavLogoContainer>
         <NavLogoContainerInner>
-          {(menuPosition == 'left' || menuPosition == 'left-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+          {(menuPosition === 'left' || menuPosition === 'left-mobile-only') && (
+            <MenuButtonWrapper position={menuPosition} onClick={toggleMenu}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
           <NavigationLogo
             title={title}
+            onClick={() => routeHandler('/')}
             customLogo={customLogo}
             pointColor={pointColor}
           />
@@ -56,15 +68,13 @@ const Navigation = ({
             {routes && (
               <LinkWrapper>
                 {routes.map((link) => {
-                  const isRoute = location.pathname.includes(link.route);
+                  const isRoute = currentLocation?.includes(link.route);
                   return (
                     <StyledLi
                       key={link.route}
                       color={pointColor}
                       active={isRoute}
-                      onClick={() => {
-                        navigate(link.route);
-                      }}
+                      onClick={() => routeHandler(link.route)}
                     >
                       {link.title}
                     </StyledLi>
@@ -81,13 +91,14 @@ const Navigation = ({
           {themeButtonActive && <ThemeButton />}
           {(menuPosition === 'right' ||
             menuPosition === 'right-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
+            <MenuButtonWrapper position={menuPosition} onClick={toggleMenu}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
         </ButtonWrapper>
       </NavInner>
-      {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
+      {/* eslint-disable-next-line react/no-children-prop */}
+      <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />
     </NavWrapper>
   );
 };

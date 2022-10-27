@@ -43,6 +43,7 @@ const ThemeButton = () => {
   return (
     <StyledThemeButton
       name={'theme-toggle-button'}
+      aria-label={'theme-toggle-button'}
       onClick={() => {
         setAnimate(true);
         toggleTheme();

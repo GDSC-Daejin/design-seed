@@ -1,5 +1,7 @@
-import { ColorToken } from '@gdsc-dju/styled-components-theme';
 import React from 'react';
+
+import { ColorToken } from '@gdsc-dju/styled-components-theme';
+
 import { NavigationRoutes } from './Navigation';
 
 export interface NavigationProps {
@@ -13,9 +15,8 @@ export interface NavigationProps {
     | 'none'
     | 'left-mobile-only'
     | 'right-mobile-only';
-  isMenuOpen?: boolean;
-  menuToggle?: () => void;
   sideMenu?: React.ReactNode;
   rightElement?: React.ReactNode;
   customLogo?: React.ReactNode;
+  router?: (pathname: string) => void;
 }

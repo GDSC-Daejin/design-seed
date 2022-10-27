@@ -1,6 +1,6 @@
 # 시작하기
 
-기본적인 기능을 위한 세팅을 해보겠습니다.
+기본적인 기능을 위한 세팅입니다.
 
 ### Provider 설정하기
 
@@ -10,6 +10,25 @@ import {GdsThemeProvider} from "@gdsc-dju/styled-components-theme";
 <GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
 </GdsThemeProvider>
+```
+
+### CSS를 Reset 해주세요.
+
+`Styled-Components`의 `globalStyle`을 활용하시면 됩니다.
+
+:::caution
+
+기본 font-size는 10px로 설정해주세요
+
+:::
+
+EX
+```
+  * {
+    font-size: 10px;
+    word-break: keep-all;
+    font-family: 'Google Sans Display','Spoqa Han Sans Neo', sans-serif;
+  }
 ```
 
 
@@ -27,7 +46,9 @@ const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 </button>
 ```
 
-`MenuContext` 을 이용해서 테마를 변경할 수 있습니다.
+### 사이드 메뉴 열고 닫기
+
+`MenuContext` 을 이용해서 사이드 메뉴를 열 수 있습니다.
 
 ```typescript jsx
 import {MenuContext} from "@gdsc-dju/styled-components-theme";

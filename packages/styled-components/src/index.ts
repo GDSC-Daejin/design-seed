@@ -1,11 +1,4 @@
-export { default as FileInput } from './FileInput';
-export * from './FileInput';
-
-export { default as Input } from './Input';
-export * from './Input';
-
-export { default as TextArea } from './TextArea';
-export * from './TextArea';
+export * from './inputs';
 
 export { default as Navigation } from './Navigation';
 export * from './Navigation';

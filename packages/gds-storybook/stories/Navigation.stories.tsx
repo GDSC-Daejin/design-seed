@@ -1,6 +1,8 @@
 import React from 'react';
-import { Navigation } from '../../styled-components';
+
 import { Story } from '@storybook/react';
+
+import { Navigation } from '../../styled-components/src';
 
 export default {
   title: 'Components/Navigation',

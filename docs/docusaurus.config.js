@@ -3,11 +3,13 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'GDSC DJU Design System',
-  tagline: '',
+  title: 'GDSC DJU Design',
+  tagline: '쉽고 간단하게 스타일을 사용해보세요',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -30,7 +32,20 @@ const config = {
           editUrl:
             'https://github.com/GDSC-Daejin/design-seed/tree/master/packages',
         },
-
+        blog: {
+          blogTitle: 'GDSC DJU Design Blog',
+          blogDescription: 'A Docusaurus powered blog!',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+          showReadingTime: true, // When set to false, the "x min read" won't be shown
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} GDSC DJU, Inc.`,
+          },
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -54,6 +69,7 @@ const config = {
             docId: 'index',
             label: 'Docs',
           },
+          { to: 'blog', label: 'Blog', position: 'left' }, // or position: 'right'
           {
             href: 'https://github.com/GDSC-Daejin/design-seed',
             label: 'GitHub',
@@ -70,14 +86,6 @@ const config = {
               {
                 label: 'Website',
                 href: 'https://web.gdsc-dju.com/',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
             ],
           },

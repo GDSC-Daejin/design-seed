@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
 import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
+
+import styled, { css } from 'styled-components';
 
 export const NavWrapper = styled.nav`
   height: 70px;
@@ -38,7 +38,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
-export const NavTaskWrapper = styled.ul`
+export const NavTaskWrapper = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
@@ -110,7 +110,7 @@ export const MenuButtonWrapper = styled.div<{
   ${({ position }) =>
     position === 'left' &&
     css`
-      margin-right: 50px;
+      margin-right: 20px;
       @media (max-width: 600px) {
         margin-right: 20px;
       }
@@ -123,14 +123,14 @@ export const MenuButtonWrapper = styled.div<{
   ${({ position }) =>
     (position === 'right' || position === 'right-mobile-only') &&
     css`
-      margin-left: 0px;
+      margin-left: 0;
     `};
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   ${({ position }) =>
-    (position == 'left-mobile-only' || position == 'right-mobile-only') &&
+    (position === 'left-mobile-only' || position === 'right-mobile-only') &&
     css`
       @media (min-width: 800px) {
         display: none;
