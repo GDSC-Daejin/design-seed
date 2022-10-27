@@ -70,6 +70,10 @@ export const StyledLi = styled.li<{
   color: ${({ theme }) => theme.colors.grey700};
   text-decoration: none;
   text-transform: capitalize;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* 인터넷익스플로러 */
+  user-select: none;
   &:first-child {
     margin-left: 16px;
   }

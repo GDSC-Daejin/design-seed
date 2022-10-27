@@ -53,7 +53,10 @@ const Navigation = ({
       <NavLogoContainer>
         <NavLogoContainerInner>
           {(menuPosition === 'left' || menuPosition === 'left-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={toggleMenu}>
+            <MenuButtonWrapper
+              position={menuPosition}
+              onClick={() => toggleMenu()}
+            >
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}

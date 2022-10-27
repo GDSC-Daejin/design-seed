@@ -36,6 +36,10 @@ export const NavSubtitle = styled.div<{ color?: ColorToken | string }>`
   font-weight: ${({ theme }) => theme.fontWeights.medium};
   word-break: keep-all;
   margin-top: 2px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* 인터넷익스플로러 */
+  user-select: none;
   ${({ color }) =>
     color && isColorToken(color)
       ? css`
@@ -50,6 +54,10 @@ export const LogoTitle = styled.div`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   font-size: ${({ theme }) => theme.fontSizes.textXxl};
   color: ${({ theme }) => theme.colors.grey800};
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* 인터넷익스플로러 */
+  user-select: none;
 `;
 export const LogoTextWrapper = styled.div`
   display: flex;
