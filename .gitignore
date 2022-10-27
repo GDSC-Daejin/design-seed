@@ -10,7 +10,6 @@ lerna-debug.log*
 node_modules
 storybook-static
 build
-test-project
 dist
 lib
 dist-ssr
