@@ -124,7 +124,7 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
         {tags.length < maxTags && (
           <StyledInput
             ref={ref}
-            placeholder="태그를 입력하세요"
+            {...rest}
             value={value}
             tabIndex={2}
             onKeyDown={onKeyDown}
