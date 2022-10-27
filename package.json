@@ -37,8 +37,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "react": "^18.2.0",
-    "react-is": "^18.2.0",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-is": "^18.2.0"
   }
 }

@@ -1,7 +1,6 @@
 import { GdsThemeProvider } from '@gdsc-dju/styled-components-theme';
-
-import { BrowserRouter } from 'react-router-dom';
 import GlobalStyles from '../stories/styles/globalStyles';
+import { useDarkMode } from 'storybook-dark-mode';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -20,12 +19,9 @@ export const parameters = {
 };
 export const decorators = [
   (Story) => (
-    <GdsThemeProvider mode={'auto'}>
+    <GdsThemeProvider mode={useDarkMode() ? 'dark-only' : 'light-only'}>
       <GlobalStyles />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
-
-        <Story />
-      </BrowserRouter>
+      <Story />
     </GdsThemeProvider>
   ),
 ];

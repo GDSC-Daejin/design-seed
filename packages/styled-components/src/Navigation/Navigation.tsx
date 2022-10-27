@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
+import MenuIcon from '../MenuIcon';
+import SideMenu from '../SideMenu/SideMenu';
+import ThemeButton from '../ThemeButton';
+
+import NavigationLogo from './NavigationLogo';
+import { NavigationProps } from './props';
 import {
   ButtonWrapper,
   LinkWrapper,
@@ -11,17 +17,11 @@ import {
   NavWrapper,
   StyledLi,
 } from './styled';
-import MenuIcon from '../MenuIcon';
-import SideMenu from '../SideMenu/SideMenu';
-import { useLocation, useNavigate } from 'react-router-dom';
-import ThemeButton from '../ThemeButton';
-import NavigationLogo from './NavigationLogo';
-import { NavigationProps } from './props';
 
-export type NavigationRoutes = {
+export type NavigationRoutes = Array<{
   route: string;
   title: string;
-}[];
+}>;
 
 const Navigation = ({
   routes,
@@ -30,24 +30,33 @@ const Navigation = ({
   themeButtonActive = true,
   pointColor = 'blue900',
   menuPosition = 'right',
+  router,
   menuToggle,
   isMenuOpen = false,
   sideMenu,
   rightElement,
 }: NavigationProps) => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [currentLocation, setLocation] = useState<string | undefined>();
+  useEffect(() => {
+    setLocation(location.pathname);
+  }, [location.pathname]);
+
+  const routeHandler = (route: string) => {
+    router && router(route);
+  };
+
   return (
     <NavWrapper>
       <NavLogoContainer>
         <NavLogoContainerInner>
-          {(menuPosition == 'left' || menuPosition == 'left-mobile-only') && (
+          {(menuPosition === 'left' || menuPosition === 'left-mobile-only') && (
             <MenuButtonWrapper position={menuPosition} onClick={menuToggle}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
           <NavigationLogo
             title={title}
+            onClick={() => routeHandler('/')}
             customLogo={customLogo}
             pointColor={pointColor}
           />
@@ -56,15 +65,13 @@ const Navigation = ({
             {routes && (
               <LinkWrapper>
                 {routes.map((link) => {
-                  const isRoute = location.pathname.includes(link.route);
+                  const isRoute = currentLocation?.includes(link.route);
                   return (
                     <StyledLi
                       key={link.route}
                       color={pointColor}
                       active={isRoute}
-                      onClick={() => {
-                        navigate(link.route);
-                      }}
+                      onClick={() => routeHandler(link.route)}
                     >
                       {link.title}
                     </StyledLi>
@@ -87,6 +94,7 @@ const Navigation = ({
           )}
         </ButtonWrapper>
       </NavInner>
+      {/* eslint-disable-next-line react/no-children-prop */}
       {menuToggle && <SideMenu isMenuOpen={isMenuOpen} children={sideMenu} />}
     </NavWrapper>
   );

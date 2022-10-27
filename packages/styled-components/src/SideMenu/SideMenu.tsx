@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+
 import styled, { css } from 'styled-components';
+
 import { SideMenuProps } from './props';
 
 export const SideMenuWrapper = styled.div<{ animate: boolean }>`
