@@ -34,7 +34,6 @@ export const NavInner = styled.div`
   justify-content: flex-end;
 `;
 export const ButtonWrapper = styled.div`
-  z-index: 999;
   display: flex;
   flex-direction: row;
 `;

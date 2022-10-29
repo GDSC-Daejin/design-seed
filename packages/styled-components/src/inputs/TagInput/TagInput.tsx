@@ -41,7 +41,7 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
     ref,
   ) => {
     const [isFocused, setIsFocused] = useState(false);
-    const [tags, setTags] = useState<string[]>(initialTags);
+    const [tags, setTags] = useState(initialTags);
     const [value, setValue] = useState('');
 
     const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
