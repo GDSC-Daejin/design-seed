@@ -30,7 +30,14 @@ export const StyledFileInput = styled.div`
 
 const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
   (
-    { placeholder: defaultPlaceholder, disabled, hasError, onChange, ...rest },
+    {
+      placeholder: defaultPlaceholder,
+      disabled,
+      hasError,
+      borderless = false,
+      onChange,
+      ...rest
+    },
     ref,
   ) => {
     const [placeholder, setPlaceholder] = useState(
@@ -49,6 +56,7 @@ const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
       <StyledInputWrapper
         hasError={hasError}
         isDisabled={disabled}
+        borderless={borderless}
         onClick={() => {
           inputRef && inputRef.click();
         }}

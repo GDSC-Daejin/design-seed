@@ -24,4 +24,5 @@ export type FileInputProps = {
    * 에러 상태를 표시합니다.
    */
   hasError?: boolean;
+  borderless?: boolean;
 } & FileInputAttributes;

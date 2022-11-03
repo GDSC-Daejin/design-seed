@@ -24,13 +24,14 @@ export const StyledTextArea = styled.textarea`
 `;
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({ disabled, hasError, className, ...rest }, ref) => {
+  ({ disabled, hasError, className, borderless = false, ...rest }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     return (
       <StyledInputWrapper
         hasError={hasError}
         isDisabled={disabled}
         isFocused={isFocused}
+        borderless={borderless}
       >
         <StyledTextArea
           ref={ref}

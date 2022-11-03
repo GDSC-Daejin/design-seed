@@ -22,13 +22,14 @@ export const StyledInputInner = styled.input<{ isDisabled?: boolean }>`
 `;
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ disabled, hasError, ...rest }, ref) => {
+  ({ disabled, hasError, borderless = false, ...rest }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     return (
       <StyledInputWrapper
         hasError={hasError}
         isDisabled={disabled}
         isFocused={isFocused}
+        borderless={borderless}
       >
         <StyledInputInner
           className={'formInput'}

@@ -4,6 +4,7 @@ export const StyledInputWrapper = styled.div<{
   isDisabled?: boolean;
   hasError?: boolean;
   isFocused?: boolean;
+  borderless?: boolean;
 }>`
   width: 100%;
   display: flex;
@@ -41,6 +42,15 @@ export const StyledInputWrapper = styled.div<{
     css`
       box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red900};
     `}
+    ${({ borderless }) =>
+    borderless &&
+    css`
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+    `}
+  
   transition: 0.3s;
 `;
 

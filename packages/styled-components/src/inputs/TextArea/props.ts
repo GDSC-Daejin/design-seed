@@ -19,6 +19,6 @@ export type TextAreaAttributes = {
 
 export type TextAreaProps = {
   className?: string;
-
+  borderless?: boolean;
   hasError?: boolean;
 } & TextAreaAttributes;

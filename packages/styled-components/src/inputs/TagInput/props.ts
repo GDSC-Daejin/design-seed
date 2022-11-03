@@ -19,5 +19,6 @@ export type TagInputProps = {
   onChange: (tags: string[]) => void;
   maxTags?: number;
   hasError?: boolean;
+  borderless?: boolean;
   chip?: keyof JSX.IntrinsicElements;
 } & TagInputAttributes;

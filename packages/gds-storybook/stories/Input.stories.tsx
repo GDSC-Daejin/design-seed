@@ -46,6 +46,7 @@ export const TagInput = TagTemplate.bind({});
 TagInput.args = {
   // @ts-ignore
   placeholder: 'placeholder',
+  borderless: true,
   onChange: (tags: string[]) => {
     console.log(tags);
   },

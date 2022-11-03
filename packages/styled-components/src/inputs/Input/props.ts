@@ -23,5 +23,6 @@ export type InputProps = {
   /**
    * 에러 상태를 표시합니다.
    */
+  borderless?: boolean;
   hasError?: boolean;
 } & InputAttributes;

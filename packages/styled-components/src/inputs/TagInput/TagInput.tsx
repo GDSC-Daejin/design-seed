@@ -37,6 +37,7 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
       disabled,
       hasError,
       chip: ChipComponent = Chip,
+      borderless = false,
       ...rest
     },
     ref,
@@ -112,6 +113,7 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
         isFocused={isFocused}
         isDisabled={disabled}
         hasError={hasError}
+        borderless={borderless}
       >
         {tags.length > 0 && (
           <ChipSection>
