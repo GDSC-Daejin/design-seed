@@ -1,4 +1,6 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
+
+import { DarkModeContext } from '@gdsc-dju/styled-components-theme';
 
 import styled, { css } from 'styled-components';
 
@@ -22,13 +24,14 @@ export const StyledChip = styled.div<{
   ${({ isDarkMode }) =>
     isDarkMode
       ? css`
-          border: 1px solid rgba(255, 255, 255, 0.6);
-          color: #fff;
+          border: 1px solid ${({ theme }) => theme.colors.grey900};
+          color: ${({ theme }) => theme.colors.grey900};
           opacity: 1;
         `
       : css`
-          border: 1px solid ${({ theme }) => theme.colors.grey600};
+          border: 1px solid ${({ theme }) => theme.colors.grey900};
           color: ${({ theme }) => theme.colors.grey900};
+          opacity: 1;
         `};
   ${({ size }) =>
     size === 'L' &&
@@ -40,16 +43,17 @@ export const StyledChip = styled.div<{
     css`
       height: 17px;
       padding: 1px 10px;
-      border: 1px solid ${(props) => props.theme.colors.grey600};
       border-radius: 50px;
       margin-right: 6px;
     `};
 `;
 
 const Chip = forwardRef<HTMLDivElement, ChipProps>(
-  ({ children, size, ...rest }, ref) => {
+  ({ children, size = 'L', ...rest }, ref) => {
+    const { isDarkMode } = useContext(DarkModeContext);
+
     return (
-      <StyledChip isDarkMode={true} size={size} ref={ref} {...rest}>
+      <StyledChip isDarkMode={isDarkMode} size={size} ref={ref} {...rest}>
         {children}
       </StyledChip>
     );

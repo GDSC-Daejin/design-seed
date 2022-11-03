@@ -36,6 +36,7 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
       maxTags = 3,
       disabled,
       hasError,
+      chip: ChipComponent = Chip,
       ...rest
     },
     ref,
@@ -114,10 +115,10 @@ const TagInput = forwardRef<HTMLInputElement, TagInputProps>(
       >
         {tags.length > 0 && (
           <ChipSection>
-            {tags.map((tag: string) => (
-              <Chip key={tag} onClick={() => onRemove(tag)} size={'L'}>
+            {tags.map((tag: string, index) => (
+              <ChipComponent onClick={() => onRemove(tag)} key={tag + index}>
                 {tag}
-              </Chip>
+              </ChipComponent>
             ))}
           </ChipSection>
         )}
