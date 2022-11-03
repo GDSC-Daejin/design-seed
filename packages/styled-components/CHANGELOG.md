@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.63 (2022-11-03)
+
+
+### Features
+
+* inputWrapper borderless option 추가 ([c4b9935](https://github.com/GDSC-Daejin/design-seed/commit/c4b9935fd9ce762894b07e05ed49540bb00da98d))
+
 ### 0.0.62 (2022-10-29)
 
 ### 0.0.61 (2022-10-27)
