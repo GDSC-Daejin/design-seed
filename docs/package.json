@@ -15,11 +15,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.18.6",
+    "@babel/register": "^7.15.3",
     "@docusaurus/core": "2.1.0",
     "@docusaurus/preset-classic": "2.1.0",
     "@gdsc-dju/styled-components": "workspace:^",
     "@gdsc-dju/styled-components-theme": "workspace:^",
     "@mdx-js/react": "^1.6.22",
+    "@types/babel__preset-env": "^7",
     "clsx": "^1.2.1",
     "firebase": "^9.10.0",
     "firebase-tools": "^11.9.0",
@@ -37,10 +42,13 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.1.0",
     "@tsconfig/docusaurus": "^1.0.5",
+    "@types/babel__preset-env": "^7",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
     "commander": "^9.4.1",
-    "typescript": "^4.7.4"
+    "globby": "^11",
+    "typescript": "^4.7.4",
+    "webpack": "^5.65.0"
   },
   "browserslist": {
     "production": [

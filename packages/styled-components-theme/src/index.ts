@@ -1,3 +1,4 @@
+/** @docs-ignore */
 export { GdsThemeProvider } from './GdsThemeProvider';
 export { DarkModeContext } from './contexts/DarkModeContext';
 export { MenuContext } from './contexts/MenuContext';

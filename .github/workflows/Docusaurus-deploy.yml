@@ -49,6 +49,8 @@ jobs:
         run: yarn workspace @gdsc-dju/styled-components-theme build
       - name: Build GDS
         run: yarn workspace @gdsc-dju/styled-components build
+      - name: Build Markdown
+        run: yarn docs:build
       - name: Project Build
         run: yarn build
         working-directory: ${{ env.working-directory }}

@@ -26,7 +26,9 @@ export type GdsTheme = {
 declare module 'styled-components' {
   export interface DefaultTheme extends GdsTheme {}
 }
-
+/**
+ * @description 123
+ */
 export const GdsThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
   mode = 'auto' as ThemeMode,
