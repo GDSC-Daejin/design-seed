@@ -6,8 +6,8 @@ on:
       - master
     paths:
       - "docs/**"
-      - "packages/styled-components/**"
-      - "packages/styled-components-theme/**"
+      - "packages/ui/**"
+      - "packages/theme/**"
       - ".github/workflows/Docusaurus-deploy.yml"
 
   pull_request:
@@ -17,8 +17,8 @@ on:
       - closed
     paths:
       - "packages/gds-storybook/**"
-      - "packages/styled-components/**"
-      - "packages/styled-components-theme/**"
+      - "packages/ui/**"
+      - "packages/theme/**"
       - ".github/workflows/Docusaurus-deploy.yml"
 jobs:
   Deploy_Live_channel:
@@ -46,9 +46,9 @@ jobs:
       - name: install package
         run: yarn install
       - name: Build GDS-Theme
-        run: yarn workspace @gdsc-dju/styled-components-theme build
+        run: yarn workspace @gdsc-dju/theme build
       - name: Build GDS
-        run: yarn workspace @gdsc-dju/styled-components build
+        run: yarn workspace @gdsc-dju/ui build
       - name: Build Markdown
         run: yarn docs:build
       - name: Project Build

@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - "packages/styled-components-theme/**"
+      - "packages/theme/**"
       - ".github/workflows/SCT-npm-publish.yml"
   pull_request:
     branches:
@@ -12,13 +12,13 @@ on:
     types:
       - closed
     paths:
-      - "packages/styled-components-theme/**"
+      - "packages/theme/**"
 jobs:
   publish-npm:
 #    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
-      working-directory: ./packages/styled-components-theme
+      working-directory: ./packages/theme
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2

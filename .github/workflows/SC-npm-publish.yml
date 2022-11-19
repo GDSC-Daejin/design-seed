@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - "packages/styled-components/**"
+      - "packages/ui/**"
       - ".github/workflows/SC-npm-publish.yml"
   pull_request:
     branches:
@@ -12,13 +12,13 @@ on:
     types:
       - closed
     paths:
-      - "packages/styled-components/**"
+      - "packages/ui/**"
 jobs:
   publish-npm:
 #    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
-      working-directory: ./packages/styled-components
+      working-directory: ./packages/ui
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -27,7 +27,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: yarn install
       - name: Build GDS
-        run: yarn workspace @gdsc-dju/styled-components-theme build
+        run: yarn workspace @gdsc-dju/theme build
       - name: version up
         run: |
           git pull origin master

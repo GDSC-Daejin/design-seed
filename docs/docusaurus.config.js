@@ -43,7 +43,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'styled-components/README',
+          docId: 'ui/README',
           position: 'left',
           label: 'Docs',
         },
@@ -62,7 +62,7 @@ module.exports = {
           items: [
             {
               label: 'Docs',
-              to: '/styled-components-theme',
+              to: '/theme',
             },
           ],
         },
