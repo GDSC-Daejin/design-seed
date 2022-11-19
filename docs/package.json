@@ -21,6 +21,7 @@
     "@babel/register": "^7.15.3",
     "@docusaurus/core": "2.1.0",
     "@docusaurus/preset-classic": "2.1.0",
+    "@easyops-cn/docusaurus-search-local": "^0.33.5",
     "@gdsc-dju/styled-components": "workspace:^",
     "@gdsc-dju/styled-components-theme": "workspace:^",
     "@mdx-js/react": "^1.6.22",

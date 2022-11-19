@@ -14,10 +14,7 @@ that using in gdsc-dju websites.
 yarn add styled-components @gdsc-dju/styled-components
 ```
 
-## Usage
-
-
-### Setup Provider
+### Provider 설정하기
 
 ```typescript jsx
 import {GdsThemeProvider} from "@gdsc-dju/styled-components-theme";
@@ -25,12 +22,31 @@ import {GdsThemeProvider} from "@gdsc-dju/styled-components-theme";
 <GdsThemeProvider mode={'auto'}> //mode: auto, dark-only, light-only
     <MyThemedComponent/>
 </GdsThemeProvider>
-```    
+```
+
+### CSS를 Reset 해주세요.
+
+`Styled-Components`의 `globalStyle`을 활용하시면 됩니다.
+
+:::caution
+
+기본 font-size는 10px로 설정해주세요
+
+:::
+
+EX
+```
+  * {
+    font-size: 10px;
+    word-break: keep-all;
+    font-family: 'Google Sans Display','Spoqa Han Sans Neo', sans-serif;
+  }
+```
 
 
-### To change theme
+### 테마 변경하기
 
-You can change theme by using `DarkModeContext`.
+`DarkModeContext` 을 이용해서 테마를 변경할 수 있습니다.
 
 ```typescript jsx
 import {DarkModeContext} from "@gdsc-dju/styled-components-theme";
@@ -42,7 +58,9 @@ const {isDarkMode, toggleTheme} = useContext(DarkModeContext);
 </button>
 ```
 
-You can open SideMenu by using `MenuContext`.
+### 사이드 메뉴 열고 닫기
+
+`MenuContext` 을 이용해서 사이드 메뉴를 열 수 있습니다.
 
 ```typescript jsx
 import {MenuContext} from "@gdsc-dju/styled-components-theme";
@@ -54,7 +72,7 @@ const {isMenuOpen, toggleMenu, menuHandler} = useContext(MenuContext);
 </button>
 ```
 
-## Using styled Tokens
+## 토큰 사용하기
 
 ```typescript jsx
 const Box1 = styled.div`
@@ -70,11 +88,12 @@ font-size: ${({theme}) => theme.fontSizes.textXxl};
 `;
 ```
 
-## Usage with custom theme
+## 사용자 커스텀 토큰 사용하기
 
-GdsThemeProvider is just a ThemeProvider with predefined types.
+GdsThemeProvider는 Styled-Components의 `ThemeProvider`를 활용한 HOC입니다.
 
-You can also use ThemeProvider directly.
+별도의 설정을 원하시는 경우 아래 예시처럼 별도로 Provider를 생성해서 사용해주세요.
+
 
 ```typescript jsx
 
@@ -104,9 +123,3 @@ const menuValue = useToggleMenu();
     </MenuContext.Provider>
 </DarkModeContext.Provider>
 ```
-
-## FontSizes
-
-[gds-storybook FontSizes](https://design.gdsc-dju.com/?path=/story/typography-bold--page)
-
-

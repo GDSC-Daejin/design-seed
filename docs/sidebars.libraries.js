@@ -14,23 +14,12 @@ const groups = {};
       cwd: BASE_PATH,
     })
     .filter(
-      (x) =>
-        !x.endsWith('/CHANGELOG.md') ||
-        !x.endsWith('index.ts.docs.md') ||
-        !x.endsWith('styled.ts.docs.md'),
+      (x) =>{
+        return !(x.includes('CHANGELOG') || x.includes('index.ts.docs.md')|| x.includes('index.tsx.docs.md') || x.endsWith('styled.ts.docs.md')|| x.endsWith('props.ts.docs.md'))
+      }
     )
     .sort();
 
-
-  console.log(globby
-      .sync('**/*.md', {
-        cwd: BASE_PATH,
-      }).filter(
-          (x) =>
-              !x.includes('/CHANGELOG.md') ||
-              !x.includes('index.ts.docs.md') ||
-              !x.includes('styled.ts.docs.md'),
-      ))
 
 
 
