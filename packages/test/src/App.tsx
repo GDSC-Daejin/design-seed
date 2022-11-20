@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { themeHandler, changeTheme } from '@gdsc-dju/gds-theme/themeHandler';
 
@@ -6,7 +6,9 @@ import reactLogo from './assets/react.svg';
 import './App.css';
 
 function App() {
-  themeHandler();
+  useEffect(() => {
+    themeHandler();
+  }, []);
   const [count, setCount] = useState(0);
   return (
     <div className="App">
