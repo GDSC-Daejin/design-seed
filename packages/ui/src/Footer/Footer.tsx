@@ -5,10 +5,10 @@ import styled, { css } from 'styled-components';
 import { FooterProps } from './props';
 
 export const FooterText = styled.a<{ google?: boolean }>`
-  font-size: ${({ theme }) => theme.fontSizes.textL};
+  font-size: var(--text-l);
   font-weight: 600;
   margin-right: 20px;
-  color: ${({ theme }) => theme.colors.grey600};
+  color: var(--grey500);
   cursor: pointer;
   white-space: nowrap;
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}px) {
@@ -17,20 +17,20 @@ export const FooterText = styled.a<{ google?: boolean }>`
   ${({ google }) =>
     google &&
     css`
-      font-size: ${({ theme }) => theme.fontSizes.textXl};
+      font-size: var(--text-xl);
       font-weight: 700;
-      color: ${({ theme }) => theme.colors.grey700};
+      color: var(--grey700);
     `}
 `;
 
 export const FooterCopyRight = styled.span`
   display: inline-block;
   position: relative;
-  font-size: ${({ theme }) => theme.fontSizes.textM};
-  color: ${({ theme }) => theme.colors.grey600};
+  font-size: var(--text-m);
+  color: var(--grey600);
   white-space: nowrap;
   @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
-    font-size: ${({ theme }) => theme.fontSizes.textS};
+    font-size: var(--text-s);
   }
 `;
 export const FooterWrapper = styled.div`

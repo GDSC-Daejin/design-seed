@@ -16,21 +16,21 @@ export const StyledInputWrapper = styled.div<{
   appearance: none;
   border-radius: 10px;
   border: none;
-  box-shadow: inset 0 0 0 1px ${({ theme }) => theme.colors.grey300};
-  background: ${({ theme }) => theme.colors.background};
+  box-shadow: inset 0 0 0 1px var(--grey300);
+  background: var(--background);
   cursor: auto;
   &:hover {
-    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue400};
+    box-shadow: inset 0 0 0 2px var(--blue400);
     ${({ hasError }) =>
       hasError &&
       css`
-        box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red600};
-      `}
+        box-shadow: inset 0 0 0 2px var(--red400);
+      `};
   }
   ${({ isFocused }) =>
     isFocused &&
     css`
-      box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.blue600};
+      box-shadow: inset 0 0 0 2px var(--blue600);
     `}
   ${({ isDisabled }) =>
     isDisabled &&
@@ -40,7 +40,7 @@ export const StyledInputWrapper = styled.div<{
   ${({ hasError }) =>
     hasError &&
     css`
-      box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colors.red900};
+      box-shadow: inset 0 0 0 2px var(--red900);
     `}
     ${({ borderless }) =>
     borderless &&

@@ -1,13 +1,10 @@
-import React, { forwardRef, useContext } from 'react';
-
-import { DarkModeContext } from '@gdsc-dju/styled-components-theme';
+import React, { forwardRef } from 'react';
 
 import styled, { css } from 'styled-components';
 
 import { ChipProps } from './props';
 
 export const StyledChip = styled.div<{
-  isDarkMode: boolean;
   size?: 'S' | 'L';
 }>`
   padding: 1px 10px;
@@ -18,25 +15,15 @@ export const StyledChip = styled.div<{
   display: flex;
   align-items: center;
   white-space: nowrap;
-  font-size: ${({ theme }) => theme.fontSizes.textS};
+  font-size: var(--text-s);
   cursor: pointer;
   user-select: none;
-  ${({ isDarkMode }) =>
-    isDarkMode
-      ? css`
-          border: 1px solid ${({ theme }) => theme.colors.grey900};
-          color: ${({ theme }) => theme.colors.grey900};
-          opacity: 1;
-        `
-      : css`
-          border: 1px solid ${({ theme }) => theme.colors.grey900};
-          color: ${({ theme }) => theme.colors.grey900};
-          opacity: 1;
-        `};
+  border: 1px solid var(--grey500);
+  color: var(--grey500);
   ${({ size }) =>
     size === 'L' &&
     css`
-      font-size: ${({ theme }) => theme.fontSizes.textL};
+      font-size: var(--text-l);
     `};
   ${({ size }) =>
     size === 'S' &&
@@ -50,10 +37,8 @@ export const StyledChip = styled.div<{
 
 const Chip = forwardRef<HTMLDivElement, ChipProps>(
   ({ children, size = 'L', ...rest }, ref) => {
-    const { isDarkMode } = useContext(DarkModeContext);
-
     return (
-      <StyledChip isDarkMode={isDarkMode} size={size} ref={ref} {...rest}>
+      <StyledChip size={size} ref={ref} {...rest}>
         {children}
       </StyledChip>
     );

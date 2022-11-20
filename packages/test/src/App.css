@@ -22,7 +22,7 @@ html {
 h1{
     font-size: var(--title-xxl);
     font-weight: var(--title-font-weight);
-    color: var(--grey900);
+    color: var(--green900);
 }
 
 @keyframes logo-spin {
