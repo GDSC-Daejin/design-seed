@@ -1,5 +1,5 @@
 {
-  "name": "@gdsc-dju/gds-utils",
+  "name": "@gdsc-dju/utils",
   "version": "0.0.0",
   "packageManager": "yarn@3.2.2",
   "description": "GDSC-DJU Design System Component package for styled-components",
