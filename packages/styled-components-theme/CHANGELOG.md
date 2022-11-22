@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.53 (2022-11-22)
+
+
+### Features
+
+* chip darkmode 대응 ([f7fb560](https://github.com/GDSC-Daejin/design-seed/commit/f7fb560b35dbe0505711571b2574a523d1145970))
+* inputWrapper borderless option 추가 ([c4b9935](https://github.com/GDSC-Daejin/design-seed/commit/c4b9935fd9ce762894b07e05ed49540bb00da98d))
+
 ### 0.0.52 (2022-10-27)
 
 ### 0.0.51 (2022-10-21)
