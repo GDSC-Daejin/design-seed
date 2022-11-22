@@ -1,14 +1,19 @@
 import React from 'react';
-import styled, { css, useTheme } from 'styled-components';
+
+import styled, { css } from 'styled-components';
+
 import { MenuIconProps } from './props';
 
 const StyledSvg = styled.svg`
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: var(--grey900);
 `;
 const StyledPath = styled.path`
   transition: 0.3s;
+  stroke: var(--grey900);
+  fill: var(--grey900);
 `;
 
 const MiddlePath = styled.path<{ isActive: boolean }>`
@@ -20,37 +25,27 @@ const MiddlePath = styled.path<{ isActive: boolean }>`
       : css`
           opacity: 1;
         `}
+  stroke: var(--grey900);
+  fill: var(--grey900);
   transition: 0.3s;
 `;
 
 const MenuIcon = ({ isMenuOpen }: MenuIconProps) => {
-  const theme = useTheme();
   return (
-    <StyledSvg
-      width="23"
-      height="23"
-      viewBox="0 0 23 23"
-      fill={theme.colors.grey900}
-    >
+    <StyledSvg width="23" height="23" viewBox="0 0 23 23">
       <StyledPath
-        fill={theme.colors.grey900}
         strokeWidth="3"
-        stroke={theme.colors.grey900}
         strokeLinecap="round"
         d={isMenuOpen ? 'M 3 19 L 17 3.5' : 'M 2 4 L 20 4'}
       />
       <MiddlePath
-        fill={theme.colors.grey900}
         strokeWidth="3"
-        stroke={theme.colors.grey900}
         strokeLinecap="round"
         d="M 2 11 L 20 11"
-        isActive={isMenuOpen}
+        isActive={Boolean(isMenuOpen)}
       />
       <StyledPath
-        fill={theme.colors.grey900}
         strokeWidth="3"
-        stroke={theme.colors.grey900}
         strokeLinecap="round"
         d={isMenuOpen ? 'M 3.5 3 L 17 19' : 'M 2 18.346 L 20 18.346'}
       />

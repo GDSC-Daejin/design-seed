@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-
-import { MenuContext } from '@gdsc-dju/styled-components-theme';
+import React, { useEffect, useState } from 'react';
 
 import MenuIcon from '../MenuIcon';
 import SideMenu from '../SideMenu/SideMenu';
@@ -35,10 +33,10 @@ const Navigation = ({
   router,
   sideMenu,
   rightElement,
+  toggleMenu,
+  isMenuOpen,
 }: NavigationProps) => {
   const [currentLocation, setLocation] = useState<string | undefined>();
-
-  const { isMenuOpen, toggleMenu } = useContext(MenuContext);
 
   useEffect(() => {
     setLocation(location.pathname);
@@ -47,16 +45,16 @@ const Navigation = ({
   const routeHandler = (route: string) => {
     router && router(route);
   };
+  const menuHandler = () => {
+    toggleMenu && toggleMenu();
+  };
 
   return (
     <NavWrapper>
       <NavLogoContainer>
         <NavLogoContainerInner>
           {(menuPosition === 'left' || menuPosition === 'left-mobile-only') && (
-            <MenuButtonWrapper
-              position={menuPosition}
-              onClick={() => toggleMenu()}
-            >
+            <MenuButtonWrapper position={menuPosition} onClick={menuHandler}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
@@ -66,7 +64,6 @@ const Navigation = ({
             customLogo={customLogo}
             pointColor={pointColor}
           />
-
           <NavTaskWrapper>
             {routes && (
               <LinkWrapper>
@@ -94,7 +91,7 @@ const Navigation = ({
           {themeButtonActive && <ThemeButton />}
           {(menuPosition === 'right' ||
             menuPosition === 'right-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={toggleMenu}>
+            <MenuButtonWrapper position={menuPosition} onClick={menuHandler}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}

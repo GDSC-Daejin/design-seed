@@ -1,5 +1,3 @@
-import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
-
 import styled, { css } from 'styled-components';
 
 export const NavWrapper = styled.nav`
@@ -56,7 +54,7 @@ export const LinkWrapper = styled.ul`
   } ;
 `;
 export const StyledLi = styled.li<{
-  color: ColorToken | string;
+  color: string;
   active?: boolean;
 }>`
   display: flex;
@@ -65,8 +63,8 @@ export const StyledLi = styled.li<{
   border-radius: 8px;
   padding: 10px 15px;
   list-style: none;
-  font-size: ${({ theme }) => theme.fontSizes.textM};
-  color: ${({ theme }) => theme.colors.grey700};
+  font-size: var(--text-m);
+  color: var(--grey700);
   text-decoration: none;
   text-transform: capitalize;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -78,30 +76,30 @@ export const StyledLi = styled.li<{
   }
   cursor: pointer;
   ${({ color }) =>
-    color && isColorToken(color)
+    color
       ? css`
           &:hover {
-            color: ${({ theme }) => theme.colors[color]};
-            background-color: ${({ theme }) => theme.colors.grey100};
+            color: var(--${color});
+            background-color: var(--grey100);
             backdrop-filter: blur(10px);
             text-decoration: none;
           }
         `
       : css`
           &:hover {
-            color: ${color};
-            background-color: ${({ theme }) => theme.colors.grey100};
+            color: var(--${color});
+            background-color: var(--grey100);
             backdrop-filter: blur(10px);
             text-decoration: none;
           }
         `};
   ${({ active, color }) =>
-    active && color && isColorToken(color)
+    active && color
       ? css`
-          color: ${({ theme }) => theme.colors[color]};
+          color: var(--${color});
         `
       : css`
-          color: ${color};
+          color: var(--${color});
         `};
 `;
 

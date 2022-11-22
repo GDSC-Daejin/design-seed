@@ -2,17 +2,17 @@ name: Node.js Package
 
 on:
   push:
-    branches: [ master ]
+#    branches: [ master ]
     paths:
       - "packages/ui/**"
       - ".github/workflows/SC-npm-publish.yml"
-  pull_request:
-    branches:
-      - master
-    types:
-      - closed
-    paths:
-      - "packages/ui/**"
+#  pull_request:
+#    branches:
+#      - master
+#    types:
+#      - closed
+#    paths:
+#      - "packages/ui/**"
 jobs:
   publish-npm:
 #    if: github.event.pull_request.merged == true

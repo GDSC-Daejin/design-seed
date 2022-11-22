@@ -1,3 +1,3 @@
 export interface MenuIconProps {
-  isMenuOpen: boolean;
+  isMenuOpen?: boolean;
 }

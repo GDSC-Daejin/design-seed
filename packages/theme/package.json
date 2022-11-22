@@ -14,21 +14,47 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GDSC-Daejin/design-seed.git",
+    "url": "https://github.com/GDSC-Daejin/design-seed",
     "directory": "packages/theme"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "main": "./dist/bundle.js",
+    "module": "./dist/bundle.js"
   },
   "exports": {
-    "./global.css": "./global.css",
-    "./themeHandler": "./themeHandler.ts",
+    ".": {
+      "import": "./dist/bundle.js",
+      "require": "./dist/bundle.js",
+      "default": "./dist/bundle.js"
+    },
+    "./src/global.css": "./src/global.css",
     "./package.json": "./package.json"
   },
-  "files": [
-    "global.css",
-    "themeHandler.ts"
+  "keywords": [
+    "styled-components",
+    "react"
   ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-tslint": "^0.2.2",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "standard-version": "^9.5.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
   "bugs": {
     "url": "https://github.com/GDSC-Daejin/design-seed/issues"
   },

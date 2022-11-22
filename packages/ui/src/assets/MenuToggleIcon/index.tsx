@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
+
 import styled, { css, useTheme } from 'styled-components';
 
 import { StyledMenuButton } from './styled';
-import { MenuContext } from '@gdsc-dju/styled-components-theme';
 
 const MiddlePath = styled.path<{ isMenuOpen: boolean }>`
   ${({ isMenuOpen }) =>

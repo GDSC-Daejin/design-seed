@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
+
 import styled, { keyframes } from 'styled-components';
 
 import DarkModeIcon from '../assets/darkModeIcon';
 import LightModeIcon from '../assets/lightModeIcon';
-import { DarkModeContext } from '@gdsc-dju/styled-components-theme';
 
 const startAnimation = keyframes`
   0% {
@@ -36,8 +36,7 @@ const ButtonWrapper = styled.div<{ isActive: boolean }>`
   animation: ${({ isActive }) => isActive && startAnimation} 0.6s ease-in-out;
 `;
 
-const ThemeButton = () => {
-  const { isDarkMode, toggleTheme } = useContext(DarkModeContext);
+const ThemeButton = (isDarkMode: boolean) => {
   const [animate, setAnimate] = useState(false);
 
   return (
@@ -46,7 +45,7 @@ const ThemeButton = () => {
       aria-label={'theme-toggle-button'}
       onClick={() => {
         setAnimate(true);
-        toggleTheme();
+        changeTheme();
       }}
     >
       <ButtonWrapper
