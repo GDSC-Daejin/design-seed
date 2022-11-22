@@ -5,8 +5,8 @@ export const NavWrapper = styled.nav`
   position: fixed;
   top: 0;
   z-index: 90;
-  background: ${({ theme }) => theme.colors.background};
-  box-shadow: 0 4px 30px ${({ theme }) => theme.colors.boxShadow100};
+  background: var(--background);
+  box-shadow: 0 4px 30px var(--box-shadow100);
   width: 100vw;
   display: flex;
 `;
@@ -34,6 +34,7 @@ export const NavInner = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  z-index: 100;
 `;
 export const NavTaskWrapper = styled.div`
   display: flex;

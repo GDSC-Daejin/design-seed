@@ -17,7 +17,6 @@ import React, { ReactNode, Ref, useCallback, useEffect, useRef } from 'react';
  * ```
  */
 
-
 export interface Props {
   children: ReactNode;
   outsideClick: (target: EventTarget | null) => void;

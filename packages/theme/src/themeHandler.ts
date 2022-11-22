@@ -21,7 +21,6 @@ export function themeHandler() {
       }
     }
   }
-  apply();
 }
 export function changeTheme(theme?: string) {
   const el = document.documentElement;

@@ -31,12 +31,15 @@
     --font-weight-bold: 700;
     --font-weight-medium: 500;
     --font-weight---regular: 400;
+    --window-size-desktop: 1024px;
+    --window-size-tablet: 768px;
+    --window-size-mobile: 480px;
+    --window-size-mobile-small: 320px;
     --title-font-weight: var(--font-weight-bold);
     --text-font-weight: var(--font-weight-medium);
     --quote-font-weight: var(--font-weight---regular);
 }
-:root[data-seed][data-seed-scale-color=light]:not([data-seed=dark-only]),
-:root[data-seed]:not([data-seed=dark-only]) [data-seed-scale-color=light] {
+:root[data-seed][data-seed-scale-color=light]{
     --background: var(--static-white);
     --white: #FFF;
     --grey50: #F9FAFB;
@@ -94,9 +97,9 @@
     --blue700: #1e88e5;
     --blue800: #1976d2;
     --blue900: #1565c0;
+    --box-shadow100: 0 0.8px 2px rgba(0,0,0,0.03), 0 3px 7px rgba(0,0,0,0.05), 0 12px 30px rgba(0,0,0,0.1);
 }
-:root[data-seed][data-seed-scale-color=dark]:not([data-seed=light-only]),
-:root[data-seed]:not([data-seed=light-only]) [data-seed-scale-color=dark] {
+:root[data-seed][data-seed-scale-color=dark]{
     --background: #202124;
     --white: #191F28;
     --grey50: #333D4B;
@@ -154,11 +157,5 @@
     --blue700: #90CAF9;
     --blue800: #BBDEFB;
     --blue900: #E3F2FD;
-}
-
-.glass-effect {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); border: 1px solid rgba(255, 255, 255, 0.18);
+    --box-shadow100: 0 0.8px 2px rgba(0,0,0,0.03), 0 3px 7px rgba(0,0,0,0.05), 0 12px 30px rgba(0,0,0,0.1);
 }

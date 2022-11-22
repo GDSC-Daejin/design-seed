@@ -20,7 +20,7 @@ export const StyledLogoWrapper = styled.div`
   flex-wrap: wrap;
   gap: 4px;
   cursor: pointer;
-  @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
+  @media (max-width: var(--window-size-mobile)) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,8 +52,8 @@ export const NavSubtitle = styled.div<{ color?: string }>`
 export const LogoTitle = styled.div`
   margin-left: 4px;
   font-weight: var(--font-weight-bold);
-  font-size: var(text-xxl);
-  color: var(--color-grey-800);
+  font-size: var(--text-xxl);
+  color: var(--grey800);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* 인터넷익스플로러 */
@@ -64,7 +64,7 @@ export const LogoTextWrapper = styled.div`
   align-items: center;
   flex-direction: row;
   gap: 4px;
-  @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
+  @media (max-width: var(--window-size-mobile)) {
     display: none;
   }
 `;

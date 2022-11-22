@@ -1,17 +1,8 @@
 {
   "name": "@gdsc-dju/gds-styles",
   "version": "0.0.0",
-  "type": "module",
   "packageManager": "yarn@3.2.2",
   "description": "StyleSheet for GDSC DJU WebServices",
-  "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -cw",
-    "release": "standard-version"
-  },
-  "source": "./src/index.ts",
-  "main": "./src/index.ts",
-  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/GDSC-Daejin/design-seed",

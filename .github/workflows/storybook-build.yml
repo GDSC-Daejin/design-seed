@@ -4,26 +4,26 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on:
   push:
-    branches:
-      - master
-    paths:
-      - "packages/storybook/**"
-      - ".github/workflows/Docusaurus-deploy.yml"
+#    branches:
+#      - master
+#    paths:
+#      - "packages/web/**"
+#      - ".github/workflows/Docusaurus-deploy.yml"
   pull_request:
-    branches:
-      - master
-    paths:
-      - "packages/storybook/**"
-      - ".github/workflows/Docusaurus-deploy.yml"
+#    branches:
+#      - master
+#    paths:
+#      - "packages/web/**"
+#      - ".github/workflows/Docusaurus-deploy.yml"
 # List of jobs
 jobs:
   storybook-build:
-    if: github.event.pull_request.merged == true
+#    if: github.event.pull_request.merged == true
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
     env:
-      working-directory: ./packages/storybook
+      working-directory: ./packages/web
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2

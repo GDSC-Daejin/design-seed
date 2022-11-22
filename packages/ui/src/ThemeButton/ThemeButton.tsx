@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-import { changeTheme, getCurrentTheme } from '@gdsc-dju/gds-theme';
-
 import styled, { keyframes } from 'styled-components';
 
 import DarkModeIcon from '../assets/darkModeIcon';
 import LightModeIcon from '../assets/lightModeIcon';
+import { useTheme } from '../hooks/useTheme';
 
 const startAnimation = keyframes`
   0% {
@@ -30,7 +29,7 @@ const StyledThemeButton = styled.button`
   cursor: pointer;
   &:hover {
     transition: 0.3s;
-    background: ${({ theme }) => theme.colors.grey50};
+    background: var(--grey50);
   }
 `;
 const ButtonWrapper = styled.div<{ isActive: boolean }>`
@@ -40,7 +39,7 @@ const ButtonWrapper = styled.div<{ isActive: boolean }>`
 
 const ThemeButton = () => {
   const [animate, setAnimate] = useState(false);
-  const theme = getCurrentTheme();
+  const [theme, setTheme] = useTheme();
   const isDarkMode = theme === 'dark';
   return (
     <StyledThemeButton
@@ -48,7 +47,7 @@ const ThemeButton = () => {
       aria-label={'theme-toggle-button'}
       onClick={() => {
         setAnimate(true);
-        changeTheme();
+        setTheme();
       }}
     >
       <ButtonWrapper
