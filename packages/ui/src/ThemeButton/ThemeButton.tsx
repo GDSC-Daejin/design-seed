@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { changeTheme, getCurrentTheme } from '@gdsc-dju/gds-theme';
+
 import styled, { keyframes } from 'styled-components';
 
 import DarkModeIcon from '../assets/darkModeIcon';
@@ -36,9 +38,10 @@ const ButtonWrapper = styled.div<{ isActive: boolean }>`
   animation: ${({ isActive }) => isActive && startAnimation} 0.6s ease-in-out;
 `;
 
-const ThemeButton = (isDarkMode: boolean) => {
+const ThemeButton = () => {
   const [animate, setAnimate] = useState(false);
-
+  const theme = getCurrentTheme();
+  const isDarkMode = theme === 'dark';
   return (
     <StyledThemeButton
       name={'theme-toggle-button'}

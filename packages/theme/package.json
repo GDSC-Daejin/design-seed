@@ -28,7 +28,6 @@
       "require": "./dist/bundle.js",
       "default": "./dist/bundle.js"
     },
-    "./src/global.css": "./src/global.css",
     "./package.json": "./package.json"
   },
   "keywords": [

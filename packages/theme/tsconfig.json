@@ -10,8 +10,8 @@
     "esModuleInterop": true,
     "noImplicitAny": false,
     "isolatedModules": false,
-//    "declaration": true, // d.ts
-//    "emitDeclarationOnly": true, //d.ts만 생성
+    //    "declaration": true, // d.ts
+    //    "emitDeclarationOnly": true, //d.ts만 생성
     "declarationDir": "./dist",
     "skipLibCheck": true,
     "removeComments": true,

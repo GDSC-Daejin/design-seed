@@ -20,6 +20,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:docs"\
       },\
       {\
+        "name": "@gdsc-dju/gds-styles",\
+        "reference": "workspace:packages/styles"\
+      },\
+      {\
         "name": "test",\
         "reference": "workspace:packages/test"\
       },\
@@ -39,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@gdsc-dju/gds-styles", ["workspace:packages/styles"]],\
       ["@gdsc-dju/gds-theme", ["workspace:packages/theme"]],\
       ["@gdsc-dju/gds-ui", ["workspace:packages/ui"]],\
       ["@gdsc-dju/utils", ["workspace:packages/utils"]],\
@@ -5533,6 +5538,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@gdsc-dju/gds-styles", [\
+        ["workspace:packages/styles", {\
+          "packageLocation": "./packages/styles/",\
+          "packageDependencies": [\
+            ["@gdsc-dju/gds-styles", "workspace:packages/styles"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["@gdsc-dju/gds-theme", [\
         ["workspace:packages/theme", {\
           "packageLocation": "./packages/theme/",\
@@ -5565,6 +5579,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.20.2"],\
             ["@babel/preset-react", "virtual:388a8b2a89937f340c752c3bc1b0426d3d325132ecbdd9e670254690d35fc807639274cf62d067745f76a19fef7bf3bfc29ee293d6628dcf5d05c2265d1eb62f#npm:7.18.6"],\
             ["@babel/preset-typescript", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.18.6"],\
+            ["@gdsc-dju/gds-theme", "workspace:packages/theme"],\
             ["@rollup/plugin-babel", "virtual:b3cbdc7b15361a32b1a2d7c94da3f6ee622bd86bad472aeaa77dce15923245dd84659202f28ff2e22ba32398280da5440d501da3ef4ca7894889f5b976724090#npm:5.3.1"],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/styled-components", "npm:5.1.26"],\

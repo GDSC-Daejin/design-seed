@@ -1,4 +1,4 @@
-name: Node.js Package
+name: @gdsc-dju/gds-ui Package Publish
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: yarn install
       - name: Build GDS
-        run: yarn workspace @gdsc-dju/gds-theme build
+        run: yarn workspace @gdsc-dju/gds-ui build
       - name: version up
         run: |
           git pull origin master

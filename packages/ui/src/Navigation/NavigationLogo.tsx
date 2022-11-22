@@ -1,6 +1,6 @@
 import React, { forwardRef, HTMLAttributes } from 'react';
 
-import { ColorToken, isColorToken } from '@gdsc-dju/styled-components-theme';
+import { isColorToken } from '@gdsc-dju/gds-theme';
 
 import styled, { css } from 'styled-components';
 
@@ -9,13 +9,13 @@ import GDSCLogo from '../assets/GDSCLogo';
 interface NavigationLogoProps extends HTMLAttributes<HTMLDivElement> {
   customLogo?: React.ReactNode;
   title?: string;
-  pointColor?: ColorToken | string;
+  pointColor?: string;
 }
 
 export const StyledLogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  font-size: ${({ theme }) => theme.fontSizes.textXl};
+  font-size: var(--text-xl);
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4px;
@@ -27,13 +27,13 @@ export const StyledLogoWrapper = styled.div`
     transform: translate(-50%, -50%);
   }
 `;
-export const NavSubtitle = styled.div<{ color?: ColorToken | string }>`
+export const NavSubtitle = styled.div<{ color?: string }>`
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.grey600};
-  font-size: ${({ theme }) => theme.fontSizes.textM};
-  font-weight: ${({ theme }) => theme.fontWeights.medium};
+  color: var(--grey600);
+  font-size: var(--text-m);
+  font-weight: var(--font-weight-medium);
   word-break: keep-all;
   margin-top: 2px;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -43,7 +43,7 @@ export const NavSubtitle = styled.div<{ color?: ColorToken | string }>`
   ${({ color }) =>
     color && isColorToken(color)
       ? css`
-          color: ${({ theme }) => theme.colors[color]};
+          color: ${color};
         `
       : css`
           color: ${color};
@@ -51,9 +51,9 @@ export const NavSubtitle = styled.div<{ color?: ColorToken | string }>`
 `;
 export const LogoTitle = styled.div`
   margin-left: 4px;
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
-  font-size: ${({ theme }) => theme.fontSizes.textXxl};
-  color: ${({ theme }) => theme.colors.grey800};
+  font-weight: var(--font-weight-bold);
+  font-size: var(text-xxl);
+  color: var(--color-grey-800);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* 인터넷익스플로러 */

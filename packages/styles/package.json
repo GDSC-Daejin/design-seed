@@ -1,0 +1,36 @@
+{
+  "name": "@gdsc-dju/gds-styles",
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "yarn@3.2.2",
+  "description": "StyleSheet for GDSC DJU WebServices",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "release": "standard-version"
+  },
+  "source": "./src/index.ts",
+  "main": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GDSC-Daejin/design-seed",
+    "directory": "packages/styles"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./global.css": "./global.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "global.css"
+  ],
+  "bugs": {
+    "url": "https://github.com/GDSC-Daejin/design-seed/issues"
+  },
+  "homepage": "https://github.com/GDSC-Daejin/design-seed#readme",
+  "author": "",
+  "license": "MIT"
+}
