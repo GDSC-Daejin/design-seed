@@ -1,0 +1,67 @@
+import {Meta, Typeset} from '@storybook/addon-docs/blocks';
+import {typography} from "./TypographyBold.stories.mdx";
+import {SampleTextEn} from "./TypographyBold.stories.mdx";
+import {SampleTextKr} from "./TypographyBold.stories.mdx";
+
+<Meta title="Typography/Regular" />
+
+
+# Typography Regular
+
+
+**Font:** Google Sans Display, Spoqa Han Sans Neo
+
+
+**Weights:** 400(Regular), 500(Medium), 700(Bold)
+
+```
+titleXxl: 56,
+titleXl: 48,
+titleL: 36,
+titleM: 32,
+titleS: 24,
+textXxl: 20,
+textXl: 18,
+textL: 16,
+textM: 14,
+textS: 12
+```
+
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.titleXxl),
+        Number(typography.size.titleXl),
+        Number(typography.size.titleL),
+        Number(typography.size.titleM),
+        Number(typography.size.titleS),
+        Number(typography.size.textXxl),
+        Number(typography.size.textXl),
+        Number(typography.size.textL),
+        Number(typography.size.textM),
+        Number(typography.size.textS),
+    ]}
+    fontWeight={typography.weights.regular}
+    sampleText={SampleTextEn}
+    fontFamily={typography.type.primary}
+/>
+
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.titleXxl),
+        Number(typography.size.titleXl),
+        Number(typography.size.titleL),
+        Number(typography.size.titleM),
+        Number(typography.size.titleS),
+        Number(typography.size.textXxl),
+        Number(typography.size.textXl),
+        Number(typography.size.textL),
+        Number(typography.size.textM),
+        Number(typography.size.textS),
+    ]}
+    fontWeight={typography.weights.regular}
+    sampleText={SampleTextKr}
+    fontFamily={typography.type.primary}
+/>
+

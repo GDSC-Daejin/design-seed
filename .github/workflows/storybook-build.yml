@@ -7,13 +7,13 @@ on:
     branches:
       - master
     paths:
-      - "packages/gds-storybook/**"
+      - "packages/storybook/**"
       - ".github/workflows/Docusaurus-deploy.yml"
   pull_request:
     branches:
       - master
     paths:
-      - "packages/gds-storybook/**"
+      - "packages/storybook/**"
       - ".github/workflows/Docusaurus-deploy.yml"
 # List of jobs
 jobs:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     env:
-      working-directory: ./packages/gds-storybook
+      working-directory: ./packages/storybook
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -33,9 +33,9 @@ jobs:
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
       - name: Build SCT
-        run: yarn workspace @gdsc-dju/theme build
+        run: yarn workspace @gdsc-dju/gds-theme build
       - name: Build SC
-        run: yarn workspace @gdsc-dju/ui build
+        run: yarn workspace @gdsc-dju/gds-ui build
       - name: Publish to Chromatic
         id: run_chromatic
         uses: chromaui/action@v1

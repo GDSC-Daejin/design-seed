@@ -16,7 +16,7 @@ on:
     types:
       - closed
     paths:
-      - "packages/gds-storybook/**"
+      - "packages/storybook/**"
       - "packages/ui/**"
       - "packages/theme/**"
       - ".github/workflows/Docusaurus-deploy.yml"
