@@ -1,4 +1,4 @@
-name: @gdsc-dju/gds-ui Package Publish
+name: '@gdsc-dju/gds-ui Package Publish'
 
 on:
   push:

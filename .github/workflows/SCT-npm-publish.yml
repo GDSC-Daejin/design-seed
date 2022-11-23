@@ -1,4 +1,4 @@
-name: @gdsc-dju/gds-theme Package Publish
+name: '@gdsc-dju/gds-theme Package Publish'
 
 on:
   push:

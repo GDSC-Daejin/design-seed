@@ -1,4 +1,4 @@
-name: Deploy to Docusaurus Live Channel
+name: "Deploy to Docusaurus Live Channel"
 
 on:
   push:
