@@ -18,6 +18,7 @@ function App() {
       <Navigation
         isMenuOpen={isMenuOpen}
         toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
+        menuPosition={'none'}
       />
       <GlobalStyles />
       <Routes />
