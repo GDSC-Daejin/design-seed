@@ -10,7 +10,7 @@ export const StyledChip = styled.div<{
   padding: 1px 10px;
   border-radius: 50px;
   margin-right: 6px;
-  opacity: 0.6;
+  opacity: 0.8;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -18,8 +18,8 @@ export const StyledChip = styled.div<{
   font-size: var(--text-s);
   cursor: pointer;
   user-select: none;
-  border: 1px solid var(--grey500);
-  color: var(--grey500);
+  border: 1px solid var(--grey900);
+  color: var(--grey900);
   ${({ size }) =>
     size === 'L' &&
     css`

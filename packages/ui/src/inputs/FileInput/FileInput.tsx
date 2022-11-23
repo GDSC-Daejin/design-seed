@@ -22,6 +22,7 @@ export const InputImageWrapper = styled.div`
 export const StyledFileInput = styled.div`
   ${inputDefaultStyle}
   ${inputTextStyles}
+  color: var(--grey600);
   display: flex;
   align-items: center;
   cursor: pointer;

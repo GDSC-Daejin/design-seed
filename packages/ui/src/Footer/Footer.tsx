@@ -11,7 +11,7 @@ export const FooterText = styled.a<{ google?: boolean }>`
   color: var(--grey500);
   cursor: pointer;
   white-space: nowrap;
-  @media (max-width: ${({ theme }) => theme.windowSizes.tablet}px) {
+  @media (max-width: var(--window-size-tablet)) {
     margin-top: 10px;
   }
   ${({ google }) =>
@@ -29,7 +29,7 @@ export const FooterCopyRight = styled.span`
   font-size: var(--text-m);
   color: var(--grey600);
   white-space: nowrap;
-  @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
+  @media (max-width: var(--window-size-mobile)) {
     font-size: var(--text-s);
   }
 `;
@@ -43,7 +43,7 @@ export const FooterWrapper = styled.div`
   align-items: flex-end;
   background-color: rgba(0, 0, 0, 0.01);
   backdrop-filter: blur(10px);
-  @media (max-width: ${({ theme }) => theme.windowSizes.mobile}px) {
+  @media (max-width: var(--window-size-mobile)) {
     padding: 30px 20px;
   }
 `;
@@ -52,7 +52,7 @@ export const FooterLogo = styled.div`
   align-items: center;
   flex-direction: row;
   flex: 1;
-  @media (max-width: ${({ theme }) => theme.windowSizes.tablet}px) {
+  @media (max-width: var(--window-size-mobile)) {
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;

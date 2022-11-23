@@ -1,23 +1,28 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-import { themeHandler } from '@gdsc-dju/gds-theme';
-
-import { Navigation } from '../../ui/src';
+import { themeHandler } from '../../theme/src';
+import { Navigation, Footer } from '../../ui/src';
 
 import Routes from './Routes';
 import GlobalStyles from './styles/globalStyles';
 
 function App() {
   useEffect(() => {
-    themeHandler();
+    themeHandler('auto');
   }, []);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div>
-      <Navigation />
+    <>
+      <Navigation
+        isMenuOpen={isMenuOpen}
+        toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
+      />
       <GlobalStyles />
       <Routes />
-    </div>
+      <Footer />
+    </>
   );
 }
 

@@ -1,4 +1,6 @@
-export function themeHandler() {
+import { ThemeType } from './type';
+
+export function themeHandler(mode: ThemeType) {
   const el = document.documentElement;
   el.dataset.seed = '';
   const savedTheme = localStorage.getItem('theme');
@@ -8,18 +10,29 @@ export function themeHandler() {
     el.dataset.seedScaleColor = prefersDark.matches ? 'dark' : 'light';
     localStorage.setItem('theme', el.dataset.seedScaleColor);
   }
-  if (savedTheme) {
-    el.dataset.seedScaleColor = savedTheme;
-  } else {
-    if (prefersLight.matches) {
-      if ('addEventListener' in prefersLight) {
-        prefersLight.addEventListener('change', apply);
+  if (mode === 'auto') {
+    if (savedTheme) {
+      el.dataset.seedScaleColor = savedTheme;
+    } else {
+      if (prefersLight.matches) {
+        if ('addEventListener' in prefersLight) {
+          prefersLight.addEventListener('change', apply);
+        }
+      } else if (prefersDark.matches) {
+        if ('addEventListener' in prefersDark) {
+          prefersDark.addEventListener('change', apply);
+        }
       }
-    } else if (prefersDark.matches) {
-      if ('addEventListener' in prefersDark) {
-        prefersDark.addEventListener('change', apply);
-      }
+      apply();
     }
+  }
+  if (mode === 'light') {
+    el.dataset.seedScaleColor = 'light';
+    localStorage.setItem('theme', el.dataset.seedScaleColor);
+  }
+  if (mode === 'dark') {
+    el.dataset.seedScaleColor = 'dark';
+    localStorage.setItem('theme', el.dataset.seedScaleColor);
   }
 }
 export function changeTheme(theme?: string) {

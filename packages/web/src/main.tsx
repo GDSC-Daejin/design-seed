@@ -9,7 +9,16 @@ import '@gdsc-dju/gds-styles/global.css';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          flex: 1,
+        }}
+      >
+        <App />
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
 );

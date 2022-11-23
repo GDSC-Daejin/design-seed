@@ -1,4 +1,4 @@
-import { color, fontSize, fontWeight } from 'src';
+import { color, fontSize, fontWeight } from './index';
 
 export const isColorToken = (token: string): boolean => {
   const colorTokens = Object.keys(color);

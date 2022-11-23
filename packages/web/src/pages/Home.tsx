@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { FileInput, Input, TagInput, TextArea } from '@gdsc-dju/gds-ui';
+
 import styled from 'styled-components';
 
 import { useTheme } from '../hooks/useTheme';
@@ -15,7 +17,13 @@ const Home = () => {
     <LayoutContainer>
       <ContainerInner>
         <StyledH1>home</StyledH1>
-        <button onClick={() => themeHandler()}>theme toggle</button>
+        <Input placeholder={'임시 플레이스 홀더입니다.'} />
+        <TextArea placeholder={'임시 플레이스 홀더입니다.'} />
+        <FileInput placeholder={'임시 플레이스 홀더입니다.'} />
+        <TagInput
+          placeholder={'임시 플레이스 홀더입니다.'}
+          onChange={(e) => console.log(e)}
+        />
       </ContainerInner>
     </LayoutContainer>
   );

@@ -68,10 +68,10 @@ export const inputDefaultStyle = css`
 `;
 
 export const inputTextStyles = css`
-  font-size: ${({ theme }) => theme.fontSizes.textL};
-  font-weight: ${({ theme }) => theme.fontWeights.regular};
-  color: ${({ theme }) => theme.colors.grey800};
+  font-size: var(--text-l);
+  font-weight: var(--font-weight-regular);
+  color: var(--grey800);
   &::placeholder {
-    color: ${({ theme }) => theme.colors.grey500};
+    color: var(--grey400);
   }
 `;
