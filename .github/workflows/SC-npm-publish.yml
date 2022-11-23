@@ -31,7 +31,7 @@ jobs:
         run: yarn workspace @gdsc-dju/gds-ui build
       - name: version up
         run: |
-          git pull origin master
+#          git pull origin master
           git config --global user.name 'hyeoke0'
           git config --global user.email jhjeong00@gmail.com
           yarn release
