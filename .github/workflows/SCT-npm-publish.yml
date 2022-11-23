@@ -6,7 +6,7 @@ on:
     paths:
       - "packages/theme/**"
       - ".github/workflows/SCT-npm-publish.yml"
-  pull_request:
+#  pull_request:
 #    branches:
 #      - master
 #    types:

@@ -9,7 +9,7 @@ on:
 #    paths:
 #      - "packages/web/**"
 #      - ".github/workflows/Docusaurus-deploy.yml"
-  pull_request:
+#  pull_request:
 #    branches:
 #      - master
 #    paths:
