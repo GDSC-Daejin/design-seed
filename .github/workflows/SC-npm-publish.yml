@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
+      - name: yarn install
         run: yarn install
       - name: Build GDS
         run: yarn workspace @gdsc-dju/gds-ui build
