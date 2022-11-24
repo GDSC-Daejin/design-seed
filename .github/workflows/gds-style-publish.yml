@@ -24,9 +24,6 @@ jobs:
           yarn release
           git push --follow-tags
         working-directory: ${{ env.working-directory }}
-      - name: build
-        run: yarn build
-        working-directory: ${{ env.working-directory }}
       - run: npm publish
         working-directory: ${{ env.working-directory }}
         env:
