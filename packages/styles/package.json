@@ -1,6 +1,6 @@
 {
   "name": "@gdsc-dju/gds-styles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "yarn@3.2.2",
   "description": "StyleSheet for GDSC DJU WebServices",
   "repository": {
