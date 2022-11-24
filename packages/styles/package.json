@@ -24,6 +24,9 @@
   "bugs": {
     "url": "https://github.com/GDSC-Daejin/design-seed/issues"
   },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  },
   "homepage": "https://github.com/GDSC-Daejin/design-seed#readme",
   "author": "",
   "license": "MIT"
