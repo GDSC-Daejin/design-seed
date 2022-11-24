@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "packages/theme/**"
-      - ".github/workflows/SCT-npm-publish.yml"
+      - ".github/workflows/gds-theme-publish.yml"
 jobs:
   publish-npm:
     runs-on: ubuntu-latest

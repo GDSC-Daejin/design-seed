@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "packages/styles/**"
-      - ".github/workflows/SC-npm-publish.yml"
+      - ".github/workflows/gds-style-publish.yml"
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
