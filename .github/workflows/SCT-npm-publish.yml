@@ -2,20 +2,11 @@ name: '@gdsc-dju/gds-theme Package Publish'
 
 on:
   push:
-#    branches: [ master ]
     paths:
       - "packages/theme/**"
       - ".github/workflows/SCT-npm-publish.yml"
-#  pull_request:
-#    branches:
-#      - master
-#    types:
-#      - closed
-#    paths:
-#      - "packages/theme/**"
 jobs:
   publish-npm:
-#    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
       working-directory: ./packages/theme
@@ -29,7 +20,7 @@ jobs:
         run: yarn install
       - name: version up
         run: |
-#          git pull origin master
+          git pull
           git config --global user.name 'hyeoke0'
           git config --global user.email jhjeong00@gmail.com
           yarn release

@@ -1,25 +1,21 @@
-name: '@gdsc-dju/gds-ui Package Publish'
+name: '@gdsc-dju/gds-styles Package Publish'
 
 on:
   push:
     paths:
-      - "packages/ui/**"
+      - "packages/styles/**"
       - ".github/workflows/SC-npm-publish.yml"
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./packages/ui
+      working-directory: ./packages/styles
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - name: yarn install
-        run: yarn install
-      - name: Build gds-theme
-        run: yarn workspace @gdsc-dju/gds-theme build
       - name: version up
         run: |
           git pull
