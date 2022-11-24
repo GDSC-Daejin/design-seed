@@ -12,7 +12,7 @@
     "isolatedModules": false,
     //    "declaration": true, // d.ts
     //    "emitDeclarationOnly": true, //d.ts만 생성
-    "declarationDir": "./dist",
+//    "declarationDir": "./dist",
     "skipLibCheck": true,
     "removeComments": true,
   },

@@ -1,24 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
-import { themeHandler } from '../../theme/src';
+import { themeHandler, useTheme } from '../../theme/src';
 import { Navigation, Footer } from '../../ui/src';
 
 import Routes from './Routes';
 import GlobalStyles from './styles/globalStyles';
 
 function App() {
-  useEffect(() => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme] = useTheme();
+
+  useLayoutEffect(() => {
     themeHandler('auto');
   }, []);
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
       <Navigation
         isMenuOpen={isMenuOpen}
         toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
-        menuPosition={'none'}
+        menuButton={'left'}
       />
       <GlobalStyles />
       <Routes />

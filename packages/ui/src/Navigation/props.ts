@@ -6,8 +6,8 @@ export interface NavigationProps {
   title?: string;
   routes?: NavigationRoutes;
   pointColor?: string;
-  themeButtonActive?: boolean;
-  menuPosition?:
+  themeButton?: boolean;
+  menuButton?:
     | 'left'
     | 'right'
     | 'none'

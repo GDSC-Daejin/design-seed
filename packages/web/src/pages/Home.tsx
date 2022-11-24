@@ -4,7 +4,6 @@ import { FileInput, Input, TagInput, TextArea } from '@gdsc-dju/gds-ui';
 
 import styled from 'styled-components';
 
-import { useTheme } from '../hooks/useTheme';
 import { ContainerInner, LayoutContainer } from '../styles/layouts';
 
 const StyledH1 = styled.h1`
@@ -12,7 +11,6 @@ const StyledH1 = styled.h1`
 `;
 
 const Home = () => {
-  const [theme, themeHandler] = useTheme();
   return (
     <LayoutContainer>
       <ContainerInner>

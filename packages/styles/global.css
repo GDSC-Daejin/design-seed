@@ -39,7 +39,7 @@
     --text-font-weight: var(--font-weight-medium);
     --quote-font-weight: var(--font-weight---regular);
 }
-:root[data-seed][data-seed-scale-color=light]{
+:root[data-seed][data-seed-theme=light]{
     --background: var(--static-white);
     --white: #FFF;
     --grey50: #F9FAFB;
@@ -99,7 +99,7 @@
     --blue900: #1565c0;
     --box-shadow100: 0 0.8px 2px rgba(0,0,0,0.03), 0 3px 7px rgba(0,0,0,0.05), 0 12px 30px rgba(0,0,0,0.1);
 }
-:root[data-seed][data-seed-scale-color=dark]{
+:root[data-seed][data-seed-theme=dark]{
     --background: #202124;
     --white: #191F28;
     --grey50: #333D4B;

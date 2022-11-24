@@ -27,9 +27,9 @@ const Navigation = ({
   routes,
   title,
   customLogo,
-  themeButtonActive = true,
+  themeButton = true,
   pointColor = 'blue900',
-  menuPosition = 'right',
+  menuButton = 'none',
   router,
   sideMenu,
   rightElement,
@@ -53,8 +53,8 @@ const Navigation = ({
     <NavWrapper>
       <NavLogoContainer>
         <NavLogoContainerInner>
-          {(menuPosition === 'left' || menuPosition === 'left-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuHandler}>
+          {(menuButton === 'left' || menuButton === 'left-mobile-only') && (
+            <MenuButtonWrapper position={menuButton} onClick={menuHandler}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}
@@ -88,10 +88,9 @@ const Navigation = ({
       <NavInner>
         <ButtonWrapper>
           {rightElement && <>{rightElement}</>}
-          {themeButtonActive && <ThemeButton />}
-          {(menuPosition === 'right' ||
-            menuPosition === 'right-mobile-only') && (
-            <MenuButtonWrapper position={menuPosition} onClick={menuHandler}>
+          {themeButton && <ThemeButton />}
+          {(menuButton === 'right' || menuButton === 'right-mobile-only') && (
+            <MenuButtonWrapper position={menuButton} onClick={menuHandler}>
               <MenuIcon isMenuOpen={isMenuOpen} />
             </MenuButtonWrapper>
           )}

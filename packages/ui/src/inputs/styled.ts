@@ -50,8 +50,7 @@ export const StyledInputWrapper = styled.div<{
         box-shadow: none;
       }
     `}
-  
-  transition: 0.3s;
+  transition: box-shadow 0.3s ease-in-out;
 `;
 
 export const inputDefaultStyle = css`

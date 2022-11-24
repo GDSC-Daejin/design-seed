@@ -1,3 +1,4 @@
+/** @docs-ignore */
 import styled, { css } from 'styled-components';
 
 export const NavWrapper = styled.nav`
