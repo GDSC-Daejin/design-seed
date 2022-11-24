@@ -49,18 +49,3 @@ export function changeTheme(theme?: string) {
     el.dataset.seedScaleColor = currentTheme === 'dark' ? 'light' : 'dark';
   }
 }
-export const getCurrentTheme = () => {
-  const localTheme = localStorage.getItem('theme');
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  if (localTheme) {
-    return localTheme;
-  } else {
-    if (prefersLight.matches) {
-      return 'light';
-    }
-    if (prefersDark.matches) {
-      return 'dark';
-    }
-  }
-};
