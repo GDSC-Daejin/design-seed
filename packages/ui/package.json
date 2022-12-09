@@ -1,6 +1,6 @@
 {
   "name": "@gdsc-dju/gds-ui",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "packageManager": "yarn@3.2.2",
   "description": "GDSC-DJU Design System Component package for styled-components",
   "scripts": {
