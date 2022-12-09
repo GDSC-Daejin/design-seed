@@ -80,7 +80,7 @@
     "no-implicit-coercion": "error",
 
     "no-undef": "off",
-
+    "import/named": "off",
     "indent": "off",
     "@typescript-eslint/indent": "off",
     "semi": "off",

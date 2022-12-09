@@ -1,102 +1,134 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+const path = require('path');
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
+const pnpapi = require('pnpapi');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const math = require('remark-math');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
 const katex = require('rehype-katex');
+const math = require('remark-math');
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+require('@babel/register')({
+  presets: [['@babel/preset-env', { targets: { node: 'current' } }], '@babel/preset-typescript'],
+  extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  ignore: [
+    path => {
+      const locator = pnpapi.findPackageLocator(path);
+
+      if (locator.name.startsWith('@toss/')) {
+        return false;
+      }
+
+      return true;
+    },
+  ],
+  cache: true,
+});
+
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
+module.exports = {
   title: 'GDSC DJU Design',
-  tagline: '쉽고 간단하게 스타일을 사용해보세요',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://design.gdsc-dju.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'GDSC-Daejin', // Usually your GitHub org/user name.
-  projectName: 'design-seed', // Usually your repo name.
+  organizationName: 'GDSC DJU',
+  projectName: 'GDS',
+  themeConfig: {
+    navbar: {
+      title: 'GDSC DJU Design',
+      logo: {
+        alt: 'gdsc logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'doc',
+          docId: 'ui/README',
+          position: 'left',
+          label: 'Docs',
+        },
+        {
+          href: 'https://github.com/GDSC-Daejin/design-seed',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Docs',
+              to: '/theme',
+            },
+          ],
+        },
+        {
+          title: '더보기',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/GDSC-Daejin/design-seed',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} GDSC DJU, Inc.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+  },
+  plugins: [require.resolve('./scripts/webpack5-compat.js')],
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/GDSC-Daejin/design-seed/tree/master/packages',
-        },
-        blog: {
-          blogTitle: 'GDSC DJU Design Blog',
-          blogDescription: 'A Docusaurus powered blog!',
-          postsPerPage: 'ALL',
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
-          showReadingTime: true, // When set to false, the "x min read" won't be shown
-          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-          feedOptions: {
-            type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} GDSC DJU, Inc.`,
+          path: '../packages',
+          routeBasePath: '/',
+          exclude: ['**/CHANGELOG', '**/index.tsx.docs.md', '**/index.ts.docs.md', '**/styled.ts.docs.md', '**/props.ts.docs.md'],
+          sidebarPath: require.resolve('./sidebars.libraries.js'),
+          editUrl: ({ docPath }) => {
+            const dirname = path.dirname(docPath);
+            const markdownFilename = getFilename(docPath);
+            const sourceFilename = getSourceFilename(markdownFilename);
+            const editUrl = `${GITHUB_EDIT_PAGE_PREFIX}/packages/${dirname}/${sourceFilename}`;
+            return editUrl;
           },
         },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+        pages: {
+          path: 'pages',
+          routeBasePath: '/',
+          include: ['**/*.{js,jsx,ts,tsx,md,mdx,html}'],
+          mdxPageComponent: '@theme/MDXPage',
         },
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'GDSC DJU Design',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'doc',
-            position: 'left',
-            docId: 'index',
-            label: 'Docs',
-          },
-          { to: 'blog', label: 'Blog', position: 'left' }, // or position: 'right'
-          {
-            href: 'https://github.com/GDSC-Daejin/design-seed',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Website',
-                href: 'https://web.gdsc-dju.com/',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} GDSC DJU, Inc.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
 };
+const GITHUB_EDIT_PAGE_PREFIX =
+  'https://github.com/GDSC-Daejin/design-seed/tree/master';
 
-module.exports = config;
+function getFilename(path) {
+  const names = path.split('/');
+  const filename = names[names.length - 1];
+
+  if (filename == null) {
+    throw new Error(`path가 올바르지 않습니다. ${path}`);
+  }
+
+  return filename;
+}
+
+function getSourceFilename(markdownFilename) {
+  const isAutoGenerated = markdownFilename.endsWith('.docs.md');
+  return isAutoGenerated
+    ? markdownFilename.replace('.docs.md', '')
+    : markdownFilename;
+}
+

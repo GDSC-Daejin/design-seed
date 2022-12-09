@@ -1,0 +1,10 @@
+export const titleXxl = 'var(--title-xxl)';
+export const titleXl = 'var(--title-xl)';
+export const titleL = 'var(--title-l)';
+export const titleM = 'var(--title-m)';
+export const titleS = 'var(--title-s)';
+export const textXxl = 'var(--text-xxl)';
+export const textXl = 'var(--text-xl)';
+export const textL = 'var(--text-l)';
+export const textM = 'var(--text-m)';
+export const textS = 'var(--text-s)';
