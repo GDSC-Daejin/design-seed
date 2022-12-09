@@ -6,7 +6,7 @@ on:
       - "packages/theme/**"
       - ".github/workflows/gds-theme-publish.yml"
 jobs:
-  publish-npm:
+  gds-theme-publish-npm:
     runs-on: ubuntu-latest
     env:
       working-directory: ./packages/theme

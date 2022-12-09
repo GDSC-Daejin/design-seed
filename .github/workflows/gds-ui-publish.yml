@@ -6,7 +6,7 @@ on:
       - "packages/ui/**"
       - ".github/workflows/gds-ui-publish.yml"
 jobs:
-  publish-npm:
+  gds-ui-publish-npm:
     runs-on: ubuntu-latest
     env:
       working-directory: ./packages/ui
