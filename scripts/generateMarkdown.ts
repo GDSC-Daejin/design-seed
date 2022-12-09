@@ -11,7 +11,7 @@ interface BuildEntry {
 function pathsToBuildEntries(paths: string[]) {
   return paths.map((path) => ({
     source: path,
-    destination: `${path}.docs.md`,
+    destination: `${path}.docs.mdx`,
   }));
 }
 
@@ -73,7 +73,8 @@ const main = async () => {
       '**/node_modules/**',
       '**/build/**',
       '**/stories/**',
-      "**/index.ts"
+      '**/index.ts',
+      '**/web/**',
     ],
   });
   const filteredContent = filterFilesByContent(

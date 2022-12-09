@@ -15,6 +15,7 @@ lib
 dist-ssr
 *.local
 **.docs.md
+**.docs.mdx
 
 # Editor directories and files
 .vscode/*

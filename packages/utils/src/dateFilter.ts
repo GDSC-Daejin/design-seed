@@ -1,10 +1,10 @@
 /**
  *
  * @param date
- * @description 날짜 입력값
+ * @description 날짜 포맷 (ex: YYYY-MM-DD HH:mm : 2020-01-01 00:00)
  * @param format
  * @description 날짜 포맷 (ex: YYYY-MM-DD HH:mm : 2020-01-01 00:00)
- * @return string
+ *
  * ```typescript
  *  import { dateFilter } from '@gdsc-dju/utils';
  *  dateFilter(new Date(), 'YYYY-MM-DD HH:mm');
