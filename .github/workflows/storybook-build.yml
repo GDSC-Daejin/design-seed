@@ -38,7 +38,7 @@ jobs:
         run: yarn workspace @gdsc-dju/gds-ui build
       - name: Publish to Chromatic
         id: run_chromatic
-        uses: chromaui/action@v1
+      - uses: chromaui/action@v1
         # Options required to the GitHub Chromatic Action
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
