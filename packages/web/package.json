@@ -34,6 +34,7 @@
     "@storybook/builder-vite": "^0.2.5",
     "@storybook/channel-postmessage": "6.5.9",
     "@storybook/channel-websocket": "6.5.9",
+    "@storybook/cli": "^6.5.14",
     "@storybook/client-api": "6.5.9",
     "@storybook/preview-web": "6.5.9",
     "@storybook/react": "^6.5.13",
