@@ -41,7 +41,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-is": "^18.2.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "@gdsc-dju/gds-theme": "workspace:^"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
@@ -60,8 +61,5 @@
     "standard-version": "^9.5.0",
     "tslib": "^2.4.0",
     "typescript": "^4.8.3"
-  },
-  "dependencies": {
-    "@gdsc-dju/gds-theme": "workspace:^"
   }
 }
