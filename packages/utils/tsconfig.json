@@ -1,13 +1,11 @@
 {
   "extends": "../../tsconfig.json",
-  "include": [
-    "src",
-    "src/custom.d.ts"
-  ],
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "esnext"],
-    "jsx": "react",
+    "rootDir": "src",
+    "outDir": "lib",
+    "jsx": "preserve"
   },
-  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
+  "include": [
+    "src"
+  ]
 }

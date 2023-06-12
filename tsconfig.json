@@ -2,10 +2,12 @@
   "compilerOptions": {
     /* Modules */
     "baseUrl": ".",
-    "module": "commonjs",
-    "moduleResolution": "nodenext",
-    "resolveJsonModule": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
 
+    "composite": true,
+    "incremental": true,
     /* Type Checking */
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -17,7 +19,6 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "ESNext", "ESNext.AsyncIterable"],
-    "target": "es6",
 
     /* Interop Constraints */
     "allowSyntheticDefaultImports": true,

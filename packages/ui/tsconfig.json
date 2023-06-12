@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": ["dom", "esnext"],
     "jsx": "react",
     "module": "es6",
@@ -10,9 +10,6 @@
     "esModuleInterop": true,
     "noImplicitAny": false,
     "isolatedModules": false,
-    //    "declaration": true, // d.ts
-    //    "emitDeclarationOnly": true, //d.ts만 생성
-//    "declarationDir": "./dist",
     "skipLibCheck": true,
     "removeComments": true,
   },
