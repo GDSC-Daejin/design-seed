@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
       ["@gdsc-dju/gds-styles", ["workspace:packages/styles"]],\
-      ["@gdsc-dju/gds-theme", ["virtual:a1407e04daf6511980732060e13d2d0407a2787fa22139df4fb2729f16c6deeb353b48b0425a1804cede8422fadd73ac0c121860085e7abeb09cab6a067e4d09#workspace:packages/theme", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/theme", "workspace:packages/theme"]],\
+      ["@gdsc-dju/gds-theme", ["virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/theme", "workspace:packages/theme"]],\
       ["@gdsc-dju/gds-ui", ["virtual:9fad0448f3da5d9523d0e8a8b40a0eacc991dad6ef439fa51732745c8163f2e1d823824911f4d118d9f60da85c72b232c578c544372aa98c32d81c1305af1ad7#workspace:packages/ui", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/ui", "workspace:packages/ui"]],\
       ["@gdsc-dju/utils", ["workspace:packages/utils"]],\
       ["docs", ["workspace:docs"]],\
@@ -7405,33 +7405,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@gdsc-dju/gds-theme", [\
-        ["virtual:a1407e04daf6511980732060e13d2d0407a2787fa22139df4fb2729f16c6deeb353b48b0425a1804cede8422fadd73ac0c121860085e7abeb09cab6a067e4d09#workspace:packages/theme", {\
-          "packageLocation": "./.yarn/__virtual__/@gdsc-dju-gds-theme-virtual-c3991cd699/1/packages/theme/",\
-          "packageDependencies": [\
-            ["@gdsc-dju/gds-theme", "virtual:a1407e04daf6511980732060e13d2d0407a2787fa22139df4fb2729f16c6deeb353b48b0425a1804cede8422fadd73ac0c121860085e7abeb09cab6a067e4d09#workspace:packages/theme"],\
-            ["@babel/core", "npm:7.20.2"],\
-            ["@babel/preset-env", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.20.2"],\
-            ["@babel/preset-react", "virtual:388a8b2a89937f340c752c3bc1b0426d3d325132ecbdd9e670254690d35fc807639274cf62d067745f76a19fef7bf3bfc29ee293d6628dcf5d05c2265d1eb62f#npm:7.18.6"],\
-            ["@babel/preset-typescript", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.18.6"],\
-            ["@rollup/plugin-babel", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:5.3.1"],\
-            ["@types/react", "npm:18.0.25"],\
-            ["react", null],\
-            ["rollup", "npm:2.79.1"],\
-            ["rollup-plugin-dts", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:4.2.3"],\
-            ["rollup-plugin-terser", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:7.0.2"],\
-            ["rollup-plugin-tslint", "npm:0.2.2"],\
-            ["rollup-plugin-typescript2", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:0.34.1"],\
-            ["rollup-plugin-uglify", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:6.0.4"],\
-            ["standard-version", "npm:9.5.0"],\
-            ["tslib", "npm:2.4.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
-          ],\
-          "packagePeers": [\
-            "@types/react",\
-            "react"\
-          ],\
-          "linkType": "SOFT"\
-        }],\
         ["virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/theme", {\
           "packageLocation": "./.yarn/__virtual__/@gdsc-dju-gds-theme-virtual-55addbd782/1/packages/theme/",\
           "packageDependencies": [\
@@ -7492,6 +7465,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-typescript", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.18.6"],\
             ["@gdsc-dju/gds-theme", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/theme"],\
             ["@rollup/plugin-babel", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:5.3.1"],\
+            ["@types/gdsc-dju__gds-theme", null],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-is", null],\
             ["@types/styled-components", "npm:5.1.26"],\
@@ -7509,6 +7483,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
           ],\
           "packagePeers": [\
+            "@gdsc-dju/gds-theme",\
+            "@types/gdsc-dju__gds-theme",\
             "@types/react-is",\
             "@types/react",\
             "@types/styled-components",\
@@ -7528,6 +7504,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-typescript", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.18.6"],\
             ["@gdsc-dju/gds-theme", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#workspace:packages/theme"],\
             ["@rollup/plugin-babel", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:5.3.1"],\
+            ["@types/gdsc-dju__gds-theme", null],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-is", null],\
             ["@types/styled-components", "npm:5.1.26"],\
@@ -7545,6 +7522,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
           ],\
           "packagePeers": [\
+            "@gdsc-dju/gds-theme",\
+            "@types/gdsc-dju__gds-theme",\
             "@types/react-is",\
             "@types/styled-components",\
             "react-is",\
@@ -7561,7 +7540,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.20.2"],\
             ["@babel/preset-react", "virtual:388a8b2a89937f340c752c3bc1b0426d3d325132ecbdd9e670254690d35fc807639274cf62d067745f76a19fef7bf3bfc29ee293d6628dcf5d05c2265d1eb62f#npm:7.18.6"],\
             ["@babel/preset-typescript", "virtual:b5b5dfb1662b30d0d5b62f084f8b8fddd0eee56dd8737572197395ab6309e644fa76525392b1d0250ce3c07c5eeeb90901439953af682fc76f8ab38f71b8b09d#npm:7.18.6"],\
-            ["@gdsc-dju/gds-theme", "virtual:a1407e04daf6511980732060e13d2d0407a2787fa22139df4fb2729f16c6deeb353b48b0425a1804cede8422fadd73ac0c121860085e7abeb09cab6a067e4d09#workspace:packages/theme"],\
             ["@rollup/plugin-babel", "virtual:55addbd782cb77f4bde6798f0d7ee16387e38919838cfbc58a202f4b0bd576abf51e3e2914a6ce08a35a817f4a0e5f3dc54b1269f491232d70886f0607ae82c8#npm:5.3.1"],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/styled-components", "npm:5.1.26"],\

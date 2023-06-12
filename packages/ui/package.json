@@ -39,10 +39,10 @@
     "dist"
   ],
   "peerDependencies": {
+    "@gdsc-dju/gds-theme": "workspace:^",
     "react": "^18.2.0",
     "react-is": "^18.2.0",
-    "styled-components": "^5.3.5",
-    "@gdsc-dju/gds-theme": "workspace:^"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
